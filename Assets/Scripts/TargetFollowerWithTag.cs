@@ -13,6 +13,7 @@ public class TargetFollowerWithTag : MonoBehaviour
 	public bool smooth = true;
 	public bool enableArea = true;
 	public Rect area;
+	public Vector3 offset;
 	public UpdateType updateType = UpdateType.FixedUpdate;
 
 	private Transform target;
@@ -31,7 +32,7 @@ public class TargetFollowerWithTag : MonoBehaviour
 			target = findObj.transform;
 		}
 
-		var newPosition = target.position;
+		var newPosition = target.position + offset;
 		newPosition.z = transform.position.z;
 		if (smooth)
 			newPosition = Vector3.Lerp(transform.position, newPosition, Time.deltaTime);

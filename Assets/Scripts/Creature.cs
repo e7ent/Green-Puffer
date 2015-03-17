@@ -7,7 +7,7 @@ using DG.Tweening;
 [RequireComponent(typeof(Collider2D))]
 public class Creature : MonoBehaviour
 {
-	public int size = 1;
+	public float size = 1;
 	public int life;
 
 	public GameObject[] dropItems;
@@ -31,10 +31,8 @@ public class Creature : MonoBehaviour
 
 	private Animator animator;
 	private new Rigidbody2D rigidbody;
-	private Material[] materials;
-	private Color prevColor = Color.white;
 
-	private Transform attackTarget = null;
+	private Transform target = null;
 
 	private float moveElapsed;
 	private Vector2 moveForce;
@@ -43,17 +41,6 @@ public class Creature : MonoBehaviour
 	{
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody2D>();
-
-		List<Material> matList = new List<Material>();
-		foreach (var renderer in GetComponentsInChildren<Renderer>())
-		{
-			foreach (var mat in renderer.materials)
-				matList.Add(mat);
-		}
-
-		materials = new Material[matList.Count];
-		for (int i = 0; i < matList.Count; i++)
-			materials[i] = matList[i];
 	}
 
 	void Update()
@@ -67,30 +54,44 @@ public class Creature : MonoBehaviour
 		animator.SetFloat("Speed", rigidbody.velocity.magnitude);
 
 		UpdateMovement();
-		UpdateColor();
 	}
 
 	void UpdateMovement()
 	{
 		if (canAttack)
 		{
-			if (attackTarget != null)
+			if (target != null)
 			{
-				var diff = attackTarget.transform.position - transform.position;
+				var diff = target.transform.position - transform.position;
 				var distance = diff.magnitude;
 
 				if (distance < rageRange)
 					moveForce = diff.normalized * chaseForce;
 				else
-					attackTarget = null;
+					target = null;
 			}
 			else
 			{
 				var collider = Physics2D.OverlapCircle(transform.position, attackRange, 1 << LayerMask.NameToLayer("Player"));
 				if (collider != null)
 				{
-					attackTarget = collider.transform;
+					target = collider.transform;
 					moveElapsed = 0;
+					if (target.GetComponent<PlayerController>().stat.CompareSize(size) < 0)
+					{
+						foreach (var renderer in GetComponentsInChildren<Renderer>())
+						{
+							var mat = renderer.material;
+							if (mat.HasProperty("_Color") == false) continue;
+
+							var seq = DOTween.Sequence();
+							for (int i = 0; i < 2; i++)
+							{
+								seq.Append(mat.DOColor(warningColor, 0.2f));
+								seq.Append(mat.DOColor(Color.white, 0.2f));
+							}
+						}
+					}
 				}
 			}
 		}
@@ -107,20 +108,6 @@ public class Creature : MonoBehaviour
 		if (freezeY)
 			force.y = 0;
 		rigidbody.AddForce(force);
-	}
-
-	void UpdateColor()
-	{
-		Color curColor = Color.white;
-
-		if (GameManager.instance.puffer.stat.GetSize() < size)
-			curColor = warningColor;
-
-		curColor = Color.Lerp(prevColor, curColor, Time.deltaTime);
-		for (int i = 0; i < materials.Length; i++)
-			materials[i].color = curColor;
-
-		prevColor = curColor;
 	}
 
 	void OnDrawGizmos()
@@ -143,8 +130,12 @@ public class Creature : MonoBehaviour
 			life = 0;
 			Kill();
 		}
-		foreach (var mat in materials)
+
+		transform.DOKill(true);
+
+		foreach (var renderer in GetComponentsInChildren<Renderer>())
 		{
+			var mat = renderer.material;
 			if (mat.HasProperty("_Color") == false) continue;
 
 			var seq = DOTween.Sequence();
@@ -154,10 +145,10 @@ public class Creature : MonoBehaviour
 				seq.Append(mat.DOColor(Color.white, 0.1f));
 			}
 		}
-		
-		transform.DOKill(true);
-		transform.DOPunchScale(Vector3.one * 0.2f, 0.4f, 5);
-		transform.DOShakeRotation(1, 45);
+
+		float duration = Mathf.Clamp(0.1f / rigidbody.mass, 0, 1);
+		transform.DOPunchScale(Vector3.one * 0.2f, duration * 0.4f, 5);
+		transform.DOShakeRotation(duration, 45);
 		
 		if (hurtFx)
 			Instantiate(hurtFx, transform.position, Quaternion.identity);
@@ -165,9 +156,10 @@ public class Creature : MonoBehaviour
 
 	public void Kill()
 	{
+		transform.DOKill(true);
 		var ani = GetComponent<Animator>();
-		GetComponent<Collider2D>().isTrigger = true;
 		ani.SetBool("Dead", true);
+		GetComponent<Collider2D>().isTrigger = true;
 		Invoke("Disappear", 0.95f);
 		Destroy(gameObject, 1);
 	}

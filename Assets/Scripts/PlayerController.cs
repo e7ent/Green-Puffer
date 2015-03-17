@@ -61,7 +61,7 @@ public partial class PlayerController : MonoBehaviour
 		transform.DOKill(true);
 		transform.DOPunchScale(Vector3.one * 0.2f, 0.4f, 5);
 
-		if (stat.IsAdult() && nextGenerationPrefab != null)
+		if (stat.IsCompletion() && nextGenerationPrefab != null)
 		{
 			var newPuffer = Instantiate(nextGenerationPrefab, transform.position, Quaternion.identity) as GameObject;
 			GameManager.instance.SetPuffer(newPuffer.GetComponent<PlayerController>());
@@ -84,6 +84,7 @@ public partial class PlayerController : MonoBehaviour
 		//if (stat.IsAlive() == false)
 		//	Destroy(gameObject);
 		transform.DOKill(true);
+
 		foreach (var renderer in GetComponentsInChildren<Renderer>())
 		{
 			var mat = renderer.material;
@@ -107,7 +108,7 @@ public partial class PlayerController : MonoBehaviour
 		if (creature == null)
 			return;
 
-		if (stat.GetSize() >= creature.size)
+		if (stat.CompareSize(creature.size) >= 0)
 			Attack(creature);
 		else
 			Hurt(creature);

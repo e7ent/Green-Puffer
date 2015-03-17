@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
+timeCreated: 1426592307
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: ui_state_label_1
@@ -711,6 +713,7 @@ TextureImporter:
     21301412: ui_end_text_3
     21301414: ui_end_text_4
     21301416: ui_state_table_3
+    21301418: sheet_ui_all_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -729,6 +732,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 2048
@@ -739,6 +745,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -1477,7 +1484,7 @@ TextureImporter:
         serializedVersion: 2
         x: 316
         y: 1609
-        width: 158
+        width: 170
         height: 431
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -1642,15 +1649,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_state_table_3
+    - name: sheet_ui_all_0
       rect:
         serializedVersion: 2
-        x: 474
-        y: 1609
-        width: 12
-        height: 431
+        x: 834
+        y: 205
+        width: 402
+        height: 432
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: UI
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

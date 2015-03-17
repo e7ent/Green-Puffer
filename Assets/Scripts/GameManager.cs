@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance { get; private set; }
 
+	public int generation = 0;
+
 	public PlayerController puffer;
 	public JoystickSystem joystick;
 

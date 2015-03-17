@@ -12,6 +12,7 @@ public class Stat
 		Old
 	}
 	public Rank rank = 0;
+	public string name;
 	public bool isAlive = true;
 	public int hp;
 	public int maxHp = 10;
@@ -22,7 +23,8 @@ public class Stat
 	public float force = 5;
 	public int money = 0;
 	public float fat = 0;
-	public int maxSize = 10;
+	public float minSize = 1;
+	public float maxSize = 10;
 
 	public Stat()
 	{
@@ -40,15 +42,19 @@ public class Stat
 		return isAlive;
 	}
 
-	public int GetSize()
+	public float GetSize()
 	{
-		return Mathf.FloorToInt(
-			Mathf.Clamp(maxSize * ((float)exp / maxExp), maxSize * .1f, maxSize)
-			);
+		var size = (maxSize - minSize) * ((float)exp / maxExp);
+		return Mathf.Clamp(minSize + size, minSize, maxSize);
 	}
 
-	public bool IsAdult()
+	public bool IsCompletion()
 	{
 		return exp >= maxExp;
+	}
+
+	public int CompareSize(float size)
+	{
+		return (int)Mathf.Sign(GetSize() - size);
 	}
 }
