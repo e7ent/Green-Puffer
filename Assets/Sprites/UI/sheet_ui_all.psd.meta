@@ -1,0 +1,1656 @@
+fileFormatVersion: 2
+guid: 1538d50b50d08304c86bbecc721b3e12
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ui_state_label_1
+    21300002: ui_state_label_state
+    21300004: sheet_ui_state_2
+    21300006: sheet_ui_state_3
+    21300008: ui_up_label_up
+    21300010: ui_up_pluse
+    21300012: sheet_ui_state_6
+    21300014: ui_option_label_1
+    21300016: sheet_ui_state_8
+    21300018: sheet_ui_state_9
+    21300020: ui_end_text_1
+    21300022: sheet_ui_state_11
+    21300024: sheet_ui_state_12
+    21300026: sheet_ui_state_13
+    21300028: sheet_ui_state_14
+    21300030: sheet_ui_state_15
+    21300032: sheet_ui_state_16
+    21300034: ui_up_upgradebox
+    21300036: sheet_ui_state_18
+    21300038: sheet_ui_state_19
+    21300040: sheet_ui_state_20
+    21300042: sheet_ui_state_21
+    21300044: sheet_ui_state_22
+    21300046: sheet_ui_state_23
+    21300048: sheet_ui_state_24
+    21300050: ui_state_ic_1
+    21300052: ui_state_ic_2
+    21300054: sheet_ui_state_27
+    21300056: sheet_ui_state_28
+    21300058: ui_option_label_2
+    21300060: ui_iconbox
+    21300062: ui_shop_ic_5
+    21300064: sheet_ui_state_32
+    21300066: sheet_ui_state_33
+    21300068: sheet_ui_state_34
+    21300070: sheet_ui_state_35
+    21300072: sheet_ui_state_36
+    21300074: sheet_ui_state_37
+    21300076: sheet_ui_state_38
+    21300078: sheet_ui_state_39
+    21300080: sheet_ui_state_40
+    21300082: sheet_ui_state_41
+    21300084: sheet_ui_state_42
+    21300086: sheet_ui_state_43
+    21300088: sheet_ui_state_44
+    21300090: sheet_ui_state_47
+    21300092: sheet_ui_state_50
+    21300094: sheet_ui_state_51
+    21300096: sheet_ui_state_52
+    21300098: sheet_ui_state_53
+    21300100: ui_option_btn_1
+    21300102: ui_shop_ic_4
+    21300104: sheet_ui_state_60
+    21300106: sheet_ui_state_61
+    21300108: sheet_ui_state_62
+    21300110: sheet_ui_state_63
+    21300112: sheet_ui_state_64
+    21300114: sheet_ui_state_65
+    21300116: sheet_ui_state_66
+    21300118: sheet_ui_state_67
+    21300120: sheet_ui_state_68
+    21300122: sheet_ui_state_69
+    21300124: sheet_ui_state_70
+    21300126: sheet_ui_state_71
+    21300128: sheet_ui_state_75
+    21300130: ui_shop_ic_9
+    21300132: sheet_ui_state_77
+    21300134: sheet_ui_state_78
+    21300136: sheet_ui_state_79
+    21300138: ui_shop_ic_3
+    21300140: ui_option_btn_2
+    21300142: ui_book_ic_gold
+    21300144: sheet_ui_state_83
+    21300146: sheet_ui_state_84
+    21300148: sheet_ui_state_85
+    21300150: sheet_ui_state_86
+    21300152: sheet_ui_state_89
+    21300154: sheet_ui_state_90
+    21300156: sheet_ui_state_91
+    21300158: sheet_ui_state_92
+    21300160: sheet_ui_state_93
+    21300162: sheet_ui_state_94
+    21300164: sheet_ui_state_95
+    21300166: sheet_ui_state_96
+    21300168: sheet_ui_state_97
+    21300170: ui_shop_ic_1
+    21300172: ui_shop_ic_2
+    21300174: ui_shop_ic_6
+    21300176: sheet_ui_state_101
+    21300178: sheet_ui_state_102
+    21300180: sheet_ui_state_103
+    21300182: sheet_ui_state_104
+    21300184: sheet_ui_state_105
+    21300186: sheet_ui_state_106
+    21300188: ui_option_btn_3
+    21300190: sheet_ui_state_111
+    21300192: sheet_ui_state_112
+    21300194: sheet_ui_state_113
+    21300196: sheet_ui_state_114
+    21300198: sheet_ui_state_115
+    21300200: sheet_ui_state_116
+    21300202: sheet_ui_state_117
+    21300204: sheet_ui_state_118
+    21300206: sheet_ui_state_119
+    21300208: sheet_ui_state_120
+    21300210: sheet_ui_state_121
+    21300212: ui_up_btn_1
+    21300214: ui_book_ic_night
+    21300216: sheet_ui_state_124
+    21300218: sheet_ui_state_125
+    21300220: sheet_ui_state_126
+    21300222: sheet_ui_state_127
+    21300224: sheet_ui_state_128
+    21300226: ui_state_hpbar
+    21300228: ui_state_hp
+    21300230: ui_state_exp
+    21300232: ui_shop_ic_7
+    21300234: sheet_ui_state_133
+    21300236: sheet_ui_state_134
+    21300238: sheet_ui_state_135
+    21300240: sheet_ui_state_136
+    21300242: ui_option_btn_4
+    21300244: sheet_ui_state_138
+    21300246: sheet_ui_state_139
+    21300248: sheet_ui_state_140
+    21300250: sheet_ui_state_141
+    21300252: ui_state_expbar
+    21300254: sheet_ui_state_143
+    21300256: sheet_ui_state_144
+    21300258: sheet_ui_state_145
+    21300260: sheet_ui_state_146
+    21300262: sheet_ui_state_147
+    21300264: ui_up_btn_2
+    21300266: sheet_ui_state_149
+    21300268: sheet_ui_state_150
+    21300270: ui_quest_label_quest
+    21300272: ui_quest_label_progress
+    21300274: ui_shop_label_shop
+    21300276: ui_shop_ic_ui_shop_ic_8
+    21300278: ui_btn_ok
+    21300280: ui_book_ic_gentleman
+    21300282: ui_quest_label_end
+    21300284: ui_quest_label_3
+    21300286: ui_shop_label_coin
+    21300288: ui_shop_btn_1
+    21300290: ui__book_label
+    21300292: ui_quest_ic_1
+    21300294: ui_shop_label_iteam
+    21300296: ui_book_textbox
+    21300298: effect_boss
+    21300300: ui_shop_btn_2
+    21300302: ui_window_1
+    21300304: ui_bg_wite
+    21300306: effect_survivor
+    21300308: ui_cilp
+    21300310: ui_book_ic_old
+    21300312: ui_quest_label_1
+    21300314: effect_fever
+    21300316: ui_btn_close
+    21300318: effect_levelup
+    21300320: ui_btn_yes
+    21300322: ui_btn_no
+    21300324: ui_bg
+    21300326: ui_scroll_btn
+    21300328: ui_window_2
+    21300330: ui_book_label
+    21300332: ui_end_back_1
+    21300334: ui_bg_scroll
+    21300336: sheet_ui_state_199
+    21300338: sheet_ui_state_200
+    21300340: sheet_ui_state_201
+    21300342: sheet_ui_state_202
+    21300344: sheet_ui_state_203
+    21300346: sheet_ui_state_204
+    21300348: sheet_ui_state_205
+    21300350: sheet_ui_state_206
+    21300352: sheet_ui_state_207
+    21300354: sheet_ui_state_208
+    21300356: sheet_ui_state_209
+    21300358: sheet_ui_state_210
+    21300360: sheet_ui_state_211
+    21300362: sheet_ui_state_212
+    21300364: sheet_ui_state_213
+    21300366: sheet_ui_state_214
+    21300368: sheet_ui_state_215
+    21300370: sheet_ui_state_216
+    21300372: ui_book_ic_pink
+    21300374: sheet_ui_state_218
+    21300376: sheet_ui_state_219
+    21300378: sheet_ui_state_220
+    21300380: sheet_ui_state_221
+    21300382: sheet_ui_state_222
+    21300384: sheet_ui_state_223
+    21300386: sheet_ui_state_224
+    21300388: sheet_ui_state_225
+    21300390: sheet_ui_state_226
+    21300392: sheet_ui_state_227
+    21300394: sheet_ui_state_228
+    21300396: sheet_ui_state_229
+    21300398: sheet_ui_state_230
+    21300400: sheet_ui_state_231
+    21300402: sheet_ui_state_232
+    21300404: sheet_ui_state_233
+    21300406: sheet_ui_state_234
+    21300408: sheet_ui_state_235
+    21300410: sheet_ui_state_236
+    21300412: sheet_ui_state_237
+    21300414: sheet_ui_state_238
+    21300416: sheet_ui_state_239
+    21300418: sheet_ui_state_240
+    21300420: sheet_ui_state_241
+    21300422: sheet_ui_state_242
+    21300424: sheet_ui_state_243
+    21300426: sheet_ui_state_244
+    21300428: sheet_ui_state_245
+    21300430: sheet_ui_state_246
+    21300432: sheet_ui_state_247
+    21300434: sheet_ui_state_248
+    21300436: sheet_ui_state_249
+    21300438: sheet_ui_state_250
+    21300440: sheet_ui_state_251
+    21300442: sheet_ui_state_252
+    21300444: sheet_ui_state_253
+    21300446: sheet_ui_state_254
+    21300448: sheet_ui_state_255
+    21300450: sheet_ui_state_256
+    21300452: sheet_ui_state_257
+    21300454: sheet_ui_state_258
+    21300456: sheet_ui_state_259
+    21300458: sheet_ui_state_260
+    21300460: sheet_ui_state_261
+    21300462: sheet_ui_state_262
+    21300464: sheet_ui_state_263
+    21300466: sheet_ui_state_264
+    21300468: sheet_ui_state_265
+    21300470: sheet_ui_state_266
+    21300472: sheet_ui_state_267
+    21300474: sheet_ui_state_268
+    21300476: sheet_ui_state_269
+    21300478: sheet_ui_state_270
+    21300480: sheet_ui_state_271
+    21300482: sheet_ui_state_272
+    21300484: sheet_ui_state_273
+    21300486: sheet_ui_state_274
+    21300488: sheet_ui_state_275
+    21300490: sheet_ui_state_276
+    21300492: sheet_ui_state_277
+    21300494: sheet_ui_state_278
+    21300496: sheet_ui_state_279
+    21300498: sheet_ui_state_280
+    21300500: sheet_ui_state_281
+    21300502: sheet_ui_state_282
+    21300504: sheet_ui_state_283
+    21300506: sheet_ui_state_284
+    21300508: sheet_ui_state_285
+    21300510: sheet_ui_state_286
+    21300512: sheet_ui_state_287
+    21300514: sheet_ui_state_288
+    21300516: sheet_ui_state_289
+    21300518: sheet_ui_state_290
+    21300520: sheet_ui_state_291
+    21300522: sheet_ui_state_292
+    21300524: sheet_ui_state_293
+    21300526: sheet_ui_state_294
+    21300528: sheet_ui_state_295
+    21300530: sheet_ui_state_296
+    21300532: sheet_ui_state_297
+    21300534: sheet_ui_state_298
+    21300536: sheet_ui_state_299
+    21300538: sheet_ui_state_300
+    21300540: sheet_ui_state_301
+    21300542: sheet_ui_state_302
+    21300544: sheet_ui_state_303
+    21300546: sheet_ui_state_304
+    21300548: sheet_ui_state_305
+    21300550: sheet_ui_state_306
+    21300552: sheet_ui_state_307
+    21300554: sheet_ui_state_308
+    21300556: sheet_ui_state_309
+    21300558: sheet_ui_state_310
+    21300560: sheet_ui_state_311
+    21300562: sheet_ui_state_312
+    21300564: sheet_ui_state_313
+    21300566: sheet_ui_state_314
+    21300568: sheet_ui_state_315
+    21300570: sheet_ui_state_316
+    21300572: sheet_ui_state_317
+    21300574: sheet_ui_state_318
+    21300576: sheet_ui_state_319
+    21300578: sheet_ui_state_320
+    21300580: sheet_ui_state_321
+    21300582: sheet_ui_state_322
+    21300584: sheet_ui_state_323
+    21300586: sheet_ui_state_324
+    21300588: sheet_ui_state_325
+    21300590: sheet_ui_state_326
+    21300592: sheet_ui_state_327
+    21300594: sheet_ui_state_328
+    21300596: sheet_ui_state_329
+    21300598: sheet_ui_state_330
+    21300600: sheet_ui_state_331
+    21300602: sheet_ui_state_332
+    21300604: sheet_ui_state_333
+    21300606: sheet_ui_state_334
+    21300608: sheet_ui_state_335
+    21300610: sheet_ui_state_336
+    21300612: sheet_ui_state_337
+    21300614: sheet_ui_state_338
+    21300616: sheet_ui_state_339
+    21300618: ui_end_back_2
+    21300620: ui_book_ic_benny
+    21300622: sheet_ui_state_342
+    21300624: sheet_ui_state_343
+    21300626: sheet_ui_state_344
+    21300628: sheet_ui_state_345
+    21300630: sheet_ui_state_346
+    21300632: sheet_ui_state_347
+    21300634: sheet_ui_state_348
+    21300636: sheet_ui_state_349
+    21300638: sheet_ui_state_350
+    21300640: sheet_ui_state_351
+    21300642: sheet_ui_state_352
+    21300644: sheet_ui_state_353
+    21300646: sheet_ui_state_354
+    21300648: sheet_ui_state_355
+    21300650: sheet_ui_state_356
+    21300652: sheet_ui_state_357
+    21300654: sheet_ui_state_358
+    21300656: sheet_ui_state_359
+    21300658: sheet_ui_state_360
+    21300660: sheet_ui_state_361
+    21300662: sheet_ui_state_362
+    21300664: sheet_ui_state_363
+    21300666: sheet_ui_state_364
+    21300668: sheet_ui_state_365
+    21300670: sheet_ui_state_366
+    21300672: sheet_ui_state_367
+    21300674: sheet_ui_state_368
+    21300676: sheet_ui_state_369
+    21300678: sheet_ui_state_370
+    21300680: sheet_ui_state_371
+    21300682: sheet_ui_state_372
+    21300684: sheet_ui_state_373
+    21300686: sheet_ui_state_374
+    21300688: sheet_ui_state_375
+    21300690: sheet_ui_state_376
+    21300692: sheet_ui_state_377
+    21300694: sheet_ui_state_378
+    21300696: sheet_ui_state_379
+    21300698: sheet_ui_state_380
+    21300700: sheet_ui_state_381
+    21300702: sheet_ui_state_382
+    21300704: sheet_ui_state_383
+    21300706: sheet_ui_state_384
+    21300708: sheet_ui_state_385
+    21300710: sheet_ui_state_386
+    21300712: sheet_ui_state_387
+    21300714: sheet_ui_state_388
+    21300716: sheet_ui_state_389
+    21300718: sheet_ui_state_390
+    21300720: sheet_ui_state_391
+    21300722: sheet_ui_state_392
+    21300724: sheet_ui_state_393
+    21300726: sheet_ui_state_394
+    21300728: sheet_ui_state_395
+    21300730: sheet_ui_state_396
+    21300732: sheet_ui_state_397
+    21300734: sheet_ui_state_398
+    21300736: sheet_ui_state_399
+    21300738: sheet_ui_state_400
+    21300740: sheet_ui_state_401
+    21300742: sheet_ui_state_402
+    21300744: sheet_ui_state_403
+    21300746: sheet_ui_state_404
+    21300748: sheet_ui_state_405
+    21300750: sheet_ui_state_406
+    21300752: sheet_ui_state_407
+    21300754: sheet_ui_state_408
+    21300756: sheet_ui_state_409
+    21300758: sheet_ui_state_410
+    21300760: sheet_ui_state_411
+    21300762: sheet_ui_state_412
+    21300764: sheet_ui_state_413
+    21300766: sheet_ui_state_414
+    21300768: sheet_ui_state_415
+    21300770: sheet_ui_state_416
+    21300772: sheet_ui_state_417
+    21300774: sheet_ui_state_418
+    21300776: sheet_ui_state_419
+    21300778: sheet_ui_state_420
+    21300780: sheet_ui_state_421
+    21300782: sheet_ui_state_422
+    21300784: ui_book_ic_kig
+    21300786: sheet_ui_state_424
+    21300788: sheet_ui_state_425
+    21300790: sheet_ui_state_426
+    21300792: sheet_ui_state_427
+    21300794: sheet_ui_state_428
+    21300796: sheet_ui_state_429
+    21300798: sheet_ui_state_430
+    21300800: sheet_ui_state_431
+    21300802: sheet_ui_state_432
+    21300804: sheet_ui_state_433
+    21300806: sheet_ui_state_434
+    21300808: sheet_ui_state_435
+    21300810: sheet_ui_state_436
+    21300812: sheet_ui_state_437
+    21300814: sheet_ui_state_438
+    21300816: sheet_ui_state_439
+    21300818: sheet_ui_state_440
+    21300820: sheet_ui_state_441
+    21300822: sheet_ui_state_442
+    21300824: sheet_ui_state_443
+    21300826: sheet_ui_state_444
+    21300828: ui_end_back_3
+    21300830: sheet_ui_state_446
+    21300832: sheet_ui_state_447
+    21300834: sheet_ui_state_448
+    21300836: sheet_ui_state_449
+    21300838: sheet_ui_state_450
+    21300840: sheet_ui_state_451
+    21300842: sheet_ui_state_452
+    21300844: sheet_ui_state_453
+    21300846: sheet_ui_state_454
+    21300848: sheet_ui_state_455
+    21300850: sheet_ui_state_456
+    21300852: sheet_ui_state_457
+    21300854: sheet_ui_state_458
+    21300856: sheet_ui_state_459
+    21300858: sheet_ui_state_460
+    21300860: sheet_ui_state_461
+    21300862: sheet_ui_state_462
+    21300864: sheet_ui_state_463
+    21300866: sheet_ui_state_464
+    21300868: sheet_ui_state_465
+    21300870: sheet_ui_state_466
+    21300872: sheet_ui_state_467
+    21300874: sheet_ui_state_468
+    21300876: sheet_ui_state_469
+    21300878: sheet_ui_state_470
+    21300880: sheet_ui_state_471
+    21300882: sheet_ui_state_472
+    21300884: sheet_ui_state_473
+    21300886: sheet_ui_state_474
+    21300888: sheet_ui_state_475
+    21300890: sheet_ui_state_476
+    21300892: sheet_ui_state_477
+    21300894: sheet_ui_state_478
+    21300896: sheet_ui_state_479
+    21300898: sheet_ui_state_480
+    21300900: sheet_ui_state_481
+    21300902: sheet_ui_state_482
+    21300904: sheet_ui_state_483
+    21300906: sheet_ui_state_484
+    21300908: sheet_ui_state_485
+    21300910: sheet_ui_state_486
+    21300912: sheet_ui_state_487
+    21300914: sheet_ui_state_488
+    21300916: sheet_ui_state_489
+    21300918: sheet_ui_state_490
+    21300920: sheet_ui_state_491
+    21300922: sheet_ui_state_492
+    21300924: sheet_ui_state_493
+    21300926: sheet_ui_state_494
+    21300928: sheet_ui_state_495
+    21300930: sheet_ui_state_496
+    21300932: sheet_ui_state_497
+    21300934: sheet_ui_state_498
+    21300936: sheet_ui_state_499
+    21300938: sheet_ui_state_500
+    21300940: sheet_ui_state_501
+    21300942: sheet_ui_state_502
+    21300944: sheet_ui_state_503
+    21300946: sheet_ui_state_504
+    21300948: sheet_ui_state_505
+    21300950: sheet_ui_state_506
+    21300952: sheet_ui_state_507
+    21300954: sheet_ui_state_508
+    21300956: sheet_ui_state_509
+    21300958: sheet_ui_state_510
+    21300960: sheet_ui_state_511
+    21300962: sheet_ui_state_512
+    21300964: sheet_ui_state_513
+    21300966: sheet_ui_state_514
+    21300968: sheet_ui_state_515
+    21300970: sheet_ui_state_516
+    21300972: sheet_ui_state_517
+    21300974: sheet_ui_state_518
+    21300976: sheet_ui_state_519
+    21300978: sheet_ui_state_520
+    21300980: sheet_ui_state_521
+    21300982: sheet_ui_state_522
+    21300984: sheet_ui_state_523
+    21300986: sheet_ui_state_524
+    21300988: sheet_ui_state_525
+    21300990: sheet_ui_state_526
+    21300992: sheet_ui_state_527
+    21300994: sheet_ui_state_528
+    21300996: sheet_ui_state_529
+    21300998: sheet_ui_state_530
+    21301000: sheet_ui_state_531
+    21301002: sheet_ui_state_532
+    21301004: sheet_ui_state_533
+    21301006: sheet_ui_state_534
+    21301008: sheet_ui_state_535
+    21301010: sheet_ui_state_536
+    21301012: sheet_ui_state_537
+    21301014: sheet_ui_state_538
+    21301016: sheet_ui_state_539
+    21301018: sheet_ui_state_540
+    21301020: sheet_ui_state_541
+    21301022: sheet_ui_state_542
+    21301024: sheet_ui_state_543
+    21301026: sheet_ui_state_544
+    21301028: sheet_ui_state_545
+    21301030: sheet_ui_state_546
+    21301032: sheet_ui_state_547
+    21301034: sheet_ui_state_548
+    21301036: sheet_ui_state_549
+    21301038: sheet_ui_state_550
+    21301040: sheet_ui_state_551
+    21301042: sheet_ui_state_552
+    21301044: sheet_ui_state_553
+    21301046: sheet_ui_state_554
+    21301048: sheet_ui_state_555
+    21301050: sheet_ui_state_557
+    21301052: sheet_ui_state_558
+    21301054: ui_messege_label
+    21301056: ui_option_label
+    21301058: sheet_ui_state_561
+    21301060: sheet_ui_state_562
+    21301062: sheet_ui_state_563
+    21301064: sheet_ui_state_564
+    21301066: sheet_ui_state_565
+    21301068: sheet_ui_state_566
+    21301070: sheet_ui_state_567
+    21301072: sheet_ui_state_568
+    21301074: sheet_ui_state_569
+    21301076: sheet_ui_state_570
+    21301078: sheet_ui_state_571
+    21301080: sheet_ui_state_572
+    21301082: sheet_ui_state_573
+    21301084: sheet_ui_state_574
+    21301086: sheet_ui_state_575
+    21301088: sheet_ui_state_576
+    21301090: sheet_ui_state_577
+    21301092: ui_end_back_4
+    21301094: sheet_ui_state_579
+    21301096: sheet_ui_state_580
+    21301098: sheet_ui_state_581
+    21301100: sheet_ui_state_582
+    21301102: sheet_ui_state_583
+    21301104: sheet_ui_state_584
+    21301106: sheet_ui_state_585
+    21301108: sheet_ui_state_586
+    21301110: sheet_ui_state_587
+    21301112: sheet_ui_state_588
+    21301114: sheet_ui_state_589
+    21301116: sheet_ui_state_590
+    21301118: sheet_ui_state_591
+    21301120: sheet_ui_state_592
+    21301122: sheet_ui_state_593
+    21301124: sheet_ui_state_594
+    21301126: sheet_ui_state_595
+    21301128: sheet_ui_state_596
+    21301130: sheet_ui_state_597
+    21301132: sheet_ui_state_598
+    21301134: sheet_ui_state_599
+    21301136: sheet_ui_state_600
+    21301138: sheet_ui_state_601
+    21301140: sheet_ui_state_602
+    21301142: sheet_ui_state_603
+    21301144: sheet_ui_state_604
+    21301146: sheet_ui_state_605
+    21301148: sheet_ui_state_606
+    21301150: sheet_ui_state_607
+    21301152: sheet_ui_state_608
+    21301154: sheet_ui_state_609
+    21301156: sheet_ui_state_610
+    21301158: sheet_ui_state_611
+    21301160: sheet_ui_state_612
+    21301162: sheet_ui_state_613
+    21301164: sheet_ui_state_614
+    21301166: sheet_ui_state_615
+    21301168: sheet_ui_state_616
+    21301170: sheet_ui_state_617
+    21301172: sheet_ui_state_618
+    21301174: sheet_ui_state_619
+    21301176: sheet_ui_state_620
+    21301178: sheet_ui_state_621
+    21301180: sheet_ui_state_622
+    21301182: sheet_ui_state_623
+    21301184: sheet_ui_state_624
+    21301186: sheet_ui_state_625
+    21301188: sheet_ui_state_626
+    21301190: sheet_ui_state_627
+    21301192: sheet_ui_state_628
+    21301194: sheet_ui_state_629
+    21301196: sheet_ui_state_630
+    21301198: sheet_ui_state_631
+    21301200: sheet_ui_state_632
+    21301202: sheet_ui_state_633
+    21301204: sheet_ui_state_634
+    21301206: sheet_ui_state_635
+    21301208: sheet_ui_state_636
+    21301210: sheet_ui_state_637
+    21301212: sheet_ui_state_638
+    21301214: sheet_ui_state_639
+    21301216: sheet_ui_state_640
+    21301218: sheet_ui_state_641
+    21301220: sheet_ui_state_642
+    21301222: sheet_ui_state_643
+    21301224: sheet_ui_state_644
+    21301226: sheet_ui_state_645
+    21301228: sheet_ui_state_646
+    21301230: sheet_ui_state_647
+    21301232: sheet_ui_state_648
+    21301234: sheet_ui_state_649
+    21301236: sheet_ui_state_650
+    21301238: sheet_ui_state_651
+    21301240: sheet_ui_state_652
+    21301242: sheet_ui_state_653
+    21301244: sheet_ui_state_654
+    21301246: sheet_ui_state_655
+    21301248: sheet_ui_state_656
+    21301250: sheet_ui_state_657
+    21301252: sheet_ui_state_658
+    21301254: sheet_ui_state_659
+    21301256: sheet_ui_state_660
+    21301258: sheet_ui_state_661
+    21301260: ui_end_text_2
+    21301262: sheet_ui_state_663
+    21301264: sheet_ui_state_664
+    21301266: sheet_ui_state_665
+    21301268: sheet_ui_state_666
+    21301270: sheet_ui_state_667
+    21301272: sheet_ui_state_668
+    21301274: sheet_ui_state_669
+    21301276: sheet_ui_state_670
+    21301278: sheet_ui_state_671
+    21301280: sheet_ui_state_672
+    21301282: sheet_ui_state_673
+    21301284: sheet_ui_state_674
+    21301286: ui_line
+    21301288: ui_book_ic_class_2
+    21301290: ui_book_ic_class_3
+    21301292: ui_book_ic_class_4
+    21301294: sheet_ui_state_679
+    21301296: sheet_ui_state_680
+    21301298: sheet_ui_state_681
+    21301300: ui_book_ic_boxer
+    21301302: ui_quest_label_2
+    21301304: sheet_ui_state_684
+    21301306: sheet_ui_state_685
+    21301308: ui_quest_ic_2
+    21301310: sheet_ui_state_687
+    21301312: sheet_ui_state_688
+    21301314: sheet_ui_state_689
+    21301316: sheet_ui_state_690
+    21301318: sheet_ui_state_691
+    21301320: ui_state_ic_3
+    21301322: ui_state_ic_4
+    21301324: ui_state_table_2
+    21301326: sheet_ui_state_695
+    21301328: sheet_ui_state_696
+    21301330: sheet_ui_state_697
+    21301332: sheet_ui_state_698
+    21301334: sheet_ui_state_699
+    21301336: sheet_ui_state_700
+    21301338: sheet_ui_state_701
+    21301340: sheet_ui_state_702
+    21301342: sheet_ui_state_703
+    21301344: sheet_ui_state_704
+    21301346: sheet_ui_state_705
+    21301348: sheet_ui_state_706
+    21301350: sheet_ui_state_707
+    21301352: ui_state_cm
+    21301354: sheet_ui_state_709
+    21301356: sheet_ui_state_710
+    21301358: sheet_ui_state_711
+    21301360: sheet_ui_state_712
+    21301362: sheet_ui_state_713
+    21301364: sheet_ui_state_714
+    21301366: sheet_ui_state_715
+    21301368: sheet_ui_state_716
+    21301370: sheet_ui_state_717
+    21301372: ui_state_cm
+    21301374: ui_state_table_2
+    21301376: ui_state_ic_3
+    21301378: ui_state_ic_4
+    21301380: ui_quest_ic_2
+    21301382: ui_quest_label_2
+    21301384: ui_quest_label_2
+    21301386: ui_line
+    21301388: ui_line
+    21301390: ui_book_ic_class_2
+    21301392: ui_book_ic_class_3
+    21301394: ui_book_ic_class_4
+    21301396: ui_end_text_2
+    21301398: sheet_ui_state_610
+    21301400: sheet_ui_state_605
+    21301402: sheet_ui_state_108
+    21301404: sheet_ui_state_109
+    21301406: ui_main_btn_guestlogin
+    21301408: ui_book_ic_engel
+    21301410: ui_book_ic_class_1
+    21301412: ui_end_text_3
+    21301414: ui_end_text_4
+    21301416: ui_state_table_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ui_state_label_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1610
+        width: 300
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_label_state
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 1990
+        width: 148
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_up_label_up
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1986
+        width: 236
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_up_pluse
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2005
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_label_1
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1963
+        width: 318
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_text_1
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1967
+        width: 334
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_up_upgradebox
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1932
+        width: 232
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_ic_1
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1852
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_ic_2
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1853
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_label_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1882
+        width: 354
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_iconbox
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1801
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_5
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1868
+        width: 80
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_btn_1
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1775
+        width: 260
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_4
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 1815
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_9
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1673
+        width: 112
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_3
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1727
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_btn_2
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1670
+        width: 260
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_gold
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1621
+        width: 366
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_1
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1606
+        width: 80
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_2
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1606
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_6
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1604
+        width: 84
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_btn_3
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1565
+        width: 260
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_up_btn_1
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1497
+        width: 264
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_night
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1403
+        width: 366
+        height: 201
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_hpbar
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1513
+        width: 519
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_hp
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1527
+        width: 4
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_exp
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 1527
+        width: 4
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1486
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_btn_4
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1460
+        width: 260
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_expbar
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1424
+        width: 519
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_up_btn_2
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 1368
+        width: 264
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_quest
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1360
+        width: 160
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_progress
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1360
+        width: 240
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_label_shop
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1363
+        width: 132
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_ic_ui_shop_ic_8
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1360
+        width: 104
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_ok
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1372
+        width: 171
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_gentleman
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1205
+        width: 366
+        height: 183
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_end
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1295
+        width: 100
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1302
+        width: 229
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_label_coin
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1296
+        width: 136
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_btn_1
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1239
+        width: 264
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui__book_label
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1323
+        width: 135
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 12, y: 12, z: 12, w: 12}
+    - name: ui_quest_ic_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1167
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_label_iteam
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1238
+        width: 132
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_textbox
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1270
+        width: 74
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 12, y: 12, z: 12, w: 12}
+    - name: effect_boss
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1191
+        width: 126
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_shop_btn_2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1109
+        width: 264
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_window_1
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1110
+        width: 156
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 28, y: 43, z: 88, w: 80}
+    - name: ui_bg_wite
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1209
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 12, y: 16, z: 16, w: 12}
+    - name: effect_survivor
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1142
+        width: 195
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_cilp
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1161
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_old
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 1021
+        width: 375
+        height: 165
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1022
+        width: 264
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: effect_fever
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1092
+        width: 126
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_close
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1110
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: effect_levelup
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1023
+        width: 234
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_yes
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1021
+        width: 172
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_no
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1021
+        width: 172
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_bg
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1058
+        width: 120
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+    - name: ui_scroll_btn
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1006
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 31, z: 0, w: 27}
+    - name: ui_window_2
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1006
+        width: 72
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 32, y: 47, z: 33, w: 42}
+    - name: ui_book_label
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 783
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_back_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 777
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_bg_scroll
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1006
+        width: 120
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 8, y: 20, z: 68, w: 20}
+    - name: ui_book_ic_pink
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 812
+        width: 366
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_back_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 541
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_benny
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 605
+        width: 366
+        height: 165
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_kig
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 387
+        width: 369
+        height: 198
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_back_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 303
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_back_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 60
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_boxer
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 11
+        width: 366
+        height: 153
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_cm
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 2004
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_table_2
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1609
+        width: 158
+        height: 431
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 158, y: 0, z: 0, w: 0}
+    - name: ui_state_ic_3
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 1723
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_ic_4
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1723
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_ic_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1167
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_quest_label_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1023
+        width: 89
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_engel
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 189
+        width: 366
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_line
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1867
+        width: 8
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_class_1
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1974
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_class_2
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 1974
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_class_3
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1974
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_ic_class_4
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 1974
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_text_2
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1881
+        width: 545
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_messege_label
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1294
+        width: 220
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_option_label
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1240
+        width: 184
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_main_btn_guestlogin
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 675
+        width: 261
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_text_3
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1789
+        width: 332
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_end_text_4
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1788
+        width: 268
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_state_table_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1609
+        width: 12
+        height: 431
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: UI
+  userData: 

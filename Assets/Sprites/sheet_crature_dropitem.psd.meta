@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: 608fa5c011a21d243ad5db7ee1290c12
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: food_shrimp_body_3
+    21300002: food_shell_body_4
+    21300004: food_anchovy_body_4
+    21300006: food_squid_body_3
+    21300008: food_guppy_body_4
+    21300010: food_guppy_tail_3
+    21300012: food_shrimp_tail_1
+    21300014: food_snail_body_3
+    21300016: food_squid_leg_3
+    21300018: food_bluecrap_body_5
+    21300020: food_bluecrap_tail_1
+    21300022: food_hermitcrap_leg_4
+    21300024: food_hermitcrap_arm_1
+    21300026: food_bluecrap_body2_4
+    21300028: food_flake
+    21300030: food_hermitcrap_body_6
+    21300032: food_basic
+    21300034: food_greentealump
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 128
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: food_shrimp_body_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 35
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_shell_body_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 34
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_anchovy_body_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 33
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_squid_body_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 33
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_guppy_body_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 26
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_guppy_tail_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 27
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_shrimp_tail_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_snail_body_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 24
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_squid_leg_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 24
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_bluecrap_body_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_bluecrap_tail_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_hermitcrap_leg_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 4
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_hermitcrap_arm_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 10
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_bluecrap_body2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_flake
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 9
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_hermitcrap_body_6
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_basic
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 17
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: food_greentealump
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: Creature
+  userData: 

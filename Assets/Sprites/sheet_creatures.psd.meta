@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: 141d9e7c9114c294b8b8cf738fe42040
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: anchovy_fin_1
+    21300002: sheet_creatures_2
+    21300004: snail_shell_1
+    21300006: anchovy_body_1
+    21300008: shrimp_body_1
+    21300010: shrimp_sw_1
+    21300012: shrimp_leg_1
+    21300014: shrimp_leg_2
+    21300016: shrimp_fin_1
+    21300018: snail_body_1
+    21300020: wiggler_3
+    21300022: guppy_eye_1
+    21300024: guppy_iris_1
+    21300026: sheet_creatures_15
+    21300028: sheet_creatures_16
+    21300030: clam_up_2
+    21300032: guppy_body_1
+    21300034: clam_pearl_1
+    21300036: clam_down_1
+    21300038: clam_up_1
+    21300040: clam_in_1
+    21300042: harmitcrap_shell_1
+    21300044: hermitcrap_crap_2
+    21300046: hermitcrap_crap_1_1
+    21300048: hermitcrap_crap_1_2
+    21300050: hermitcrap_eye_1
+    21300052: sheet_creatures_28
+    21300054: hermitcrap_leg_1_1
+    21300056: hermitcrap_leg_2_1
+    21300058: hermitcrap_leg_2_2
+    21300060: hermitcrap_leg_1_2
+    21300062: hermitcrap_body_1
+    21300064: bluecrayfish_eye_1
+    21300066: bluecrayfish_body_1
+    21300068: bluecrayfish_legdown_1
+    21300070: bluecrayfish_legdown_2
+    21300072: bluecrayfish_legup_1
+    21300074: bluecrayfish_legup_3
+    21300076: bluecrayfish_tail_1
+    21300078: bluecrayfish_crapup_1
+    21300080: anchovy_eye_1
+    21300082: anchovy_fin_3
+    21300084: anchovy_eye_1
+    21300086: anchovy_fin_3
+    21300088: wiggler_1
+    21300090: guppy_fin_3
+    21300092: guppy_fin_3
+    21300094: guppy_fin_1
+    21300096: guppy_fin_1
+    21300098: guppy_fin_1
+    21300100: wiggler_2
+    21300102: guppy_fin_4
+    21300104: guppy_fin_4
+    21300106: hermitcrap_crap_1_2
+    21300108: bluecrayfish_crapdown_1
+    21300110: anchovy_fin_2
+    21300112: guppy_fin_2
+    21300114: squid_eye_1
+    21300116: squid_body_1
+    21300118: squid_body_2
+    21300120: squid_mouth_1
+    21300122: anchovy_eye_2
+    21300124: guppy_eye_2
+    21300126: squid_eye_2
+    21300128: bluecrayfish_crapup_3
+    21300130: bluecrayfish_crapup_3
+    21300132: bluecrayfish_legup_2
+    21300134: harmitcrap_eye_2
+    21300136: bluecrayfish_eye_2
+    21300138: bluecrayfish_crapup_2
+    21300140: hermitcrap_crap_1_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: anchovy_fin_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 253
+        width: 8
+        height: 6
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snail_shell_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 235
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anchovy_body_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 230
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shrimp_body_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 242
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shrimp_sw_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 245
+        width: 9
+        height: 6
+      alignment: 9
+      pivot: {x: .788889587, y: 1.0166651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shrimp_leg_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 245
+        width: 7
+        height: 6
+      alignment: 9
+      pivot: {x: .800000846, y: .866666138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shrimp_leg_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 245
+        width: 7
+        height: 5
+      alignment: 9
+      pivot: {x: .142857149, y: .779998779}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: shrimp_fin_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 246
+        width: 8
+        height: 6
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: snail_body_1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 241
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wiggler_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 237
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_eye_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 213
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_iris_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 215
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clam_up_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 202
+        width: 47
+        height: 24
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_body_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 181
+        width: 78
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clam_pearl_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 196
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clam_down_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 177
+        width: 47
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clam_up_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 175
+        width: 47
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: clam_in_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 184
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: harmitcrap_shell_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 99
+        width: 111
+        height: 65
+      alignment: 9
+      pivot: {x: .729334772, y: .364973098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_crap_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 135
+        width: 21
+        height: 29
+      alignment: 9
+      pivot: {x: .134630471, y: .67638582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_crap_1_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 156
+        width: 20
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_crap_1_2
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 150
+        width: 41
+        height: 17
+      alignment: 9
+      pivot: {x: .0421637557, y: .665628791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_eye_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 155
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_leg_1_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 83
+        width: 22
+        height: 57
+      alignment: 9
+      pivot: {x: .86426264, y: .709393442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_leg_2_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 84
+        width: 14
+        height: 39
+      alignment: 9
+      pivot: {x: .731401742, y: .919706881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_leg_2_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 85
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: .158988953, y: .876116157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_leg_1_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 85
+        width: 26
+        height: 50
+      alignment: 9
+      pivot: {x: .132996783, y: .612627387}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_body_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 107
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: .118421055, y: .110256292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_eye_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 88
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_body_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 41
+        width: 85
+        height: 52
+      alignment: 9
+      pivot: {x: .982763827, y: .331108153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_legdown_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 72
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: .954262376, y: .646199167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_legdown_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 72
+        width: 15
+        height: 28
+      alignment: 9
+      pivot: {x: .156781003, y: .667644203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_legup_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 42
+        width: 15
+        height: 28
+      alignment: 9
+      pivot: {x: .857352316, y: .620092213}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_legup_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 43
+        width: 15
+        height: 28
+      alignment: 9
+      pivot: {x: .166875198, y: .656828463}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_tail_1
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 33
+        width: 73
+        height: 33
+      alignment: 9
+      pivot: {x: .0996693671, y: .72483629}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_crapup_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 38
+        height: 28
+      alignment: 9
+      pivot: {x: .953282177, y: .905111194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_crapup_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 10
+        width: 10
+        height: 11
+      alignment: 9
+      pivot: {x: .836091638, y: .108527966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_crapdown_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 4
+        width: 42
+        height: 28
+      alignment: 9
+      pivot: {x: .93080467, y: .464347214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anchovy_eye_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 255
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anchovy_fin_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 251
+        width: 13
+        height: 9
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wiggler_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 253
+        width: 2
+        height: 5
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: wiggler_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 246
+        width: 6
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_fin_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 228
+        width: 16
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_fin_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 177
+        width: 42
+        height: 42
+      alignment: 9
+      pivot: {x: .0428572148, y: .438095093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anchovy_fin_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 254
+        width: 8
+        height: 4
+      alignment: 9
+      pivot: {x: .175000191, y: .775001526}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_fin_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 209
+        width: 25
+        height: 16
+      alignment: 9
+      pivot: {x: .0600001514, y: .118749619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_fin_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 167
+        width: 11
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid_eye_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 17
+        width: 9
+        height: 1
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid_body_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 7
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid_body_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 8
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid_mouth_1
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 11
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: anchovy_eye_2
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 251
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_eye_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 214
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: squid_eye_2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 16
+        width: 10
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_crapup_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 41
+        width: 9
+        height: 11
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: hermitcrap_crap_1_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 141
+        width: 9
+        height: 8
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_legup_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 41
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: harmitcrap_eye_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 6
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bluecrayfish_eye_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 15
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: Creature
+  userData: 

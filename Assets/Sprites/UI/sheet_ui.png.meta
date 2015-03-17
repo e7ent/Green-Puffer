@@ -1,0 +1,453 @@
+fileFormatVersion: 2
+guid: c20f388d9c5154443915b16f93c4a303
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ui_status
+    21300002: ui_trouble
+    21300004: ui_expbar
+    21300006: ui_menu_state
+    21300008: ui_menu_exit
+    21300010: ui_menu_news
+    21300012: ui_menu_setting
+    21300014: ui_ic_new
+    21300016: ui_return
+    21300018: ui_message
+    21300020: ui_menu_up
+    21300022: ui_joystick_drag
+    21300024: ui_joystick
+    21300026: ui_talk_bubble
+    21300028: ui_menu_quest
+    21300030: ui_menu_shop
+    21300032: ui_joystick_highlight
+    21300034: ui_rank_baby
+    21300036: ui_rank_kid
+    21300038: ui_rank_adult
+    21300040: ui_rank_old
+    21300042: ui_status
+    21300044: sheet_ui_1
+    21300046: sheet_ui_2
+    21300048: sheet_ui_3
+    21300050: sheet_ui_4
+    21300052: sheet_ui_5
+    21300054: sheet_ui_6
+    21300056: sheet_ui_7
+    21300058: sheet_ui_8
+    21300060: sheet_ui_9
+    21300062: sheet_ui_10
+    21300064: sheet_ui_11
+    21300066: sheet_ui_12
+    21300068: sheet_ui_13
+    21300070: sheet_ui_14
+    21300072: sheet_ui_15
+    21300074: ui_trouble
+    21300076: ui_expbar
+    21300078: ui_menu_state
+    21300080: ui_menu_exit
+    21300082: ui_menu_news
+    21300084: ui_menu_setting
+    21300086: ui_ic_new
+    21300088: ui_return
+    21300090: ui_message
+    21300092: ui_menu_up
+    21300094: ui_joystick_drag
+    21300096: ui_joystick
+    21300098: ui_talk_bubble
+    21300100: ui_menu_quest
+    21300102: ui_menu_shop
+    21300104: ui_logo_main_2
+    21300106: ui_logo_main_3
+    21300108: ui_trouble
+    21300110: ui_mycoin
+    21300112: ui_condition_nomarl
+    21300114: ui_condition_sad
+    21300116: ui_condition_angry
+    21300118: ui_condition_happy
+    21300120: ui_joystick_drag_2
+    21300122: ui_hpbar
+    21300124: ui_hp
+    21300126: ui_exp
+    21300128: ui_ic_book
+    21300130: ui_logo_main_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ui_status
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 337
+        width: 369
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 63, y: 0, z: 57, w: 0}
+    - name: ui_trouble
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 400
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_expbar
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 542
+        width: 5
+        height: 16
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_state
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 150
+        width: 127
+        height: 154
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_exit
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 284
+        width: 76
+        height: 102
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_news
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 292
+        width: 114
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_setting
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 288
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_ic_new
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 288
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_return
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 632
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_message
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 697
+        width: 64
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 14, y: 18, z: 14, w: 14}
+    - name: ui_menu_up
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 165
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_joystick_drag
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 110
+        width: 173
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_joystick
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 110
+        width: 173
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_talk_bubble
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 518
+        width: 106
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 51, y: 32, z: 14, w: 14}
+    - name: ui_menu_quest
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 7
+        width: 141
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_shop
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 5
+        width: 119
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_joystick_highlight
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 156
+        width: 58
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_rank_baby
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 395
+        width: 115
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_rank_kid
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 395
+        width: 75
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_rank_adult
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 395
+        width: 135
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_rank_old
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 395
+        width: 135
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_mycoin
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 24
+        width: 184
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 51, y: 0, z: 83, w: 0}
+    - name: ui_condition_nomarl
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 6
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_condition_sad
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 8
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_condition_angry
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 8
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_condition_happy
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 10
+        width: 90
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_joystick_drag_2
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 153
+        width: 139
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 77, w: 0}
+    - name: ui_hpbar
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 542
+        width: 5
+        height: 16
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_hp
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 507
+        width: 185
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 90, y: 10, z: 90, w: 10}
+    - name: ui_exp
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 470
+        width: 185
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 90, y: 10, z: 90, w: 10}
+    - name: ui_ic_book
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 271
+        width: 90
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_logo_main_2
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 501
+        width: 320
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_logo_main_3
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 520
+        width: 230
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_logo_main_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 569
+        width: 888
+        height: 229
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: UI
+  userData: 

@@ -1,0 +1,70 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class TargetFollowerWithTag : MonoBehaviour
+{
+	public enum UpdateType
+	{
+		FixedUpdate,
+		Update,
+		LateUpdate,
+	}
+	public string targetTag;
+	public bool smooth = true;
+	public bool enableArea = true;
+	public Rect area;
+	public UpdateType updateType = UpdateType.FixedUpdate;
+
+	private Transform target;
+	
+	void Start()
+	{
+		target = GameObject.FindWithTag(targetTag).transform;
+	}
+
+	void FollowUpdate()
+	{
+		if (target == null)
+		{
+			var findObj = GameObject.FindWithTag(targetTag);
+			if (findObj == null) return;
+			target = findObj.transform;
+		}
+
+		var newPosition = target.position;
+		newPosition.z = transform.position.z;
+		if (smooth)
+			newPosition = Vector3.Lerp(transform.position, newPosition, Time.deltaTime);
+
+		if (enableArea)
+		{
+			newPosition.x = Mathf.Clamp(newPosition.x, area.min.x, area.max.x);
+			newPosition.y = Mathf.Clamp(newPosition.y, area.min.y, area.max.y);
+		}
+		transform.position = newPosition;
+	}
+
+	void Update()
+	{
+		if (updateType == UpdateType.Update)
+			FollowUpdate();
+	}
+
+	void FixedUpdate()
+	{
+		if (updateType == UpdateType.FixedUpdate)
+			FollowUpdate();
+	}
+
+	void LateUpdate()
+	{
+		if (updateType == UpdateType.LateUpdate)
+			FollowUpdate();
+	}
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireCube(area.center, area.size);
+	}
+}

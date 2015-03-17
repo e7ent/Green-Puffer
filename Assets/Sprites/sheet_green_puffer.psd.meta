@@ -1,0 +1,1384 @@
+fileFormatVersion: 2
+guid: b339628bae3f5e14e8719db9f29ec396
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: face_stress_4
+    21300002: face_rage_1
+    21300004: face_rage_4
+    21300006: face_sleep_1
+    21300008: 
+    21300010: face_lazy_1
+    21300012: face_lazy_2
+    21300014: face_lazy_3
+    21300016: face_pinch_1
+    21300018: face_space_out_1
+    21300020: face_space_out_3
+    21300022: face_sweat_1
+    21300024: face_fear_1
+    21300026: face_eye
+    21300028: face_hungry_3
+    21300030: face_hungry_4
+    21300032: face_pinch_2
+    21300034: face_fear_2
+    21300036: baby_fin_1
+    21300038: baby_fin_2
+    21300040: baby_fin_3
+    21300042: baby_fin_4
+    21300044: baby_nouse
+    21300046: baby_mouth
+    21300048: baby_body_1
+    21300050: baby_body_2
+    21300052: baby_body_3
+    21300054: kid_fin_1
+    21300056: kid_fin_2
+    21300058: kid_fin_3
+    21300060: kid_fin_4
+    21300062: puffers_nouse
+    21300064: kid_mouth
+    21300066: adult_fin_1
+    21300068: adult_fin_2
+    21300070: adult_fin_3
+    21300072: adult_fin_4
+    21300074: adult_mouth
+    21300076: kid_body_1
+    21300078: kid_body_2
+    21300080: kid_body_3
+    21300082: old_fin_1
+    21300084: old_fin_2
+    21300086: old_fin_3
+    21300088: old_fin_4
+    21300090: old_mouth
+    21300092: adult_body_1
+    21300094: puffers_mouth
+    21300096: adult_body_2
+    21300098: baby_eye
+    21300100: kid_eye
+    21300102: puffers_eye
+    21300104: lens_1
+    21300106: lens_2
+    21300108: lens_3
+    21300110: old_body_1
+    21300112: old_body_2
+    21300114: old_body_3
+    21300116: adult_body_3
+    21300118: baby_body_4
+    21300120: kid_body_4
+    21300122: adult_body_4
+    21300124: old_body_4
+    21300126: old_body_4
+    21300128: face_stress_2
+    21300130: face_stress_1
+    21300132: face_stress_1
+    21300134: face_rage_2
+    21300136: face_rage_2
+    21300138: face_sleep_4
+    21300140: face_sleep_4
+    21300142: face_full_3
+    21300144: face_full_3
+    21300146: face_hungry_2
+    21300148: face_hungry_2
+    21300150: face_sleep_2
+    21300152: face_stress_3
+    21300154: face_rage_3
+    21300156: face_full_1
+    21300158: face_sleep_3
+    21300160: face_full_2
+    21300162: face_hungry_1
+    21300164: face_space_out_2
+    21300166: face_stress_5
+    21300168: face_stress_6
+    21300170: face_rage_5
+    21300172: face_rage_6
+    21300174: face_sleep_5
+    21300176: face_lazy_3
+    21300178: face_lazy_4
+    21300180: accessory_pink_tail
+    21300182: accessory_gold_tail
+    21300184: accessory_ribbon
+    21300186: accessory_benny hat
+    21300188: accessory_wound
+    21300190: accessory_gloves
+    21300192: accessory_mohicanhair
+    21300194: accessory_band
+    21300196: accessory_wing
+    21300198: accessory_cutehair
+    21300200: accessory_ring
+    21300202: accessory_kig_tail
+    21300204: accessory_crown
+    21300206: accessory_knight_tail
+    21300208: accessory_knight_armor
+    21300210: accessory_knight_helmet
+    21300212: accessory_su1
+    21300214: accessory_su2
+    21300216: accessory_man_tail
+    21300218: accessory_glass
+    21300220: accessory_hat
+    21300222: accessory_su3
+    21300224: accessory_ribbon2
+    21300226: gold_eye
+    21300228: pink_eye
+    21300230: pink_nouse
+    21300232: gold_nouse
+    21300234: pink_mouth
+    21300236: gold_mouth
+    21300238: gold_body_1
+    21300240: gold_body_2
+    21300242: gold_body_3
+    21300244: gold_body_4
+    21300246: pink_body_4
+    21300248: pink_body_3
+    21300250: pink_body_2
+    21300252: pink_body_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: face_stress_4
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 364
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 358
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 359
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 359
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 356
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_lazy_1
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 356
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_lazy_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 356
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_lazy_3
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 358
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_pinch_1
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 356
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_space_out_1
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 357
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_space_out_3
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 358
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sweat_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 357
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_fear_1
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 353
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_eye
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 356
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_hungry_3
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 356
+        width: 11
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_hungry_4
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 356
+        width: 11
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_pinch_2
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 357
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_fear_2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 360
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_fin_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 294
+        width: 32
+        height: 20
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_fin_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 297
+        width: 23
+        height: 18
+      alignment: 9
+      pivot: {x: .898132324, y: .138024226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_fin_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 299
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .863378644, y: .62774837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_fin_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 302
+        width: 17
+        height: 11
+      alignment: 9
+      pivot: {x: .882352948, y: .89999944}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_nouse
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 306
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_mouth
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 307
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_body_1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 292
+        width: 74
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_body_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 294
+        width: 74
+        height: 38
+      alignment: 9
+      pivot: {x: .5, y: .469999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_body_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 290
+        width: 74
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_fin_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 266
+        width: 36
+        height: 21
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_fin_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 269
+        width: 25
+        height: 19
+      alignment: 9
+      pivot: {x: .922632754, y: .101466127}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_fin_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 271
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .907693148, y: .632225513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_fin_4
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 274
+        width: 19
+        height: 12
+      alignment: 9
+      pivot: {x: .898104191, y: .920219421}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: puffers_nouse
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 279
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_mouth
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 280
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_fin_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 236
+        width: 41
+        height: 22
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_fin_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 238
+        width: 25
+        height: 20
+      alignment: 9
+      pivot: {x: .908544898, y: .121392824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_fin_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 242
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .89283222, y: .624305248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_fin_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 246
+        width: 21
+        height: 11
+      alignment: 9
+      pivot: {x: .91074264, y: .886039019}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_mouth
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 251
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_body_1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 235
+        width: 80
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_body_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 235
+        width: 80
+        height: 42
+      alignment: 9
+      pivot: {x: .500000775, y: .46666646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_body_3
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 230
+        width: 80
+        height: 49
+      alignment: 9
+      pivot: {x: .501250088, y: .544898212}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_fin_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 206
+        width: 43
+        height: 22
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_fin_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 207
+        width: 29
+        height: 21
+      alignment: 9
+      pivot: {x: .937206149, y: .0891084224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_fin_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 211
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .852194548, y: .624304354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_fin_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 213
+        width: 23
+        height: 14
+      alignment: 9
+      pivot: {x: .913444877, y: .889930725}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_mouth
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 216
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_body_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 173
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: puffers_mouth
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 196
+        width: 4
+        height: 5
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_body_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 171
+        width: 92
+        height: 44
+      alignment: 9
+      pivot: {x: .499507397, y: .460918069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_eye
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 178
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_eye
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 179
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: puffers_eye
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 179
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lens_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 166
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lens_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 166
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lens_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 166
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_body_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 100
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_body_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 101
+        width: 92
+        height: 44
+      alignment: 9
+      pivot: {x: .496739268, y: .465908736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_body_3
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 99
+        width: 92
+        height: 52
+      alignment: 9
+      pivot: {x: .501509607, y: .548049212}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_body_3
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 100
+        width: 92
+        height: 52
+      alignment: 9
+      pivot: {x: .498913318, y: .548076928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: baby_body_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 11
+        width: 77
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: kid_body_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 6
+        width: 84
+        height: 71
+      alignment: 9
+      pivot: {x: .511954546, y: .557079256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: adult_body_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 5
+        width: 95
+        height: 77
+      alignment: 9
+      pivot: {x: .501895308, y: .574250042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: old_body_4
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 7
+        width: 95
+        height: 77
+      alignment: 9
+      pivot: {x: .498109847, y: .563032687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_stress_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 364
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_stress_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 362
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_stress_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 364
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 359
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 360
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 356
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 353
+        width: 3
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_full_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 354
+        width: 4
+        height: 2
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_full_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 354
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_hungry_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 359
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_hungry_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 354
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_space_out_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 359
+        width: 3
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_full_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 356
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_stress_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 378
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_stress_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 378
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_5
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 375
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_rage_6
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 375
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_4
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 373
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_sleep_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 373
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_lazy_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 373
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_lazy_4
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 373
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_pink_tail
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 327
+        width: 13
+        height: 18
+      alignment: 9
+      pivot: {x: .862663865, y: .596498251}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_gold_tail
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 327
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .891295791, y: .616771042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_ribbon
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 333
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_benny hat
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 333
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_wound
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 334
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_gloves
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 330
+        width: 24
+        height: 16
+      alignment: 9
+      pivot: {x: .706782043, y: .476737976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_mohicanhair
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 335
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_band
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 332
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_wing
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 327
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: .845645905, y: .489167869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_cutehair
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 343
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_ring
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 332
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_kig_tail
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 328
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .881751418, y: .609473705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_crown
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 404
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_knight_tail
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 382
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .88550508, y: .631573856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_knight_armor
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 382
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_knight_helmet
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 380
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_su1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 414
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_su2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 404
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_man_tail
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 405
+        width: 13
+        height: 17
+      alignment: 9
+      pivot: {x: .880533099, y: .632286549}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_glass
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 407
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_hat
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 406
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_su3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 416
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: accessory_ribbon2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 405
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_eye
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 179
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_eye
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 179
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_nouse
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 269
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_nouse
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 262
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_mouth
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 242
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_mouth
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 232
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_body_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 463
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_body_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 461
+        width: 92
+        height: 44
+      alignment: 9
+      pivot: {x: .499507397, y: .460918099}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_body_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 458
+        width: 92
+        height: 52
+      alignment: 9
+      pivot: {x: .498913288, y: .548076928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gold_body_4
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 434
+        width: 92
+        height: 77
+      alignment: 9
+      pivot: {x: .51177448, y: .563843548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_body_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 434
+        width: 92
+        height: 77
+      alignment: 9
+      pivot: {x: .498904347, y: .565465331}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_body_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 405
+        width: 92
+        height: 52
+      alignment: 9
+      pivot: {x: .498913288, y: .548076928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_body_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 408
+        width: 93
+        height: 44
+      alignment: 9
+      pivot: {x: .499507397, y: .460918099}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pink_body_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 410
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: Game
+  userData: 
