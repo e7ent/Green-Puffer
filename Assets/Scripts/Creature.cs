@@ -32,7 +32,7 @@ public class Creature : MonoBehaviour
 	private Animator animator;
 	private new Rigidbody2D rigidbody;
 
-	private Transform target = null;
+	private PlayerController target = null;
 
 	private float moveElapsed;
 	private Vector2 moveForce;
@@ -58,6 +58,7 @@ public class Creature : MonoBehaviour
 
 	void UpdateMovement()
 	{
+		if (life <= 0) return;
 		if (canAttack)
 		{
 			if (target != null)
@@ -66,7 +67,7 @@ public class Creature : MonoBehaviour
 				var distance = diff.magnitude;
 
 				if (distance < rageRange)
-					moveForce = diff.normalized * chaseForce;
+					moveForce = diff.normalized * chaseForce * (target.stat.CompareSize(size) < 0 ? 1 : -1);
 				else
 					target = null;
 			}
@@ -75,23 +76,10 @@ public class Creature : MonoBehaviour
 				var collider = Physics2D.OverlapCircle(transform.position, attackRange, 1 << LayerMask.NameToLayer("Player"));
 				if (collider != null)
 				{
-					target = collider.transform;
+					target = collider.GetComponent<PlayerController>();
 					moveElapsed = 0;
-					if (target.GetComponent<PlayerController>().stat.CompareSize(size) < 0)
-					{
-						foreach (var renderer in GetComponentsInChildren<Renderer>())
-						{
-							var mat = renderer.material;
-							if (mat.HasProperty("_Color") == false) continue;
-
-							var seq = DOTween.Sequence();
-							for (int i = 0; i < 2; i++)
-							{
-								seq.Append(mat.DOColor(warningColor, 0.2f));
-								seq.Append(mat.DOColor(Color.white, 0.2f));
-							}
-						}
-					}
+					if (target.stat.CompareSize(size) < 0)
+						WarnningFlash();
 				}
 			}
 		}
@@ -107,7 +95,7 @@ public class Creature : MonoBehaviour
 			force.x = 0;
 		if (freezeY)
 			force.y = 0;
-		rigidbody.AddForce(force);
+		rigidbody.AddForce(force * Time.deltaTime);
 	}
 
 	void OnDrawGizmos()
@@ -156,6 +144,7 @@ public class Creature : MonoBehaviour
 
 	public void Kill()
 	{
+		rigidbody.AddForce(rigidbody.velocity * -.5f);
 		transform.DOKill(true);
 		var ani = GetComponent<Animator>();
 		ani.SetBool("Dead", true);
@@ -168,14 +157,36 @@ public class Creature : MonoBehaviour
 	{
 		if (destroyFx)
 			Instantiate(destroyFx, transform.position, Quaternion.identity);
+		SprayItem();
+	}
+
+	private void SprayItem()
+	{
 		for (int i = 0; i < dropItemCount; i++)
 		{
 			var size = GetComponent<Collider2D>().bounds.size.magnitude;
 			Vector3 randomForce = Random.insideUnitCircle * size;
+			randomForce.y = Mathf.Abs(randomForce.y);
 			var dropedItem = Instantiate(dropItems[Random.Range(0, dropItems.Length)],
 				transform.position, Quaternion.identity) as GameObject;
 			dropedItem.GetComponent<Rigidbody2D>().AddForce(randomForce, ForceMode2D.Impulse);
 			dropedItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1, 1), ForceMode2D.Impulse);
+		}
+	}
+
+	private void WarnningFlash()
+	{
+		foreach (var renderer in GetComponentsInChildren<Renderer>())
+		{
+			var mat = renderer.material;
+			if (mat.HasProperty("_Color") == false) continue;
+
+			var seq = DOTween.Sequence();
+			for (int i = 0; i < 2; i++)
+			{
+				seq.Append(mat.DOColor(warningColor, 0.2f));
+				seq.Append(mat.DOColor(Color.white, 0.2f));
+			}
 		}
 	}
 }

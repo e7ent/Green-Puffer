@@ -33,8 +33,10 @@ public class Stat
 
 	public void Hurt(int damage = 1)
 	{
-		if ((hp -= damage) <= 0)
-			isAlive = false;
+		if ((hp -= damage) > 0)
+			return;
+		hp = 0;
+		isAlive = false;
 	}
 
 	public bool IsAlive()
@@ -56,5 +58,10 @@ public class Stat
 	public int CompareSize(float size)
 	{
 		return (int)Mathf.Sign(GetSize() - size);
+	}
+
+	public float GetHPPercent()
+	{
+		return (float)hp / (float)maxHp;
 	}
 }

@@ -79,6 +79,9 @@ public partial class PlayerController : MonoBehaviour
 	{
 		creature.Attack();
 		stat.Hurt();
+		print(stat.GetHPPercent());
+		if (stat.GetHPPercent() <= 0.2f)
+			SetBodyState(new BlowState());
 		if (GetCurrentState().GetStateType() <= StateType.Behavior)
 			SetActionState(new HurtState());
 		//if (stat.IsAlive() == false)
