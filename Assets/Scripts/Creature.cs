@@ -189,4 +189,25 @@ public class Creature : MonoBehaviour
 			}
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag(tag))
+		{
+			var dir = (other.transform.position - transform.position).normalized;
+			moveElapsed = (1.0f / randomMoveFreq);
+			var force = dir * GetMoveForce() * -0.1f;
+			if (freezeX)
+				force.x = 0;
+			if (freezeY)
+				force.y = 0;
+			rigidbody.AddForce(force);
+		}
+	}
+
+	public float GetMoveForce()
+	{
+		var force = Vector2.Max(randomMoveMinForce, randomMoveMaxForce);
+		return force.magnitude;
+	}
 }
