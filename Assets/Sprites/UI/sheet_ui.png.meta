@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: c20f388d9c5154443915b16f93c4a303
+timeCreated: 1426678844
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: ui_status
@@ -68,6 +70,7 @@ TextureImporter:
     21300126: ui_exp
     21300128: ui_ic_book
     21300130: ui_logo_main_1
+    21300132: ui_menu_marry
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -86,6 +89,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
@@ -96,6 +102,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -119,16 +126,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 63, y: 0, z: 57, w: 0}
-    - name: ui_trouble
-      rect:
-        serializedVersion: 2
-        x: 906
-        y: 400
-        width: 32
-        height: 38
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_expbar
       rect:
         serializedVersion: 2
@@ -329,46 +326,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 51, y: 0, z: 83, w: 0}
-    - name: ui_condition_nomarl
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 6
-        width: 90
-        height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_condition_sad
-      rect:
-        serializedVersion: 2
-        x: 622
-        y: 8
-        width: 90
-        height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_condition_angry
-      rect:
-        serializedVersion: 2
-        x: 724
-        y: 8
-        width: 90
-        height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_condition_happy
-      rect:
-        serializedVersion: 2
-        x: 824
-        y: 10
-        width: 90
-        height: 96
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_joystick_drag_2
       rect:
         serializedVersion: 2
@@ -412,10 +369,10 @@ TextureImporter:
     - name: ui_ic_book
       rect:
         serializedVersion: 2
-        x: 919
-        y: 271
-        width: 90
-        height: 109
+        x: 868
+        y: 278
+        width: 144
+        height: 110
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,5 +406,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_menu_marry
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 7
+        width: 154
+        height: 123
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: UI
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

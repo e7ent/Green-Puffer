@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1426665309
+timeCreated: 1426680583
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -714,6 +714,10 @@ TextureImporter:
     21301414: ui_end_text_4
     21301416: ui_state_table_3
     21301418: sheet_ui_all_0
+    21301420: ui_ending_marry_1
+    21301422: ui_ending_marry_2
+    21301424: ui_ending_die_1
+    21301426: sheet_ui_all_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -806,16 +810,6 @@ TextureImporter:
         y: 1963
         width: 318
         height: 72
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_end_text_1
-      rect:
-        serializedVersion: 2
-        x: 1636
-        y: 1967
-        width: 334
-        height: 68
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -932,8 +926,8 @@ TextureImporter:
     - name: ui_book_ic_gold
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 1621
+        x: 845
+        y: 619
         width: 366
         height: 153
       alignment: 0
@@ -992,8 +986,8 @@ TextureImporter:
     - name: ui_book_ic_night
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 1403
+        x: 845
+        y: 401
         width: 366
         height: 201
       alignment: 0
@@ -1122,8 +1116,8 @@ TextureImporter:
     - name: ui_book_ic_gentleman
       rect:
         serializedVersion: 2
-        x: 1321
-        y: 1205
+        x: 845
+        y: 203
         width: 366
         height: 183
       alignment: 0
@@ -1272,10 +1266,10 @@ TextureImporter:
     - name: ui_book_ic_old
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 1021
-        width: 375
-        height: 165
+        x: 837
+        y: 19
+        width: 378
+        height: 172
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1589,16 +1583,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_end_text_2
-      rect:
-        serializedVersion: 2
-        x: 1420
-        y: 1881
-        width: 545
-        height: 68
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_messege_label
       rect:
         serializedVersion: 2
@@ -1622,40 +1606,60 @@ TextureImporter:
     - name: ui_main_btn_guestlogin
       rect:
         serializedVersion: 2
-        x: 848
-        y: 675
+        x: 768
+        y: 1597
         width: 261
         height: 72
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_end_text_3
-      rect:
-        serializedVersion: 2
-        x: 1327
-        y: 1789
-        width: 332
-        height: 68
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_end_text_4
-      rect:
-        serializedVersion: 2
-        x: 1691
-        y: 1788
-        width: 268
-        height: 68
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_ui_all_0
       rect:
         serializedVersion: 2
-        x: 834
-        y: 205
+        x: 1632
+        y: 1612
         width: 402
         height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_ending_marry_1
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 772
+        width: 792
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_ending_die_1
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 1216
+        width: 468
+        height: 376
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_ending_marry_2
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 0
+        width: 618
+        height: 716
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_ui_all_3
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 976
+        width: 445
+        height: 206
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

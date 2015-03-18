@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b339628bae3f5e14e8719db9f29ec396
-timeCreated: 1426665412
+timeCreated: 1426679456
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -132,6 +132,10 @@ TextureImporter:
     21300250: pink_body_2
     21300252: pink_body_1
     21300254: cion
+    21300256: face_fun_1
+    21300258: face_eyehider_1
+    21300260: face_happy_1
+    21300262: face_glow_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1394,6 +1398,46 @@ TextureImporter:
         y: 358
         width: 10
         height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_fun_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 359
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_eyehider_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 349
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_happy_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_glow_1
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 334
+        width: 7
+        height: 4
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
