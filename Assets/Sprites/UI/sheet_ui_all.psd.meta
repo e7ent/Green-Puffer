@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1426592307
+timeCreated: 1426665309
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -794,7 +794,7 @@ TextureImporter:
         serializedVersion: 2
         x: 984
         y: 2005
-        width: 40
+        width: 24
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -824,7 +824,7 @@ TextureImporter:
         serializedVersion: 2
         x: 776
         y: 1932
-        width: 232
+        width: 152
         height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -982,10 +982,10 @@ TextureImporter:
     - name: ui_up_btn_1
       rect:
         serializedVersion: 2
-        x: 761
-        y: 1497
-        width: 264
-        height: 124
+        x: 804
+        y: 1477
+        width: 220
+        height: 112
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1062,10 +1062,10 @@ TextureImporter:
     - name: ui_up_btn_2
       rect:
         serializedVersion: 2
-        x: 762
-        y: 1368
-        width: 264
-        height: 124
+        x: 804
+        y: 1357
+        width: 220
+        height: 112
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1162,10 +1162,10 @@ TextureImporter:
     - name: ui_shop_btn_1
       rect:
         serializedVersion: 2
-        x: 761
-        y: 1239
-        width: 264
-        height: 124
+        x: 804
+        y: 1237
+        width: 220
+        height: 112
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1222,10 +1222,10 @@ TextureImporter:
     - name: ui_shop_btn_2
       rect:
         serializedVersion: 2
-        x: 761
-        y: 1109
-        width: 264
-        height: 124
+        x: 804
+        y: 1117
+        width: 220
+        height: 112
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
