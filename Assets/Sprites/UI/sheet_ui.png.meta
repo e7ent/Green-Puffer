@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c20f388d9c5154443915b16f93c4a303
-timeCreated: 1426678844
+timeCreated: 1426748616
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -71,6 +71,7 @@ TextureImporter:
     21300128: ui_ic_book
     21300130: ui_logo_main_1
     21300132: ui_menu_marry
+    21300134: ui_btn_share
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -413,6 +414,16 @@ TextureImporter:
         y: 7
         width: 154
         height: 123
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_share
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 181
+        width: 99
+        height: 76
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
