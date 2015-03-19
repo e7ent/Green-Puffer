@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1426680583
+timeCreated: 1426743480
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -718,6 +718,10 @@ TextureImporter:
     21301422: ui_ending_marry_2
     21301424: ui_ending_die_1
     21301426: sheet_ui_all_3
+    21301428: ui_tab_back
+    21301430: ui_book_ending_label
+    21301432: sheet_ui_all_2
+    21301434: ui_book_puffer_label
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1660,6 +1664,46 @@ TextureImporter:
         y: 976
         width: 445
         height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_tab_back
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1024
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 24, y: 0, z: 24, w: 0}
+    - name: ui_book_ending_label
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 1338
+        width: 184
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sheet_ui_all_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1119
+        width: 136
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_book_puffer_label
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1397
+        width: 180
+        height: 52
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
