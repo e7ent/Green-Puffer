@@ -43,6 +43,6 @@ public class GameManager : MonoBehaviour
 
 	public void Share()
 	{
-		GetComponent<Camera>().ren
+		//GetComponent<Camera>().ren
 	}
 }

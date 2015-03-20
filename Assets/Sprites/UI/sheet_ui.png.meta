@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c20f388d9c5154443915b16f93c4a303
-timeCreated: 1426748616
+timeCreated: 1426839700
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -72,6 +72,8 @@ TextureImporter:
     21300130: ui_logo_main_1
     21300132: ui_menu_marry
     21300134: ui_btn_share
+    21300136: ui_lodig_back
+    21300138: ui_loding_bar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -427,6 +429,26 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_lodig_back
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 4
+        width: 4
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_loding_bar
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 8
+        width: 36
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 16, y: 0, z: 16, w: 0}
   spritePackingTag: UI
   userData: 
   assetBundleName: 
