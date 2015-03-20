@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class SpeechBubble : UIBehaviour
 {
+	public System.Action<SpeechBubble> onEffectFinish;
+
 	public enum SpeechBubbleEffect
 	{
 		None = 0,
@@ -51,7 +53,7 @@ public class SpeechBubble : UIBehaviour
 	public SpeechBubble SetMessage(string text)
 	{
 		var col = Mathf.Min(text.Length, maxWidthSize / messageText.fontSize);
-		var row = Mathf.Max(text.Length / col, 1);
+		var row = Mathf.Max(Mathf.CeilToInt(text.Length / col), 1);
 		var newSize = new Vector2(col, row) * messageText.fontSize;
 		newSize.x += originSize.x - messageText.fontSize;
 		bubbleTransform.sizeDelta = Vector2.Max(originSize, newSize);
@@ -126,9 +128,16 @@ public class SpeechBubble : UIBehaviour
 			for (int i = 0; i <= message.Length; i++)
 			{
 				messageText.text = message.Substring(0, i);
-				yield return new WaitForSeconds(.25f);
+				yield return StartCoroutine(WaitForRealSeconds(.1f));
 			}
 			if (effects != SpeechBubbleEffect.RepeatTypewriter) break;
 		} while (true);
+		onEffectFinish(this);
+	}
+	IEnumerator WaitForRealSeconds(float seconds)
+	{
+		var start = Time.unscaledTime + seconds;
+		while (Time.unscaledTime < start)
+			yield return null;
 	}
 }

@@ -18,6 +18,9 @@
 	Full = 14,
 	Blow = 15,
 	Move = 16,
+	Die = 17,
+	Hayyp = 18,
+	Fun = 19,
 }
 
 public enum StateType

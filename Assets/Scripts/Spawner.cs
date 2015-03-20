@@ -31,11 +31,13 @@ public class Spawner : MonoBehaviour
 	private List<SpawnerMark> spawned = new List<SpawnerMark>();
 	private float elapsed = 0;
 
-	void Update()
+	private void Update()
 	{
-		if (GetCount() >= maxCount) return;
+		if (GetCreatedCount() >= maxCount) return;
+
 		if ((elapsed += Time.deltaTime) < createTime) return;
 		elapsed = 0;
+		
 		var newObject = Create(Random.Range(0, prefabs.Count));
 		newObject.transform.parent = transform;
 		newObject.transform.position = spawnRect.center +
@@ -43,6 +45,7 @@ public class Spawner : MonoBehaviour
 				Random.Range(spawnRect.size.x * -.5f, spawnRect.size.x * .5f),
 				Random.Range(spawnRect.size.y * -.5f, spawnRect.size.y * .5f)
 				);
+
 		if (spawnFx)
 			Instantiate(spawnFx, newObject.transform.position, Quaternion.identity);
 	}
@@ -55,12 +58,12 @@ public class Spawner : MonoBehaviour
 		return obj;
 	}
 
-	public int GetCount()
+	public int GetCreatedCount()
 	{
 		return spawned.Count;
 	}
 
-	void OnDrawGizmos()
+	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireCube(spawnRect.center, spawnRect.size);

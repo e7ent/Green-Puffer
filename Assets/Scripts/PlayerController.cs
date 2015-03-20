@@ -25,12 +25,15 @@ public partial class PlayerController : MonoBehaviour
 
 	void Update()
 	{
+		UpdateState();
+
+		if (stat.IsAlive() == false)
+			return;
 		var velocity = rigidbody.velocity;
 		transform.rotation = Quaternion.Lerp(transform.rotation,
 			Quaternion.AngleAxis(velocity.y * 10 * Mathf.Sign(transform.localScale.x), transform.forward),
 			Time.deltaTime * 5);
 
-		UpdateState();
 	}
 
 	public void Move(Vector2 movement)
@@ -64,7 +67,7 @@ public partial class PlayerController : MonoBehaviour
 		if (stat.IsCompletion() && nextGenerationPrefab != null)
 		{
 			var newPuffer = Instantiate(nextGenerationPrefab, transform.position, Quaternion.identity) as GameObject;
-			GameManager.instance.SetPuffer(newPuffer.GetComponent<PlayerController>());
+			GameManager.instance.SetPlayer(newPuffer.GetComponent<PlayerController>());
 			Destroy(gameObject);
 		}
 	}
@@ -77,16 +80,13 @@ public partial class PlayerController : MonoBehaviour
 
 	public void Hurt(Creature creature)
 	{
+		transform.DOKill(true);
 		creature.Attack();
 		stat.Hurt();
-		print(stat.GetHPPercent());
-		if (stat.GetHPPercent() <= 0.2f)
+		if (stat.GetHPPercent() <= 0.2f && !CompareStateAnimationType(StateAnimationType.Blow))
 			SetBodyState(new BlowState());
 		if (GetCurrentState().GetStateType() <= StateType.Behavior)
 			SetActionState(new HurtState());
-		//if (stat.IsAlive() == false)
-		//	Destroy(gameObject);
-		transform.DOKill(true);
 
 		foreach (var renderer in GetComponentsInChildren<Renderer>())
 		{
@@ -98,6 +98,17 @@ public partial class PlayerController : MonoBehaviour
 			{
 				seq.Append(mat.DOColor(hurtColor, 0.1f));
 				seq.Append(mat.DOColor(Color.white, 0.1f));
+			}
+		}
+
+		if (stat.IsAlive() == false)
+		{
+			GameManager.instance.joystick.valueChange.RemoveAllListeners();
+			SetActionState(new DeathState());
+			rigidbody.isKinematic = true;
+			foreach (var col in GetComponentsInChildren<Collider2D>())
+			{
+				col.isTrigger = true;
 			}
 		}
 	}

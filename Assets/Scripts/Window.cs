@@ -2,17 +2,16 @@
 using UnityEngine.UI;
 using System.Collections;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class WindowController : MonoBehaviour
+public class Window : UIBehaviour
 {
-	[SerializeField]
-	private Image titleImage;
-	[SerializeField]
-	private Button closeButton;
-	[SerializeField]
-	private RectTransform content;
+	protected override void OnEnable()
+	{
+		Show();
+	}
 
-	void OnEnable()
+	public void Show()
 	{
 		Time.timeScale = 0.00001f;
 		transform.localScale = Vector3.zero;
@@ -27,5 +26,4 @@ public class WindowController : MonoBehaviour
 			Time.timeScale = 1;
 		});
 	}
-
 }

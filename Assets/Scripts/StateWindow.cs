@@ -10,7 +10,7 @@ public class StateWindow : MonoBehaviour
 
 	void OnEnable()
 	{
-		var puffer = GameManager.instance.puffer;
+		var puffer = GameManager.instance.player;
 		if (puffer == null) return;
 
 		ageText.text = puffer.stat.name;

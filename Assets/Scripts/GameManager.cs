@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
 
 	public int generation = 0;
 
-	public PlayerController puffer;
+	public PlayerController player;
 	public JoystickSystem joystick;
+
+	public Transform endingPrefab;
 
 	void Awake()
 	{
@@ -21,15 +23,21 @@ public class GameManager : MonoBehaviour
 		Application.targetFrameRate = 60;
 		DOTween.Init();
 
-		SetPuffer(FindObjectOfType<PlayerController>());
+		SetPlayer(FindObjectOfType<PlayerController>());
+		FadeManager.FadeIn();
 	}
 
-	public void SetPuffer(PlayerController puffer)
+	public void SetPlayer(PlayerController player)
 	{
-		if (puffer == null)
+		if (player == null)
 			Debug.LogError("Arg is null");
-		this.puffer = puffer;
+		this.player = player;
 		joystick.valueChange.RemoveAllListeners();
-		joystick.valueChange.AddListener(puffer.Move);
+		joystick.valueChange.AddListener(player.Move);
+	}
+
+	public void EndGame()
+	{
+		Instantiate(endingPrefab);
 	}
 }

@@ -10,7 +10,7 @@ public class Creature : MonoBehaviour
 	public float size = 1;
 	public int life;
 
-	public GameObject[] dropItems;
+	public GameObject[] dropItemPrefabs;
 	public int dropItemCount;
 
 	public GameObject hurtFx;
@@ -58,7 +58,7 @@ public class Creature : MonoBehaviour
 
 	void UpdateMovement()
 	{
-		if (life <= 0) return;
+		if (IsAlive() == false) return;
 		if (canAttack)
 		{
 			if (target != null)
@@ -98,14 +98,6 @@ public class Creature : MonoBehaviour
 		rigidbody.AddForce(force * Time.deltaTime);
 	}
 
-	void OnDrawGizmos()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, attackRange);
-		Gizmos.color = Color.magenta;
-		Gizmos.DrawWireSphere(transform.position, rageRange);
-	}
-
 	public void Attack()
 	{
 		animator.SetTrigger("Attack");
@@ -113,6 +105,7 @@ public class Creature : MonoBehaviour
 
 	public void Hurt(int damage = 1)
 	{
+		if (IsAlive() == false) return;
 		if ((life -= damage) <= 0)
 		{
 			life = 0;
@@ -157,17 +150,20 @@ public class Creature : MonoBehaviour
 	{
 		if (destroyFx)
 			Instantiate(destroyFx, transform.position, Quaternion.identity);
-		SprayItem();
+		DropItems();
 	}
 
-	private void SprayItem()
+	public void DropItems()
 	{
+		if (dropItemPrefabs.Length <= 0)
+			return;
+
 		for (int i = 0; i < dropItemCount; i++)
 		{
 			var size = GetComponent<Collider2D>().bounds.size.magnitude;
 			Vector3 randomForce = Random.insideUnitCircle * size;
 			randomForce.y = Mathf.Abs(randomForce.y);
-			var dropedItem = Instantiate(dropItems[Random.Range(0, dropItems.Length)],
+			var dropedItem = Instantiate(dropItemPrefabs[Random.Range(0, dropItemPrefabs.Length)],
 				transform.position, Quaternion.identity) as GameObject;
 			dropedItem.GetComponent<Rigidbody2D>().AddForce(randomForce, ForceMode2D.Impulse);
 			dropedItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1, 1), ForceMode2D.Impulse);
@@ -190,7 +186,18 @@ public class Creature : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
+	public float GetMoveForce()
+	{
+		var force = Vector2.Max(randomMoveMinForce, randomMoveMaxForce);
+		return force.magnitude;
+	}
+
+	public bool IsAlive()
+	{
+		return life > 0;
+	}
+
+	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.gameObject.CompareTag(tag))
 		{
@@ -205,9 +212,11 @@ public class Creature : MonoBehaviour
 		}
 	}
 
-	public float GetMoveForce()
+	void OnDrawGizmos()
 	{
-		var force = Vector2.Max(randomMoveMinForce, randomMoveMaxForce);
-		return force.magnitude;
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.position, attackRange);
+		Gizmos.color = Color.magenta;
+		Gizmos.DrawWireSphere(transform.position, rageRange);
 	}
 }
