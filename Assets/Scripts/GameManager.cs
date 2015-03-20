@@ -40,4 +40,9 @@ public class GameManager : MonoBehaviour
 	{
 		Instantiate(endingPrefab);
 	}
+
+	public void Share()
+	{
+		GetComponent<Camera>().ren
+	}
 }
