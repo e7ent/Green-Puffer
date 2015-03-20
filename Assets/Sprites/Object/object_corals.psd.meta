@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 72267a497794bc94f802095d5dfb05b2
-timeCreated: 1426587518
+timeCreated: 1426845578
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,8 +64,8 @@ TextureImporter:
         y: 169
         width: 67
         height: 63
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .483240277, y: .213898197}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_a_1
       rect:
@@ -74,8 +74,8 @@ TextureImporter:
         y: 169
         width: 63
         height: 63
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .449654728, y: .214492306}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_a_2
       rect:
@@ -84,8 +84,8 @@ TextureImporter:
         y: 168
         width: 57
         height: 63
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .407098055, y: .230946377}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_0
       rect:
@@ -94,8 +94,8 @@ TextureImporter:
         y: 87
         width: 70
         height: 56
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .48999998, y: .169643}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_1
       rect:
@@ -104,8 +104,8 @@ TextureImporter:
         y: 87
         width: 70
         height: 56
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .475714326, y: .169643134}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_2
       rect:
@@ -114,8 +114,8 @@ TextureImporter:
         y: 87
         width: 70
         height: 55
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .461428612, y: .170909256}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_c_0
       rect:
@@ -124,8 +124,8 @@ TextureImporter:
         y: 14
         width: 71
         height: 54
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .459415376, y: .193666592}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_c_1
       rect:
@@ -134,8 +134,8 @@ TextureImporter:
         y: 14
         width: 71
         height: 58
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .459900558, y: .178933933}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
