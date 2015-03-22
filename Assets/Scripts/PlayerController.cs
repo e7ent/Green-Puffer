@@ -42,7 +42,7 @@ public partial class PlayerController : MonoBehaviour
 		theScale.x = Mathf.Abs(theScale.x) * Mathf.Sign(movement.x);
 		transform.localScale = theScale;
 
-		rigidbody.AddForce(movement * stat.force);
+		rigidbody.AddForce(movement * stat.force * Time.deltaTime);
 
 		if (GetCurrentState() != null)
 		{
