@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 72267a497794bc94f802095d5dfb05b2
-timeCreated: 1426845578
+timeCreated: 1427106447
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,10 +12,19 @@ TextureImporter:
     21300010: coral_b_2
     21300012: coral_c_0
     21300014: coral_c_1
+    21300016: coral_c_4
+    21300018: coral_b_4
+    21300020: coral_a_3
+    21300022: coral_a_1_0
+    21300024: coral_a_1_1
+    21300026: coral_a_1_2
+    21300028: coral_a_2_0
+    21300030: coral_a_2_1
+    21300032: coral_a_2_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -34,7 +43,7 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 256
   textureSettings:
     filterMode: 0
@@ -60,82 +69,172 @@ TextureImporter:
     - name: coral_a_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 169
-        width: 67
-        height: 63
+        x: 1
+        y: 206
+        width: 50
+        height: 50
       alignment: 9
-      pivot: {x: .483240277, y: .213898197}
+      pivot: {x: .6272403, y: .0338983163}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_a_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 169
-        width: 63
-        height: 63
+        x: 81
+        y: 206
+        width: 52
+        height: 50
       alignment: 9
-      pivot: {x: .449654728, y: .214492306}
+      pivot: {x: .524654806, y: .030492248}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_a_2
       rect:
         serializedVersion: 2
-        x: 176
-        y: 168
-        width: 57
-        height: 63
+        x: 158
+        y: 206
+        width: 50
+        height: 49
       alignment: 9
-      pivot: {x: .407098055, y: .230946377}
+      pivot: {x: .445098281, y: .0329873227}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 87
+        x: 1
+        y: 49
         width: 70
-        height: 56
+        height: 48
       alignment: 9
-      pivot: {x: .48999998, y: .169643}
+      pivot: {x: .489988267, y: .0738097802}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_1
       rect:
         serializedVersion: 2
-        x: 93
-        y: 87
+        x: 85
+        y: 49
         width: 70
-        height: 56
+        height: 48
       alignment: 9
-      pivot: {x: .475714326, y: .169643134}
+      pivot: {x: .47714287, y: .0740427971}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_b_2
       rect:
         serializedVersion: 2
-        x: 177
-        y: 87
+        x: 169
+        y: 49
         width: 70
-        height: 55
+        height: 47
       alignment: 9
-      pivot: {x: .461428612, y: .170909256}
+      pivot: {x: .447142899, y: .0560158268}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_c_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 14
+        x: 2
+        y: 0
         width: 71
-        height: 54
-      alignment: 9
-      pivot: {x: .459415376, y: .193666592}
+        height: 45
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: coral_c_1
       rect:
         serializedVersion: 2
-        x: 132
-        y: 14
+        x: 94
+        y: 0
         width: 71
-        height: 58
+        height: 48
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_c_4
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 239
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_b_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 25
+        width: 47
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 152
+        width: 50
+        height: 50
       alignment: 9
-      pivot: {x: .459900558, y: .178933933}
+      pivot: {x: .629999995, y: .0299999993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_1_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 152
+        width: 52
+        height: 50
+      alignment: 9
+      pivot: {x: .525000036, y: .0320001207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_1_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 152
+        width: 50
+        height: 49
+      alignment: 9
+      pivot: {x: .446000069, y: .0326531865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 100
+        width: 50
+        height: 50
+      alignment: 9
+      pivot: {x: .623740971, y: .0322593674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_2_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 100
+        width: 52
+        height: 50
+      alignment: 9
+      pivot: {x: .523265421, y: .0281782523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: coral_a_2_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 100
+        width: 50
+        height: 49
+      alignment: 9
+      pivot: {x: .447401136, y: .0267791748}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
