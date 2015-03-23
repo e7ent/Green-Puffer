@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PufferAnimator : MonoBehaviour
+public class PlayerAnimator : MonoBehaviour
 {
 	public Animator eye;
 	public Animator nose;

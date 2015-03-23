@@ -2,27 +2,21 @@
 using System.Collections;
 using DG.Tweening;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-	public static GameManager instance { get; private set; }
-
 	public int generation = 0;
-
 	public PlayerController player;
 	public JoystickSystem joystick;
-
 	public Transform endingPrefab;
 
-	void Awake()
-	{
-		instance = this;
-	}
-
-	void Start()
+	protected override void Awake()
 	{
 		Application.targetFrameRate = 60;
 		DOTween.Init();
+	}
 
+	private void Start()
+	{
 		SetPlayer(FindObjectOfType<PlayerController>());
 		FadeManager.FadeIn();
 	}
@@ -39,10 +33,5 @@ public class GameManager : MonoBehaviour
 	public void EndGame()
 	{
 		Instantiate(endingPrefab);
-	}
-
-	public void Share()
-	{
-		//GetComponent<Camera>().ren
 	}
 }

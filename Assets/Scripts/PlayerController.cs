@@ -5,16 +5,18 @@ using DG.Tweening;
 
 public partial class PlayerController : MonoBehaviour
 {
+	public System.Action<PlayerController> onDestroy;
+
 	public Stat stat;
 	public GameObject nextGenerationPrefab;
 	public Color hurtColor = Color.red;
 
-	private PufferAnimator animator;
+	private PlayerAnimator animator;
 	private new Rigidbody2D rigidbody;
 
 	void Awake()
 	{
-		animator = GetComponent<PufferAnimator>();
+		animator = GetComponent<PlayerAnimator>();
 		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
@@ -103,6 +105,8 @@ public partial class PlayerController : MonoBehaviour
 
 		if (stat.IsAlive() == false)
 		{
+			if (onDestroy != null)
+				onDestroy(this);
 			GameManager.instance.joystick.valueChange.RemoveAllListeners();
 			SetActionState(new DeathState());
 			rigidbody.isKinematic = true;
