@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1427173904
+timeCreated: 1427189600
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -726,6 +726,9 @@ TextureImporter:
     21301438: ui_btn_facebook
     21301440: ui_btn_twitter
     21301442: ui_share_label
+    21301444: ui_loading_1
+    21301446: ui_loading_2
+    21301448: ui_loading_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1721,26 +1724,6 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 1, y: 1, z: 1, w: 1}
-    - name: ui_btn_facebook
-      rect:
-        serializedVersion: 2
-        x: 1273
-        y: 1249
-        width: 76
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_btn_twitter
-      rect:
-        serializedVersion: 2
-        x: 1358
-        y: 1249
-        width: 76
-        height: 80
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_share_label
       rect:
         serializedVersion: 2
@@ -1748,6 +1731,56 @@ TextureImporter:
         y: 1181
         width: 148
         height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_twitter
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1677
+        width: 160
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_btn_facebook
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 1783
+        width: 160
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_loading_1
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1599
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_loading_2
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1593
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_loading_3
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 1579
+        width: 90
+        height: 90
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
