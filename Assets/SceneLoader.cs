@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Soomla.Profile;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class SceneLoader : MonoBehaviour
 	public string sceneName;
 
 	public Slider progressControl;
+
+	[SerializeField]
+	private float progressValue = 0;
 
 	void Start()
 	{
@@ -17,7 +21,7 @@ public class SceneLoader : MonoBehaviour
 
 	void Update()
 	{
-
+		progressControl.value = progressValue;
 	}
 
 	public void LoadScene()
@@ -30,10 +34,24 @@ public class SceneLoader : MonoBehaviour
 
 	private IEnumerator LoadSceneWithProgressBar()
 	{
+		bool profileInit = false;
+		ProfileEvents.OnSoomlaProfileInitialized = () => profileInit = true;
+		SoomlaProfile.Initialize();
+		while (profileInit != true)
+			yield return null;
+
+		progressValue = .3f;
+
+		SoomlaProfile.Login(Provider.FACEBOOK);
+		while (SoomlaProfile.IsLoggedIn(Provider.FACEBOOK) != true)
+			yield return null;
+
+		progressValue = .6f;
+
 		var op = Application.LoadLevelAsync(sceneName);
 		while (!op.isDone)
 		{
-			progressControl.value = op.progress;
+			progressValue = .6f + (op.progress * 0.3f);
 			yield return null;
 		}
 	}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using DG.Tweening;
+using Soomla.Profile;
 
 public class GameManager : MonoSingleton<GameManager>
 {
