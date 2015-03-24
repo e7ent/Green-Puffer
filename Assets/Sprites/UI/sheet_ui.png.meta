@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c20f388d9c5154443915b16f93c4a303
-timeCreated: 1426848490
+timeCreated: 1427181710
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -432,23 +432,23 @@ TextureImporter:
     - name: ui_loading_back
       rect:
         serializedVersion: 2
-        x: 528
-        y: 4
-        width: 44
-        height: 80
+        x: 532
+        y: 24
+        width: 36
+        height: 40
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 21, y: 21, z: 21, w: 21}
+      border: {x: 16, y: 12, z: 16, w: 16}
     - name: ui_loading_bar
       rect:
         serializedVersion: 2
-        x: 585
-        y: 8
-        width: 36
-        height: 72
+        x: 576
+        y: 28
+        width: 28
+        height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 17, y: 17, z: 17, w: 17}
+      border: {x: 12, y: 12, z: 12, w: 12}
   spritePackingTag: UI
   userData: 
   assetBundleName: 
