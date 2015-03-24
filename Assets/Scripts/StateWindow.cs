@@ -10,14 +10,14 @@ public class StateWindow : MonoBehaviour
 
 	void OnEnable()
 	{
-		var puffer = GameManager.instance.player;
-		if (puffer == null) return;
+		var player = FindObjectOfType<PlayerController>();
+		if (player == null) return;
 
-		ageText.text = puffer.stat.name;
+		ageText.text = player.stat.name;
 		genText.text = GameManager.instance.generation + " Gen";
-		sizeText.text = puffer.stat.GetSize() + " Cm";
+		sizeText.text = player.stat.GetSize() + " Cm";
 
-		expBar.fillAmount = (float)puffer.stat.exp / puffer.stat.maxExp;
-		hpBar.fillAmount = (float)puffer.stat.hp / puffer.stat.maxHp;
+		expBar.fillAmount = (float)player.stat.exp / player.stat.maxExp;
+		hpBar.fillAmount = (float)player.stat.hp / player.stat.maxHp;
 	}
 }

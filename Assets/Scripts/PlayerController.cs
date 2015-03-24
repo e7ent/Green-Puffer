@@ -23,6 +23,8 @@ public partial class PlayerController : MonoBehaviour
 	void Start()
 	{
 		StartState();
+
+		JoystickSystem.instance.valueChange.AddListener(Move);
 	}
 
 	void Update()
@@ -31,11 +33,34 @@ public partial class PlayerController : MonoBehaviour
 
 		if (stat.IsAlive() == false)
 			return;
+
 		var velocity = rigidbody.velocity;
+
 		transform.rotation = Quaternion.Lerp(transform.rotation,
 			Quaternion.AngleAxis(velocity.y * 10 * Mathf.Sign(transform.localScale.x), transform.forward),
 			Time.deltaTime * 5);
+	}
 
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		var colliedObject = coll.gameObject;
+		if (!colliedObject.CompareTag("Creature")) return;
+
+		var creature = colliedObject.GetComponent<Creature>();
+		if (creature == null)
+			return;
+
+		if (stat.CompareSize(creature.size) >= 0)
+			Attack(creature);
+		else
+			Hurt(creature);
+
+		var diff = (creature.gameObject.transform.position - transform.position).normalized;
+		var otherRigidbody = creature.gameObject.GetComponent<Rigidbody2D>();
+		var totalMass = rigidbody.mass + otherRigidbody.mass;
+		var force = Mathf.Clamp(rigidbody.velocity.magnitude + otherRigidbody.velocity.magnitude, 0.1f, 1.0f);
+		rigidbody.AddForce(-diff * force * (otherRigidbody.mass / totalMass), ForceMode2D.Impulse);
+		otherRigidbody.AddForce(diff * force * (rigidbody.mass / totalMass) * otherRigidbody.mass, ForceMode2D.Impulse);
 	}
 
 	public void Move(Vector2 movement)
@@ -68,9 +93,7 @@ public partial class PlayerController : MonoBehaviour
 
 		if (stat.IsCompletion() && nextGenerationPrefab != null)
 		{
-			var newPuffer = Instantiate(nextGenerationPrefab, transform.position, Quaternion.identity) as GameObject;
-			GameManager.instance.SetPlayer(newPuffer.GetComponent<PlayerController>());
-			Destroy(gameObject);
+			RebirthNextGeneration();
 		}
 	}
 
@@ -104,43 +127,35 @@ public partial class PlayerController : MonoBehaviour
 		}
 
 		if (stat.IsAlive() == false)
-		{
-			if (onDestroy != null)
-				onDestroy(this);
-			GameManager.instance.joystick.valueChange.RemoveAllListeners();
-			SetActionState(new DeathState());
-			rigidbody.isKinematic = true;
-			foreach (var col in GetComponentsInChildren<Collider2D>())
-			{
-				col.isTrigger = true;
-			}
-		}
+			Kill();
 	}
 
-	void OnCollisionEnter2D(Collision2D coll)
+	public void RebirthNextGeneration()
 	{
-		var colliedObject = coll.gameObject;
-		if (!colliedObject.CompareTag("Creature")) return;
-
-		var creature = colliedObject.GetComponent<Creature>();
-		if (creature == null)
-			return;
-
-		if (stat.CompareSize(creature.size) >= 0)
-			Attack(creature);
-		else
-			Hurt(creature);
-
-		var diff = (creature.gameObject.transform.position - transform.position).normalized;
-		var otherRigidbody = creature.gameObject.GetComponent<Rigidbody2D>();
-		var totalMass = rigidbody.mass + otherRigidbody.mass;
-		var force = Mathf.Clamp(rigidbody.velocity.magnitude + otherRigidbody.velocity.magnitude, 0.1f, 1.0f);
-		rigidbody.AddForce(-diff * force * (otherRigidbody.mass / totalMass), ForceMode2D.Impulse);
-		otherRigidbody.AddForce(diff * force * (rigidbody.mass / totalMass) * otherRigidbody.mass, ForceMode2D.Impulse);
+		Instantiate(nextGenerationPrefab, transform.position, Quaternion.identity);
+		Destroy();
 	}
 
-	public void SetFat(int fat)
+	public void Kill()
 	{
-		this.stat.fat = fat;
+		if (onDestroy != null)
+			onDestroy(this);
+
+		SetActionState(new DeathState());
+		rigidbody.isKinematic = true;
+		foreach (var col in GetComponentsInChildren<Collider2D>())
+			col.isTrigger = true;
+		
+		//Destroy();
+	}
+
+	public void Destroy()
+	{
+		if (onDestroy != null)
+			onDestroy(this);
+
+		JoystickSystem.instance.valueChange.RemoveListener(Move);
+
+		GameObject.Destroy(gameObject);
 	}
 }

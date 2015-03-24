@@ -6,33 +6,42 @@ using Soomla.Profile;
 public class GameManager : MonoSingleton<GameManager>
 {
 	public int generation = 0;
-	public PlayerController player;
-	public JoystickSystem joystick;
-	public Transform endingPrefab;
+
+	private bool isPaused = false;
 
 	protected override void Awake()
 	{
+		base.Awake();
 		Application.targetFrameRate = 60;
 		DOTween.Init();
+		DontDestroyOnLoad(this);
 	}
 
 	private void Start()
 	{
-		SetPlayer(FindObjectOfType<PlayerController>());
 		FadeManager.FadeIn();
 	}
 
-	public void SetPlayer(PlayerController player)
+	public void Pause()
 	{
-		if (player == null)
-			Debug.LogError("Arg is null");
-		this.player = player;
-		joystick.valueChange.RemoveAllListeners();
-		joystick.valueChange.AddListener(player.Move);
+		if (isPaused)
+			return;
+
+		isPaused = true;
+		Time.timeScale = 0.00001f;
 	}
 
-	public void EndGame()
+	public void Resume()
 	{
-		Instantiate(endingPrefab);
+		if (!isPaused)
+			return;
+
+		isPaused = false;
+		Time.timeScale = 1;
+	}
+
+	public bool IsPaused()
+	{
+		return isPaused;
 	}
 }

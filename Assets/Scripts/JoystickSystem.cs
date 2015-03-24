@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using DG.Tweening;
 
-public class JoystickSystem : MonoBehaviour
+public class JoystickSystem : MonoSingleton<JoystickSystem>
 {
 	[System.Serializable]
 	public class JoystickEvent : UnityEvent<Vector2> { }

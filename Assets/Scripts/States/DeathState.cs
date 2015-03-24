@@ -22,7 +22,7 @@ public class DeathState : IState
 			seq.Append(owner.transform.DOMoveY(2.9f, 2).SetEase(Ease.Linear));
 			seq.OnComplete(() =>
 			{
-				GameManager.instance.EndGame();
+				//GameManager.instance.EndGame();
 			});
 		};
 	}

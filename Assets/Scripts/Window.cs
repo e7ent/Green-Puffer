@@ -6,33 +6,38 @@ using UnityEngine.EventSystems;
 
 public class Window : UIBehaviour
 {
-	private bool isShow = false;
+	private bool isVisible = false;
 	protected override void OnEnable()
 	{
-		Show();
+		if (!IsVisible())
+			gameObject.SetActive(false);
 	}
 
 	public void Show()
 	{
-		if (isShow) return;
+		if (isVisible) return;
+		isVisible = true;
 
-		gameObject.SetActive(true);
-		Time.timeScale = 0.00001f;
 		transform.localScale = Vector3.zero;
+		gameObject.SetActive(true);
+		GameManager.instance.Pause();
 		transform.DOScale(Vector3.one, .3f).SetEase(Ease.OutBack);
-
-		isShow = true;
 	}
 
 	public void Close()
 	{
-		if (!isShow) return;
+		if (!isVisible) return;
+		isVisible = false;
 
-		isShow = false;
 		transform.DOScale(Vector3.zero, .3f).SetEase(Ease.InBack).OnComplete(() =>
 		{
 			gameObject.SetActive(false);
 			Time.timeScale = 1;
 		});
+	}
+
+	public bool IsVisible()
+	{
+		return isVisible;
 	}
 }

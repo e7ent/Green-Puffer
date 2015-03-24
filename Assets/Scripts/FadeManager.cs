@@ -7,6 +7,12 @@ public class FadeManager : MonoSingleton<FadeManager>
 {
 	public delegate void FadeCallback();
 
+	protected override void Awake()
+	{
+		base.Awake();
+		DontDestroyOnLoad(this);
+	}
+
 	/// <summary>
 	/// 검은색에서 투명으로 페이드인 된다.
 	/// </summary>

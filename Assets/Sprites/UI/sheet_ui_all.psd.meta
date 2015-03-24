@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1427189600
+timeCreated: 1427191155
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1757,28 +1757,28 @@ TextureImporter:
     - name: ui_loading_1
       rect:
         serializedVersion: 2
-        x: 1311
-        y: 1599
-        width: 48
-        height: 48
+        x: 1310
+        y: 1567
+        width: 90
+        height: 90
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_loading_2
       rect:
         serializedVersion: 2
-        x: 1363
-        y: 1593
-        width: 60
-        height: 60
+        x: 1400
+        y: 1567
+        width: 90
+        height: 90
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ui_loading_3
       rect:
         serializedVersion: 2
-        x: 1426
-        y: 1579
+        x: 1490
+        y: 1567
         width: 90
         height: 90
       alignment: 0

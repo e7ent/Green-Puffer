@@ -43,7 +43,11 @@ public class SceneLoader : MonoBehaviour
 		progressValue = .3f;
 
 		SoomlaProfile.Login(Provider.FACEBOOK);
+		SoomlaProfile.Login(Provider.TWITTER);
 		while (SoomlaProfile.IsLoggedIn(Provider.FACEBOOK) != true)
+			yield return null;
+
+		while (SoomlaProfile.IsLoggedIn(Provider.TWITTER) != true)
 			yield return null;
 
 		progressValue = .6f;
