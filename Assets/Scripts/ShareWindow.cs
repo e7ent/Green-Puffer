@@ -8,8 +8,6 @@ public class ShareWindow : MonoBehaviour
 {
 	public InputField messageInputField;
 	public RawImage rawImageControl;
-	public Rect captureImageRect;
-	public GameObject loadingControl;
 
 	private Window window;
 	private RenderTexture renderTexture;
@@ -24,21 +22,30 @@ public class ShareWindow : MonoBehaviour
 	{
 		var cam = Camera.main;
 
+		float aspectRatio = 9.0f / 16.0f;
+		int width = Screen.width;
+		int height = (int)(width * aspectRatio);
+
 		if (renderTexture == null)
-			renderTexture = new RenderTexture((int)captureImageRect.width, (int)captureImageRect.height, 0);
+		{
+			renderTexture = new RenderTexture(width, height, 0);
+			renderTexture.useMipMap = false;
+		}
 
 		if (texture == null)
 		{
-			texture = new Texture2D((int)captureImageRect.width, (int)captureImageRect.height);
+			texture = new Texture2D(width, height, TextureFormat.ARGB32, false, false);
 			texture.filterMode = FilterMode.Point;
 			texture.wrapMode = TextureWrapMode.Clamp;
+			texture.alphaIsTransparency = false;
 		}
 
 		cam.targetTexture = renderTexture;
 		cam.Render();
 
 		RenderTexture.active = renderTexture;
-		texture.ReadPixels(captureImageRect, 0, 0);
+
+		texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
 		texture.Apply();
 
 		cam.targetTexture = null;
@@ -68,7 +75,7 @@ public class ShareWindow : MonoBehaviour
 			if (payload != sharePayload)
 				return;
 
-			loadingControl.SetActive(true);
+			//loadingControl.SetActive(true);
 		};
 
 		ProfileEvents.OnSocialActionFinished = (Provider provider, SocialActionType action, string payload) =>
@@ -76,7 +83,8 @@ public class ShareWindow : MonoBehaviour
 			if (payload != sharePayload)
 				return;
 
-			loadingControl.SetActive(false);
+			//loadingControl.SetActive(false);
+			window.Close();
 		};
 
 		SoomlaProfile.UploadImage(shareProvider, messageInputField.text, "image.png", texture, sharePayload);

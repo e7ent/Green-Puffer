@@ -7,10 +7,17 @@ public class FadeManager : MonoSingleton<FadeManager>
 {
 	public delegate void FadeCallback();
 
+	private Canvas canvas;
+	private Image image;
+
 	protected override void Awake()
 	{
 		base.Awake();
 		DontDestroyOnLoad(this);
+		canvas = GetComponent<Canvas>();
+		image = GetComponent<Image>();
+
+		canvas.enabled = false;
 	}
 
 	/// <summary>
@@ -38,11 +45,13 @@ public class FadeManager : MonoSingleton<FadeManager>
 	/// <param name="onComplate">페이드 완료 콜백</param>
 	public void Fade(Color from, Color to, float duration, FadeCallback onComplate = null)
 	{
-		var image = GetComponent<Image>();
+		image.DOKill(false);
+		canvas.enabled = true;
 		image.color = from;
 		image.DOColor(to, duration).OnComplete(() => {
 			if (onComplate != null)
 				onComplate();
+			canvas.enabled = false;
 		});
 	}
 }
