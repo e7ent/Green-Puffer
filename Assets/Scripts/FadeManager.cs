@@ -43,15 +43,27 @@ public class FadeManager : MonoSingleton<FadeManager>
 	/// <param name="to">끝 색상</param>
 	/// <param name="duration">페이드에 걸리는 시간</param>
 	/// <param name="onComplate">페이드 완료 콜백</param>
-	public void Fade(Color from, Color to, float duration, FadeCallback onComplate = null)
+	public void Fade(Color from, Color to, float duration = 1, FadeCallback onComplate = null)
 	{
 		image.DOKill(false);
-		canvas.enabled = true;
+		if (canvas.enabled != true)
+			canvas.enabled = true;
 		image.color = from;
 		image.DOColor(to, duration).OnComplete(() => {
 			if (onComplate != null)
 				onComplate();
-			canvas.enabled = false;
+
+			if (to.a <= 0)
+				canvas.enabled = false;
 		});
+	}
+
+	/// <summary>
+	/// Set Canvas SortOrder
+	/// </summary>
+	/// <param name="order">Sort Order</param>
+	public void SetSortOrder(int order)
+	{
+		canvas.sortingOrder = order;
 	}
 }

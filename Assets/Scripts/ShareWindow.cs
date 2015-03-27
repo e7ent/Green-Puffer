@@ -37,7 +37,6 @@ public class ShareWindow : MonoBehaviour
 			texture = new Texture2D(width, height, TextureFormat.ARGB32, false, false);
 			texture.filterMode = FilterMode.Point;
 			texture.wrapMode = TextureWrapMode.Clamp;
-			texture.alphaIsTransparency = false;
 		}
 
 		cam.targetTexture = renderTexture;
