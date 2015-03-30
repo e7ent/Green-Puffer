@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
-using DG.Tweening;
 
-public class FadeManager : MonoSingleton<FadeManager>
+/// <summary>
+/// 경고창, 페이드 효과등을 담당한다.
+/// </summary>
+public class UIManager : MonoSingleton<UIManager>
 {
 	public delegate void FadeCallback();
 
@@ -49,7 +50,8 @@ public class FadeManager : MonoSingleton<FadeManager>
 		if (canvas.enabled != true)
 			canvas.enabled = true;
 		image.color = from;
-		image.DOColor(to, duration).OnComplete(() => {
+		image.DOColor(to, duration).OnComplete(() =>
+		{
 			if (onComplate != null)
 				onComplate();
 

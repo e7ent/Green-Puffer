@@ -5,7 +5,9 @@ using Soomla.Profile;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-	public int generation = 0;
+	public int money = 0;
+	public int generation = 1;
+	public UpgradeData[] upgrades;
 
 	private bool isPaused = false;
 
@@ -43,5 +45,25 @@ public class GameManager : MonoSingleton<GameManager>
 	public bool IsPaused()
 	{
 		return isPaused;
+	}
+
+	public bool Upgrade(string name)
+	{
+		UpgradeData upgrade = null;
+		foreach (var item in upgrades)
+		{
+			if (item.name != name)
+				continue;
+			upgrade = item;
+			break;
+		}
+
+		if ((money - upgrade.NextRequiredMoney()) < 0)
+			return false;
+
+		money -= upgrade.NextRequiredMoney();
+		upgrade.Upgrade();
+
+		return true;
 	}
 }

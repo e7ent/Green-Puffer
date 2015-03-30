@@ -44,7 +44,7 @@ public class ShareWindow : MonoBehaviour
 
 		RenderTexture.active = renderTexture;
 
-		texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+		texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.width * aspectRatio), 0, 0);
 		texture.Apply();
 
 		cam.targetTexture = null;

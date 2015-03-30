@@ -8,14 +8,24 @@ public class Item : MonoBehaviour
 	public int fat;
 	public GameObject feedFx;
 
-	void OnTriggerEnter2D(Collider2D other)
+	public void Use(PlayerController player)
 	{
-		if (other.CompareTag("Player") == false)
+		if (player == null)
 			return;
 
-		other.GetComponent<PlayerController>().Feed(exp, fat);
+		player.Feed(exp, fat);
 		if (feedFx)
 			Instantiate(feedFx, transform.position, Quaternion.identity);
 		Destroy(gameObject);
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Use(other.GetComponent<PlayerController>());
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		Use(other.gameObject.GetComponent<PlayerController>());
 	}
 }

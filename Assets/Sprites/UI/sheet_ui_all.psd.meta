@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1427437400
+timeCreated: 1427440853
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -1186,7 +1186,7 @@ TextureImporter:
         height: 39
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 12, y: 12, z: 12, w: 12}
+      border: {x: 95, y: 12, z: 12, w: 12}
     - name: ui_quest_ic_1
       rect:
         serializedVersion: 2
