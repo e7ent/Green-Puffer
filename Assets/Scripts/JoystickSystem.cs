@@ -7,16 +7,23 @@ using DG.Tweening;
 
 public class JoystickSystem : MonoSingleton<JoystickSystem>
 {
-	[System.Serializable]
-	public class JoystickEvent : UnityEvent<Vector2> { }
+	[HideInInspector]
+	public Vector2 axis;
+	[HideInInspector]
+	public float strength;
 
+	[SerializeField]
 	public float dragThreshold = 50;
+	[SerializeField]
 	public float radius = 100;
+	[SerializeField]
 	public RectTransform joystick;
+	[SerializeField]
 	public RectTransform defaultImage;
+	[SerializeField]
 	public RectTransform dragImage;
+	[SerializeField]
 	public RectTransform elasticImage;
-	public JoystickEvent valueChange;
 
 	private Vector2 startPosition;
 	private bool wasTouched = false;
@@ -59,6 +66,7 @@ public class JoystickSystem : MonoSingleton<JoystickSystem>
 
 	private void CleanUp()
 	{
+		axis = Vector2.zero;
 		defaultImage.gameObject.SetActive(true);
 		dragImage.gameObject.SetActive(false);
 		isDrag = false;
@@ -99,12 +107,11 @@ public class JoystickSystem : MonoSingleton<JoystickSystem>
 
 		distance = Mathf.Clamp(distance, 0, radius);
 
-		Vector2 dir = diff.normalized;
+		axis = diff.normalized;
 
-		if (valueChange != null)
-			valueChange.Invoke(dir * (distance / radius));
+		strength = (distance / radius);
 
-		dragImage.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+		dragImage.transform.localRotation = Quaternion.Euler(0, 0, Mathf.Atan2(axis.y, axis.x) * Mathf.Rad2Deg);
 		var size = elasticImage.sizeDelta;
 		size.x = distance;
 		elasticImage.sizeDelta = size;

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UpgradeWindow : MonoBehaviour
 {
+	public float cellHeight;
 	public Transform content;
 	public Transform defaultCell;
 
@@ -27,14 +28,20 @@ public class UpgradeWindow : MonoBehaviour
 		var upgrades = GameManager.instance.upgrades;
 		foreach (var item in upgrades)
 		{
-			var newCell = reuse.Pop();
-			if (newCell == null)
+			Transform newCell = null;
+			if (reuse.Count <= 0)
 				newCell = Instantiate(defaultCell) as Transform;
+			else
+				newCell = reuse.Pop();
 
 			newCell.gameObject.SetActive(true);
 			newCell.GetComponent<UpgradeCell>().SetData(item);
 			newCell.SetParent(content, false);
 		}
+		
+		var size = content.GetComponent<RectTransform>().sizeDelta;
+		size.y = cellHeight * upgrades.Length;
+		content.GetComponent<RectTransform>().sizeDelta = size;
 	}
 
 }

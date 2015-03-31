@@ -5,7 +5,7 @@ using Soomla.Profile;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-	public int money = 0;
+	public int currency = 0;
 	public int generation = 1;
 	public UpgradeData[] upgrades;
 
@@ -58,10 +58,10 @@ public class GameManager : MonoSingleton<GameManager>
 			break;
 		}
 
-		if ((money - upgrade.NextRequiredMoney()) < 0)
+		if ((currency - upgrade.NextRequiredCurrency()) < 0)
 			return false;
 
-		money -= upgrade.NextRequiredMoney();
+		currency -= upgrade.NextRequiredCurrency();
 		upgrade.Upgrade();
 
 		return true;

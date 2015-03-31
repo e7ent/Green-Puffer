@@ -23,12 +23,11 @@ public partial class PlayerController : MonoBehaviour
 	void Start()
 	{
 		StartState();
-
-		JoystickSystem.instance.valueChange.AddListener(Move);
 	}
 
 	void Update()
 	{
+		Move(JoystickSystem.instance.axis * JoystickSystem.instance.strength);
 		UpdateState();
 
 		if (stat.IsAlive() == false)
@@ -65,9 +64,12 @@ public partial class PlayerController : MonoBehaviour
 
 	public void Move(Vector2 movement)
 	{
-		Vector3 theScale = transform.localScale;
-		theScale.x = Mathf.Abs(theScale.x) * Mathf.Sign(movement.x);
-		transform.localScale = theScale;
+		if (Mathf.Abs(movement.x) > float.Epsilon)
+		{
+			Vector3 theScale = transform.localScale;
+			theScale.x = Mathf.Abs(theScale.x) * Mathf.Sign(movement.x);
+			transform.localScale = theScale;
+		}
 
 		rigidbody.AddForce(movement * stat.force * Time.deltaTime);
 
@@ -153,8 +155,6 @@ public partial class PlayerController : MonoBehaviour
 	{
 		if (onDestroy != null)
 			onDestroy(this);
-
-		JoystickSystem.instance.valueChange.RemoveListener(Move);
 
 		GameObject.Destroy(gameObject);
 	}

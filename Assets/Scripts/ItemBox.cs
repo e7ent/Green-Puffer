@@ -2,7 +2,7 @@
 using System.Collections;
 using DG.Tweening;
 
-public class EventBox : MonoBehaviour
+public class ItemBox : MonoBehaviour
 {
 	public Transform acquireFx;
 	public float attackThreshold = 2;

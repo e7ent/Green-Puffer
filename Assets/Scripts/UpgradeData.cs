@@ -16,8 +16,19 @@ public class UpgradeData
 		currentLevel = Math.Min(currentLevel + 1, 5);
 	}
 
-	public int NextRequiredMoney()
+	public int NextRequiredCurrency()
 	{
-		return requiredMoney[currentLevel + 1];
+		if (requiredMoney == null)
+			return 0;
+		if (requiredMoney.Length <= 0)
+			return 0;
+		if (currentLevel >= 5)
+			return 0;
+		return requiredMoney[currentLevel];
+	}
+
+	public bool IsMaxLevel()
+	{
+		return currentLevel >= 5;
 	}
 }

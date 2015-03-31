@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 
-/// <summary>
-/// 경고창, 페이드 효과등을 담당한다.
-/// </summary>
-public class UIManager : MonoSingleton<UIManager>
+public class FadeManager : MonoSingleton<FadeManager>
 {
 	public delegate void FadeCallback();
 

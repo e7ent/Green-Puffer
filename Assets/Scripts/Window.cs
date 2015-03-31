@@ -37,6 +37,11 @@ public class Window : UIBehaviour
 
 	public void Close()
 	{
+		Close(null);
+	}
+
+	public void Close(System.Action onClose)
+	{
 		if (!isVisible) return;
 		isVisible = false;
 
@@ -49,6 +54,8 @@ public class Window : UIBehaviour
 				GameManager.instance.Resume();
 				FadeManager.instance.Fade(new Color(0, 0, 0, .5f), new Color(0, 0, 0, 0), 0.25f);
 			}
+			if (onClose != null)
+				onClose();
 			SendMessage("OnClose", SendMessageOptions.DontRequireReceiver);
 		});
 	}
