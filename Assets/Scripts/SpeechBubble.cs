@@ -8,7 +8,7 @@ public class SpeechBubble : UIBehaviour
 {
 	public System.Action<SpeechBubble> onEffectFinish;
 
-	public enum SpeechBubbleEffect
+	public enum Effect
 	{
 		None = 0,
 		Typewriter,
@@ -22,7 +22,7 @@ public class SpeechBubble : UIBehaviour
 	private Text messageText;
 
 	private string message;
-	private SpeechBubbleEffect effects = SpeechBubbleEffect.None;
+	private Effect effects = Effect.None;
 	private Vector2 originSize;
 	private Vector2 followOffset;
 	private Transform followTarget = null;
@@ -63,7 +63,7 @@ public class SpeechBubble : UIBehaviour
 		return this;
 	}
 
-	public SpeechBubble SetEffect(SpeechBubbleEffect effects)
+	public SpeechBubble SetEffect(Effect effects)
 	{
 		this.effects = effects;
 		StartEffect();
@@ -109,10 +109,10 @@ public class SpeechBubble : UIBehaviour
 	{
 		switch (effects)
 		{
-			case SpeechBubbleEffect.None:
+			case Effect.None:
 				break;
-			case SpeechBubbleEffect.Typewriter:
-			case SpeechBubbleEffect.RepeatTypewriter:
+			case Effect.Typewriter:
+			case Effect.RepeatTypewriter:
 				StopCoroutine("TypeWriterEffect");
 				StartCoroutine("TypeWriterEffect");
 				break;
@@ -130,7 +130,7 @@ public class SpeechBubble : UIBehaviour
 				messageText.text = message.Substring(0, i);
 				yield return StartCoroutine(WaitForRealSeconds(.1f));
 			}
-			if (effects != SpeechBubbleEffect.RepeatTypewriter) break;
+			if (effects != Effect.RepeatTypewriter) break;
 		} while (true);
 		onEffectFinish(this);
 	}

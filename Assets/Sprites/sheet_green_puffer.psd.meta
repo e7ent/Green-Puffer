@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b339628bae3f5e14e8719db9f29ec396
-timeCreated: 1426679456
+timeCreated: 1427887548
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -131,7 +131,7 @@ TextureImporter:
     21300248: pink_body_3
     21300250: pink_body_2
     21300252: pink_body_1
-    21300254: cion
+    21300254: coin
     21300256: face_fun_1
     21300258: face_eyehider_1
     21300260: face_happy_1
@@ -1391,7 +1391,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: cion
+    - name: coin
       rect:
         serializedVersion: 2
         x: 476

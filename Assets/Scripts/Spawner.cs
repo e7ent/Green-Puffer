@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
 		return spawned.Count;
 	}
 
-	private void OnDrawGizmos()
+	private void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireCube(spawnRect.center, spawnRect.size);

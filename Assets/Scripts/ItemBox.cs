@@ -32,7 +32,7 @@ public class ItemBox : MonoBehaviour
 
 			if (acquireFx != null)
 				Instantiate(acquireFx, transform.position, Quaternion.identity);
-			target.GetComponent<PlayerController>().Feed(10, 0);
+			target.GetComponent<PlayerController>().Eat(10, 0);
 			GetComponent<Animator>().SetBool("Used", true);
 			GetComponent<Destroyer>().Destroy();
 			isUsed = true;

@@ -13,11 +13,11 @@ public class StateWindow : MonoBehaviour
 		var player = FindObjectOfType<PlayerController>();
 		if (player == null) return;
 
-		ageText.text = player.stat.name;
+		ageText.text = player.Name;
 		genText.text = GameManager.instance.generation + " Gen";
-		sizeText.text = player.stat.GetSize() + " Cm";
+		sizeText.text = player.Size + " Cm";
 
-		expBar.fillAmount = (float)player.stat.exp / player.stat.maxExp;
-		hpBar.fillAmount = (float)player.stat.hp / player.stat.maxHp;
+		expBar.fillAmount = player.Exp / player.MaxExp;
+		hpBar.fillAmount = player.Hp / player.MaxHp;
 	}
 }

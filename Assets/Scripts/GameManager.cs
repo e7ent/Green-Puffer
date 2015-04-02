@@ -66,4 +66,21 @@ public class GameManager : MonoSingleton<GameManager>
 
 		return true;
 	}
+
+	public int GetUpgradeLevel(string name)
+	{
+		UpgradeData upgrade = null;
+		foreach (var item in upgrades)
+		{
+			if (item.name != name)
+				continue;
+			upgrade = item;
+			break;
+		}
+		
+		if (upgrade == null)
+			return 0;
+
+		return upgrade.currentLevel;
+	}
 }

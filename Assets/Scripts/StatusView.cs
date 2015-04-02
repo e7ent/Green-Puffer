@@ -25,7 +25,7 @@ public class StatusView : MonoBehaviour
 				return;
 		}
 
-		expBar.fillAmount = (float)puffer.stat.exp / puffer.stat.maxExp;
-		hpBar.fillAmount = (float)puffer.stat.hp / puffer.stat.maxHp;
+		expBar.fillAmount = puffer.Exp / puffer.MaxExp;
+		hpBar.fillAmount = puffer.Hp / puffer.MaxHp;
 	}
 }

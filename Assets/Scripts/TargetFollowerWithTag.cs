@@ -63,7 +63,7 @@ public class TargetFollowerWithTag : MonoBehaviour
 			FollowUpdate();
 	}
 
-	void OnDrawGizmos()
+	void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.blue;
 		Gizmos.DrawWireCube(area.center, area.size);
