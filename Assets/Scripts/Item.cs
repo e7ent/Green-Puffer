@@ -22,12 +22,12 @@ public class Item : MonoBehaviour
 		Destroy(gameObject);
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
 		Use(other.GetComponent<PlayerController>());
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
 		Use(other.gameObject.GetComponent<PlayerController>());
 	}

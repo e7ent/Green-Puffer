@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1427440853
+timeCreated: 1427956555
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -732,6 +732,9 @@ TextureImporter:
     21301450: ui_book_ending_btn
     21301452: ui_book_puffer_btn
     21301454: sheet_ui_all_1
+    21301456: upgrade_food_0
+    21301458: upgrade_food_2
+    21301460: upgrade_food_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1814,6 +1817,36 @@ TextureImporter:
         y: 560
         width: 176
         height: 176
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_0
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 414
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_2
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 282
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_1
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 147
+        width: 128
+        height: 124
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

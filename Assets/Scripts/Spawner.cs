@@ -26,7 +26,14 @@ public class Spawner : MonoBehaviour
 	public float createTime;
 	public Rect spawnRect;
 
-	public int maxCount = 10;
+	[SerializeField]
+	private int maxCount = 10;
+
+	public int MaxCount
+	{
+		get { return maxCount; }
+		set { maxCount = value; }
+	}
 
 	private List<SpawnerMark> spawned = new List<SpawnerMark>();
 	private float elapsed = 0;
