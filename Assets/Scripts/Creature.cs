@@ -5,13 +5,12 @@ using DG.Tweening;
 
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(ItemDropTrigger))]
 public class Creature : MonoBehaviour
 {
+	public float hp;
 	public float size = 1;
-	public int life;
-
-	public GameObject[] dropItemPrefabs;
-	public int dropItemCount;
+	public float strength = 1;
 
 	public GameObject hurtFx;
 	public Color hurtColor = Color.white;
@@ -67,7 +66,7 @@ public class Creature : MonoBehaviour
 				var distance = diff.magnitude;
 
 				if (distance < rageRange)
-					moveForce = diff.normalized * chaseForce * (target.stat.CompareSize(size) < 0 ? 1 : -1);
+					moveForce = diff.normalized * chaseForce * (this.size > target.Size ? 1 : -1);
 				else
 					target = null;
 			}
@@ -78,7 +77,7 @@ public class Creature : MonoBehaviour
 				{
 					target = collider.GetComponent<PlayerController>();
 					moveElapsed = 0;
-					if (target.stat.CompareSize(size) < 0)
+					if (this.size > target.Size)
 						WarnningFlash();
 				}
 			}
@@ -103,12 +102,12 @@ public class Creature : MonoBehaviour
 		animator.SetTrigger("Attack");
 	}
 
-	public void Hurt(int damage = 1)
+	public void Hurt(float strength = 1)
 	{
 		if (IsAlive() == false) return;
-		if ((life -= damage) <= 0)
+		if ((hp -= strength) <= 0)
 		{
-			life = 0;
+			hp = 0;
 			Kill();
 		}
 
@@ -150,24 +149,7 @@ public class Creature : MonoBehaviour
 	{
 		if (destroyFx)
 			Instantiate(destroyFx, transform.position, Quaternion.identity);
-		DropItems();
-	}
-
-	public void DropItems()
-	{
-		if (dropItemPrefabs.Length <= 0)
-			return;
-
-		for (int i = 0; i < dropItemCount; i++)
-		{
-			var size = GetComponent<Collider2D>().bounds.size.magnitude;
-			Vector3 randomForce = Random.insideUnitCircle * size;
-			randomForce.y = Mathf.Abs(randomForce.y);
-			var dropedItem = Instantiate(dropItemPrefabs[Random.Range(0, dropItemPrefabs.Length)],
-				transform.position, Quaternion.identity) as GameObject;
-			dropedItem.GetComponent<Rigidbody2D>().AddForce(randomForce, ForceMode2D.Impulse);
-			dropedItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1, 1), ForceMode2D.Impulse);
-		}
+		this.GetComponent<ItemDropTrigger>().Drop();
 	}
 
 	private void WarnningFlash()
@@ -194,7 +176,7 @@ public class Creature : MonoBehaviour
 
 	public bool IsAlive()
 	{
-		return life > 0;
+		return hp > 0;
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
