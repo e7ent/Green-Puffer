@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: dadfe5851c5e3d443b714f9eb3e95dfb
+timeCreated: 1428049711
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: empty
+    21300002: ui_upgrade_and_items_1
+    21300004: ui_upgrade_and_items_2
+    21300006: ui_upgrade_and_items_3
+    21300008: upgrade_add
+    21300010: upgrade_up
+    21300012: ui_upgrade_and_items_6
+    21300014: upgrade_exp_up
+    21300016: upgrade_luck_up
+    21300018: ui_upgrade_and_items_9
+    21300020: upgrade_food_0
+    21300022: ui_upgrade_and_items_11
+    21300024: ui_upgrade_and_items_12
+    21300026: upgrade_food_2
+    21300028: upgrade_food_1
+    21300030: quest_0
+    21300032: quest_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: empty
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 892
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_1
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 924
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 892
+        width: 80
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 892
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_add
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 751
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_up
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 752
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 768
+        width: 104
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_exp_up
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 622
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_luck_up
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 622
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 622
+        width: 112
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 478
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_11
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 485
+        width: 108
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui_upgrade_and_items_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 485
+        width: 84
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_2
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 346
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: upgrade_food_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 211
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: quest_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 11
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: quest_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 11
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

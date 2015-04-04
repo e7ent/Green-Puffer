@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1427956555
+timeCreated: 1428035313
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -29,8 +29,8 @@ TextureImporter:
     21300044: sheet_ui_state_22
     21300046: sheet_ui_state_23
     21300048: sheet_ui_state_24
-    21300050: ui_state_ic_1
-    21300052: ui_state_ic_2
+    21300050: upgrade_player_0
+    21300052: upgrade_player_1
     21300054: sheet_ui_state_27
     21300056: sheet_ui_state_28
     21300058: ui_option_label_2
@@ -664,8 +664,8 @@ TextureImporter:
     21301314: sheet_ui_state_689
     21301316: sheet_ui_state_690
     21301318: sheet_ui_state_691
-    21301320: ui_state_ic_3
-    21301322: ui_state_ic_4
+    21301320: upgrade_food_exp
+    21301322: upgrade_luck
     21301324: ui_state_table_2
     21301326: sheet_ui_state_695
     21301328: sheet_ui_state_696
@@ -840,7 +840,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_state_ic_1
+    - name: upgrade_player_0
       rect:
         serializedVersion: 2
         x: 509
@@ -850,7 +850,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_state_ic_2
+    - name: upgrade_player_1
       rect:
         serializedVersion: 2
         x: 642
@@ -1500,7 +1500,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 158, y: 0, z: 0, w: 0}
-    - name: ui_state_ic_3
+    - name: upgrade_food_exp
       rect:
         serializedVersion: 2
         x: 508
@@ -1510,7 +1510,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ui_state_ic_4
+    - name: upgrade_luck
       rect:
         serializedVersion: 2
         x: 642

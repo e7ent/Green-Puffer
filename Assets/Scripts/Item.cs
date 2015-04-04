@@ -19,6 +19,7 @@ public class Item : MonoBehaviour
 
 		GameManager.instance.currency += currency;
 		player.Eat(exp, satiety);
+		SendMessage("OnUse", SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 	}
 

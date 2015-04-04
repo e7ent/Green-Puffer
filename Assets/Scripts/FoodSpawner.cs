@@ -7,7 +7,7 @@ public class FoodSpawner : MonoBehaviour
 	[SerializeField]
 	private int increaseCount = 2;
 	[SerializeField]
-	private string upgradeName;
+	private string upgradeItemName;
 
 	private Spawner spawner;
 
@@ -18,6 +18,6 @@ public class FoodSpawner : MonoBehaviour
 
 	private void Update()
 	{
-		spawner.MaxCount = GameManager.instance.GetUpgradeLevel(upgradeName) * increaseCount;
+		spawner.MaxCount = UpgradeSystem.instance.Get(upgradeItemName).currentLevel * increaseCount;
 	}
 }

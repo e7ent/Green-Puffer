@@ -7,7 +7,6 @@ public class GameManager : MonoSingleton<GameManager>
 {
 	public int currency = 0;
 	public int generation = 1;
-	public UpgradeData[] upgrades;
 
 	private bool isPaused = false;
 
@@ -47,40 +46,40 @@ public class GameManager : MonoSingleton<GameManager>
 		return isPaused;
 	}
 
-	public bool Upgrade(string name)
-	{
-		UpgradeData upgrade = null;
-		foreach (var item in upgrades)
-		{
-			if (item.name != name)
-				continue;
-			upgrade = item;
-			break;
-		}
+	//public bool Upgrade(string name)
+	//{
+	//	Upgrade upgrade = null;
+	//	foreach (var item in upgrades)
+	//	{
+	//		if (item.name != name)
+	//			continue;
+	//		upgrade = item;
+	//		break;
+	//	}
 
-		if ((currency - upgrade.NextRequiredCurrency()) < 0)
-			return false;
+	//	if ((currency - upgrade.NextRequiredCurrency()) < 0)
+	//		return false;
 
-		currency -= upgrade.NextRequiredCurrency();
-		upgrade.Upgrade();
+	//	currency -= upgrade.NextRequiredCurrency();
+	//	upgrade.DoUpgrade();
 
-		return true;
-	}
+	//	return true;
+	//}
 
-	public int GetUpgradeLevel(string name)
-	{
-		UpgradeData upgrade = null;
-		foreach (var item in upgrades)
-		{
-			if (item.name != name)
-				continue;
-			upgrade = item;
-			break;
-		}
+	//public int GetUpgradeLevel(string name)
+	//{
+	//	Upgrade upgrade = null;
+	//	foreach (var item in upgrades)
+	//	{
+	//		if (item.name != name)
+	//			continue;
+	//		upgrade = item;
+	//		break;
+	//	}
 		
-		if (upgrade == null)
-			return 0;
+	//	if (upgrade == null)
+	//		return 0;
 
-		return upgrade.currentLevel;
-	}
+	//	return upgrade.currentLevel;
+	//}
 }

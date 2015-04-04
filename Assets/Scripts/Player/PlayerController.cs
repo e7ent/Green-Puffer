@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
 	public float MaxHp
 	{
-		get { return maxHp + GameManager.instance.GetUpgradeLevel("hp") * 10; }
+		get { return maxHp + UpgradeSystem.instance.Get("hp").currentLevel * 10; }
 	}
 	
 	public float Exp
@@ -74,17 +74,21 @@ public class PlayerController : MonoBehaviour
 
 	public float Strength
 	{
-		get { return strength + GameManager.instance.GetUpgradeLevel("strength"); }
+		get { return strength + UpgradeSystem.instance.Get("strength").currentLevel; }
 	}
 	
 	public float MoveForce
 	{
-		get { return moveForce + GameManager.instance.GetUpgradeLevel("moveforce") * 5; }
+		get { return moveForce + UpgradeSystem.instance.Get("moveforce").currentLevel * 5; }
 	}
 
 	public float Size
 	{
-		get { return minSize + ((maxSize - minSize) * (this.Exp / this.MaxExp)) + GameManager.instance.GetUpgradeLevel("size"); }
+		get
+		{
+			var upgradeStat = UpgradeSystem.instance.Get("size").currentLevel;
+			return minSize + ((maxSize - minSize) * (this.Exp / this.MaxExp)) + upgradeStat;
+		}
 	}
 
 	public bool IsAlive()

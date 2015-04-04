@@ -149,7 +149,8 @@ public class Creature : MonoBehaviour
 	{
 		if (destroyFx)
 			Instantiate(destroyFx, transform.position, Quaternion.identity);
-		this.GetComponent<ItemDropTrigger>().Drop();
+		GetComponent<ItemDropTrigger>().Drop();
+		SendMessage("OnUse", SendMessageOptions.DontRequireReceiver);
 	}
 
 	private void WarnningFlash()
