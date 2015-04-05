@@ -17,31 +17,18 @@ public class UpgradeData
 	[XmlArray("RequiredCurrency")]
 	[XmlArrayItem("Currency")]
 	public int[] requiredCurrency;
-	[XmlElement("CurrentLevel")]
-	public int currentLevel;
 
 	private Sprite iconSprite;
 
-	public void Upgrade()
+	public int GetRequiredCurrency(int level)
 	{
-		currentLevel = Math.Min(currentLevel + 1, 5);
-	}
-
-	public int GetRequiredCurrency()
-	{
-		return 0;/*
 		if (requiredCurrency == null)
 			return 0;
 		if (requiredCurrency.Length <= 0)
 			return 0;
-		if (currentLevel >= 5)
-			return 0;
-		return requiredCurrency[currentLevel];*/
-	}
-
-	public bool IsMaxLevel()
-	{
-		return currentLevel >= 5;
+        if (level >= requiredCurrency.Length)
+            return 0;
+		return requiredCurrency[level];
 	}
 
 	public Sprite GetIcon()

@@ -65,7 +65,7 @@ public class Creature : MonoBehaviour
 				var diff = target.transform.position - transform.position;
 				var distance = diff.magnitude;
 
-				if (distance < rageRange)
+				if (distance < rageRange && target.IsAlive)
 					moveForce = diff.normalized * chaseForce * (this.size > target.Size ? 1 : -1);
 				else
 					target = null;
@@ -75,10 +75,14 @@ public class Creature : MonoBehaviour
 				var collider = Physics2D.OverlapCircle(transform.position, attackRange, 1 << LayerMask.NameToLayer("Player"));
 				if (collider != null)
 				{
-					target = collider.GetComponent<PlayerController>();
-					moveElapsed = 0;
-					if (this.size > target.Size)
-						WarnningFlash();
+					var player = collider.GetComponent<PlayerController>();
+                    if (player.IsAlive)
+                    {
+                        moveElapsed = 0;
+                        if (this.size > player.Size)
+                            WarnningFlash();
+                        target = player;
+                    }
 				}
 			}
 		}

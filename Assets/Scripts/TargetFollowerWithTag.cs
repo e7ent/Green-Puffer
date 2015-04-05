@@ -18,11 +18,6 @@ public class TargetFollowerWithTag : MonoBehaviour
 
 	private Transform target;
 	
-	void Start()
-	{
-		target = GameObject.FindWithTag(targetTag).transform;
-	}
-
 	void FollowUpdate()
 	{
 		if (target == null)

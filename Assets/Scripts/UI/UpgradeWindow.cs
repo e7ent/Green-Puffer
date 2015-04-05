@@ -16,7 +16,7 @@ public class UpgradeWindow : MonoBehaviour
 
 	public void ReloadData()
 	{
-		var upgrades = UpgradeSystem.instance.GetAll();
+		var upgrades = UpgradeSystem.instance.GetDataAll();
 		Stack<Transform> reuse = new Stack<Transform>();
 
 		for (int i = 0; i < upgrades.Count; i++)
@@ -42,7 +42,7 @@ public class UpgradeWindow : MonoBehaviour
 			newCell = reuse.Pop();
 
 			newCell.gameObject.SetActive(true);
-			newCell.GetComponent<UpgradeCell>().Load(item);
+			newCell.GetComponent<UpgradeCell>().Load(item.name);
 		}
 		
 		var size = content.GetComponent<RectTransform>().sizeDelta;

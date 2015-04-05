@@ -8,10 +8,13 @@ using System.Text;
 
 public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 {
-	private static string assetPath = Application.persistentDataPath + "/Resources/upgrade.xml";
+    private static string assetPath = Application.dataPath + "/Resources/upgrade.xml";
+    private static string userDataPath = "upgradeUserData";
 
-	[SerializeField]
-	private Dictionary<string, UpgradeData> upgrades;
+    [SerializeField]
+    private Dictionary<string, UpgradeData> datas = new Dictionary<string, UpgradeData>();
+    [SerializeField]
+    private Dictionary<string, UpgradeUserData> userDatas = new Dictionary<string, UpgradeUserData>();
 
 	protected override void Awake()
 	{
@@ -26,17 +29,35 @@ public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 	}
 
 	public void Load()
-	{
-		this.upgrades = new Dictionary<string, UpgradeData>();
-
-		XmlSerializer serializer = new XmlSerializer(typeof(UpgradeData[]));
+    {
+        this.datas.Clear();
 		using (XmlReader reader = XmlReader.Create(assetPath))
 		{
+    		XmlSerializer serializer = new XmlSerializer(typeof(UpgradeData[]));
 			UpgradeData[] upgrades = serializer.Deserialize(reader) as UpgradeData[];
 			foreach (UpgradeData item in upgrades)
-				this.upgrades[item.name] = item;
-		}
-	}
+				this.datas[item.name] = item;
+        }
+
+        this.userDatas.Clear();
+
+        string savedUserData = PlayerPrefs.GetString(userDataPath, string.Empty);
+        if (string.IsNullOrEmpty(savedUserData))
+            return;
+        
+        using (XmlReader reader = XmlTextReader.Create(new StringReader(savedUserData)))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(UpgradeUserData[]));
+            UpgradeUserData[] upgrades = serializer.Deserialize(reader) as UpgradeUserData[];
+            foreach (UpgradeUserData item in upgrades)
+                this.userDatas[item.upgradeDataName] = item;
+        }
+    }
+
+    public void Reset()
+    {
+        this.userDatas.Clear();
+    }
 
 	public void Save()
 	{
@@ -44,29 +65,58 @@ public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 		settings.Indent = true;
 		settings.IndentChars = "\t";
 		settings.NewLineOnAttributes = true;
-		XmlSerializer serializer = new XmlSerializer(typeof(UpgradeData[]));
-		using (XmlWriter writer = XmlWriter.Create(assetPath, settings))
-		{
-			var array = new UpgradeData[upgrades.Count];
-			upgrades.Values.CopyTo(array, 0);
-			serializer.Serialize(writer, array);
-		}
+
+        StringBuilder sb = new StringBuilder();
+        using (XmlWriter writer = XmlTextWriter.Create(sb, settings))
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(UpgradeUserData[]));
+            var array = new UpgradeUserData[userDatas.Count];
+            userDatas.Values.CopyTo(array, 0);
+            serializer.Serialize(writer, array);
+        }
+        PlayerPrefs.SetString(userDataPath, sb.ToString());
 	}
 
-	public UpgradeData Get(string name)
+    public int GetLevel(string name)
+    {
+        return GetUserData(name).currentLevel;
+    }
+
+	public UpgradeData GetData(string name)
 	{
-		return upgrades[name];
+		return datas[name];
 	}
+
+    public ICollection<UpgradeData> GetDataAll()
+    {
+        return datas.Values;
+    }
+
+    public UpgradeUserData GetUserData(string name)
+    {
+        if (userDatas.ContainsKey(name))
+            return userDatas[name];
+        
+        var userData = userDatas[name] = new UpgradeUserData();
+        userData.upgradeDataName = name;
+        userData.currentLevel = 0;
+        return userData;
+    }
 
 	public bool CanUpgrade(string name)
 	{
 		var currentCurrency = GameManager.instance.currency;
-		var requiredCurrency = upgrades[name].GetRequiredCurrency();
+        var currentLevel = GetUserData(name).currentLevel;
+		var requiredCurrency = GetData(name).GetRequiredCurrency(currentLevel);
 		return currentCurrency - requiredCurrency >= 0;
 	}
 
-	public ICollection<UpgradeData> GetAll()
-	{
-		return upgrades.Values;
-	}
+    public void Upgrade(string name)
+    {
+        var data = GetData(name);
+        var userData = GetUserData(name);
+
+        GameManager.instance.currency -= data.GetRequiredCurrency(userData.currentLevel);
+        GetUserData(name).currentLevel++;
+    }
 }

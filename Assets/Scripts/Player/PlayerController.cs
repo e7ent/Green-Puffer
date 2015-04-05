@@ -1,20 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
-	public delegate void PlayerEventHandler(PlayerController player);
+    public enum RankType
+    {
+        Baby,
+        Kid,
+        Adult,
+        Old
+    }
 
-	public PlayerEventHandler onEat;
-	public PlayerEventHandler onAttack;
-	public PlayerEventHandler onHurt;
-	public PlayerEventHandler onDestroy;
-
-	public GameObject nextGenerationPrefab;
-	public Color hurtColor = Color.red;
-
+    [SerializeField]
+    private bool isAlive = true;
+    [SerializeField]
+    private RankType rank;
 	[SerializeField]
 	private string id;
 	[SerializeField]
@@ -34,32 +37,59 @@ public class PlayerController : MonoBehaviour
 	[SerializeField]
 	private float maxSize = 1;
 	[SerializeField]
-	private float satiety = 0;
+    private float satiety = 0;
+    [SerializeField]
+    private GameObject[] nextGeneration;
 
+    public bool IsAlive
+    {
+        get { return isAlive; }
+        set { isAlive = value; }
+    }
+
+    public RankType Rank
+    {
+        get { return rank; }
+    }
+
+    public string Id
+    {
+        get { return id; }
+    }
 
 	public string Name
 	{
-		get { return LocalizationString.GetString(id); }
-	}
+        get { return LocalizationString.GetString(id); }
+    }
 
-	public float Hp
-	{
-		get { return hp; }
-		set { hp = Mathf.Clamp(value, 0, MaxHp); }
-	}
+    public float Hp
+    {
+        get { return hp; }
+        set
+        {
+            hp = Mathf.Clamp(value, 0, MaxHp);
+        }
+    }
 
-	public float MaxHp
-	{
-		get { return maxHp + UpgradeSystem.instance.Get("hp").currentLevel * 10; }
-	}
-	
-	public float Exp
-	{
-		get { return exp; }
-		set { exp = value; }
-	}
+    public float MaxHp
+    {
+        get { return maxHp + UpgradeSystem.instance.GetLevel("hp") * 10; }
+    }
 
-	public float MaxExp
+    public float Exp
+    {
+        get { return exp; }
+        set
+        {
+            exp = Mathf.Clamp(value, 0, MaxExp);
+            if (exp >= MaxExp && Rank < RankType.Old)
+            {
+                GameManager.instance.RebirthPlayer(rank + 1);
+            }
+        }
+    }
+
+    public float MaxExp
 	{
 		get { return maxExp; }
 	}
@@ -74,27 +104,28 @@ public class PlayerController : MonoBehaviour
 
 	public float Strength
 	{
-		get { return strength + UpgradeSystem.instance.Get("strength").currentLevel; }
+		get { return strength + UpgradeSystem.instance.GetLevel("strength"); }
 	}
-	
+
 	public float MoveForce
 	{
-		get { return moveForce + UpgradeSystem.instance.Get("moveforce").currentLevel * 5; }
+		get { return moveForce + UpgradeSystem.instance.GetLevel("moveforce") * 5; }
 	}
 
 	public float Size
 	{
 		get
 		{
-			var upgradeStat = UpgradeSystem.instance.Get("size").currentLevel;
+			var upgradeStat = UpgradeSystem.instance.GetLevel("size");
 			return minSize + ((maxSize - minSize) * (this.Exp / this.MaxExp)) + upgradeStat;
 		}
 	}
 
-	public bool IsAlive()
-	{
-		return hp > 0;
-	}
+    public Action<PlayerController> onEat;
+    public Action<PlayerController> onAttack;
+    public Action<PlayerController> onHurt;
+    public Action<PlayerController> onKill;
+    public Action<PlayerController> onDestroy;
 
 	private PlayerAnimator animator;
 	private PlayerStateMachine stateMachine;
@@ -111,15 +142,21 @@ public class PlayerController : MonoBehaviour
 
 	private void Update()
 	{
-		if (IsAlive() == false)
-			return;
+        if (Hp <= 0 && IsAlive)
+        {
+            stateMachine.Change(new DeathState());
+            IsAlive = false;
+        }
 
 		UpdateSatiety();
 		UpdateMovement();
 	}
 
 	private void UpdateSatiety()
-	{
+    {
+        if (IsAlive == false)
+            return;
+
 		this.Satiety -= Time.deltaTime * Size * 0.1f;
 
 		if (this.Hp <= (this.MaxHp * 0.1f))
@@ -134,6 +171,9 @@ public class PlayerController : MonoBehaviour
 
 	private void UpdateMovement()
 	{
+        if (IsAlive == false)
+            return;
+
 		var movement = JoystickSystem.instance.axis * JoystickSystem.instance.strength;
 		var localScale = transform.localScale;
 
@@ -151,6 +191,8 @@ public class PlayerController : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D coll)
 	{
+        if (!IsAlive) return;
+
 		var colliedObject = coll.gameObject;
 		if (!colliedObject.CompareTag("Creature")) return;
 
@@ -172,7 +214,9 @@ public class PlayerController : MonoBehaviour
 	}
 
 	public void Eat(float exp, float satiety)
-	{
+    {
+        if (!IsAlive) return;
+
 		this.Exp += exp;
 		this.Satiety += satiety;
 
@@ -180,22 +224,22 @@ public class PlayerController : MonoBehaviour
 
 		transform.DOKill(true);
 		transform.DOPunchScale(Vector3.one * 0.2f, 0.4f, 5);
-
-		if ((this.Exp / this.MaxExp) >= 1.0f && nextGenerationPrefab != null)
-		{
-			RebirthNextGeneration();
-		}
 	}
 
 	public void Attack(Creature creature)
-	{
+    {
+        if (!IsAlive) return;
+
 		creature.Hurt(this.Strength);
 		stateMachine.Change(new AttackState());
 	}
 
 	public void Hurt(Creature creature)
-	{
+    {
+        if (!IsAlive) return;
+
 		Hp -= creature.strength;
+
 		creature.Attack();
 		stateMachine.Change(new HurtState());
 
@@ -208,19 +252,10 @@ public class PlayerController : MonoBehaviour
 			var seq = DOTween.Sequence();
 			for (int i = 0; i < 3; i++)
 			{
-				seq.Append(mat.DOColor(hurtColor, 0.1f));
+				seq.Append(mat.DOColor(new Color(1.0f, 0.8f, 0.8f), 0.1f));
 				seq.Append(mat.DOColor(Color.white, 0.1f));
 			}
 		}
-
-		if (IsAlive() == false)
-			Kill();
-	}
-
-	public void RebirthNextGeneration()
-	{
-		Instantiate(nextGenerationPrefab, transform.position, Quaternion.identity);
-		Destroy();
 	}
 
 	public void Kill()
@@ -228,12 +263,14 @@ public class PlayerController : MonoBehaviour
 		if (onDestroy != null)
 			onDestroy(this);
 
-		stateMachine.Change(new DeathState());
 		rigidbody.isKinematic = true;
 		foreach (var col in GetComponentsInChildren<Collider2D>())
 			col.isTrigger = true;
 
-		//Destroy();
+        if (onKill != null)
+            onKill(this);
+
+        GameManager.instance.Finish();
 	}
 
 	public void Destroy()

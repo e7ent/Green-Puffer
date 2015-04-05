@@ -8,7 +8,7 @@ using System.Text;
 
 public class QuestSystem : MonoSingleton<QuestSystem>
 {
-	private static string assetPath = Application.persistentDataPath + "/Resources/quest.xml";
+	private static string assetPath = Application.dataPath + "/Resources/quest.xml";
 
 	private Dictionary<string, QuestData> quests;
 

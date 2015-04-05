@@ -10,10 +10,12 @@ public class FadeManager : MonoSingleton<FadeManager>
 	private Canvas canvas;
 	private Image image;
 
+    private Color color;
+
 	protected override void Awake()
 	{
-		base.Awake();
-		DontDestroyOnLoad(this);
+        base.Awake();
+
 		canvas = GetComponent<Canvas>();
 		image = GetComponent<Image>();
 
@@ -21,11 +23,11 @@ public class FadeManager : MonoSingleton<FadeManager>
 	}
 
 	/// <summary>
-	/// 검은색에서 투명으로 페이드인 된다.
+	/// 투명으로 페이드인 된다.
 	/// </summary>
 	public static void FadeIn(float duration = 1, FadeCallback onComplate = null)
 	{
-		instance.Fade(Color.black, new Color(0, 0, 0, 0), duration, onComplate);
+		instance.Fade(instance.color, Color.clear, duration, onComplate);
 	}
 
 	/// <summary>
@@ -33,7 +35,7 @@ public class FadeManager : MonoSingleton<FadeManager>
 	/// </summary>
 	public static void FadeOut(float duration = 1, FadeCallback onComplate = null)
 	{
-		instance.Fade(new Color(0, 0, 0, 0), Color.black, duration, onComplate);
+		instance.Fade(Color.clear, Color.black, duration, onComplate);
 	}
 
 	/// <summary>
@@ -57,6 +59,7 @@ public class FadeManager : MonoSingleton<FadeManager>
 			if (to.a <= 0)
 				canvas.enabled = false;
 		});
+        color = to;
 	}
 
 	/// <summary>

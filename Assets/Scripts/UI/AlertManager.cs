@@ -9,12 +9,19 @@ public class AlertManager : MonoSingleton<AlertManager>
 
 	System.Action onFinish = null;
 
+    void OnEnable()
+    {
+        if (!window.IsVisible())
+            gameObject.SetActive(false);
+    }
+
+
 	public void ShowAlert(string message, System.Action onFinish = null)
 	{
 		this.onFinish = onFinish;
-		gameObject.SetActive(true);
 		this.message.text = message;
 		window.Show();
+		gameObject.SetActive(true);
 	}
 
 	public void Ok()

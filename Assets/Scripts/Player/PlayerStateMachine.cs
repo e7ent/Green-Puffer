@@ -18,6 +18,13 @@ public class PlayerStateMachine : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody2D>();
 	}
 
+    private void OnDestroy()
+    {
+        if (currentState != null)
+            currentState.End(this);
+        currentState = null;
+    }
+
 	private void Start()
 	{
 		Change(new NormalState());
