@@ -8,7 +8,7 @@ using System.Text;
 
 public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 {
-    private static string assetPath = Application.dataPath + "/Resources/upgrade.xml";
+    private static string assetPath = "upgrade";
     private static string userDataPath = "upgradeUserData";
 
     [SerializeField]
@@ -28,10 +28,16 @@ public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 		base.OnDestroy();
 	}
 
+    private void OnApplicationQuit()
+    {
+        Save();
+    }
+
 	public void Load()
     {
         this.datas.Clear();
-		using (XmlReader reader = XmlReader.Create(assetPath))
+        var asset = Resources.Load<TextAsset>(assetPath);
+        using (XmlReader reader = XmlTextReader.Create(new StringReader(asset.text)))
 		{
     		XmlSerializer serializer = new XmlSerializer(typeof(UpgradeData[]));
 			UpgradeData[] upgrades = serializer.Deserialize(reader) as UpgradeData[];

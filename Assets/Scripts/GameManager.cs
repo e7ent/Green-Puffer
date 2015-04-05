@@ -13,6 +13,7 @@ public class GameManager : MonoSingleton<GameManager>
     public int currency = 0;
     public int generation = 1;
 
+    public GameObject createEffect;
     public PlayerController[] playerPrefabs;
     public GameObject[] backgroundPrefabs;
     public GameObject endingPrefab;
@@ -29,17 +30,18 @@ public class GameManager : MonoSingleton<GameManager>
         Application.targetFrameRate = 60;
         DOTween.Init();
 
-        // Load Currency
-        currency = PlayerPrefs.GetInt("currency", 1000);
-
-        LoadPlayer();
+        Load();
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        SavePlayer();
-        PlayerPrefs.SetInt("currency", currency);
+        Save();
+    }
+
+    private void OnApplicationQuit()
+    {
+        Save();
     }
 
     private void Start()
@@ -47,8 +49,11 @@ public class GameManager : MonoSingleton<GameManager>
         FadeManager.FadeIn();
     }
 
-    public void LoadPlayer()
+    public void Load()
     {
+        // Load Currency
+        currency = PlayerPrefs.GetInt("currency", 10000);
+
         string savedPlayerData = PlayerPrefs.GetString("player", string.Empty);
 
         if (string.IsNullOrEmpty(savedPlayerData))
@@ -82,8 +87,9 @@ public class GameManager : MonoSingleton<GameManager>
         }
     }
 
-    public void SavePlayer()
+    public void Save()
     {
+        PlayerPrefs.SetInt("currency", currency);
         XmlWriterSettings settings = new XmlWriterSettings();
         settings.Indent = true;
         settings.IndentChars = "\t";
@@ -156,6 +162,7 @@ public class GameManager : MonoSingleton<GameManager>
             player.Destroy();
         }
         player = newPlayer;
+        GameObject.Instantiate(createEffect, newPlayer.transform.position, Quaternion.identity);
     }
 
     public void Finish(bool isRebirth = false)
