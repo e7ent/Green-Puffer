@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
             exp = Mathf.Clamp(value, 0, MaxExp);
             if (exp >= MaxExp && Rank < RankType.Old)
             {
-                GameManager.instance.RebirthPlayer(rank + 1);
+                GameManager.instance.CreatePlayer(rank + 1);
             }
         }
     }

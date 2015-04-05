@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1538d50b50d08304c86bbecc721b3e12
-timeCreated: 1428035313
+timeCreated: 1428246761
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -735,6 +735,7 @@ TextureImporter:
     21301456: upgrade_food_0
     21301458: upgrade_food_2
     21301460: upgrade_food_1
+    21301462: locked
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1846,6 +1847,16 @@ TextureImporter:
         x: 1251
         y: 147
         width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: locked
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 10
+        width: 90
         height: 124
       alignment: 0
       pivot: {x: .5, y: .5}

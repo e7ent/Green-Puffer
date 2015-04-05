@@ -53,7 +53,7 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (string.IsNullOrEmpty(savedPlayerData))
         {
-            player = GameObject.Instantiate(playerPrefabs[0], Vector3.zero, Quaternion.identity) as PlayerController;
+            CreatePlayer(PlayerController.RankType.Baby);
             return;
         }
 
@@ -72,7 +72,7 @@ public class GameManager : MonoSingleton<GameManager>
                     }
                 }
 
-                player = GameObject.Instantiate(findPrefab, Vector3.zero, Quaternion.identity) as PlayerController;
+                CreatePlayer(findPrefab.Id);
 
                 player.Hp = float.Parse(reader.ReadElementString("hp"));
                 player.Exp = float.Parse(reader.ReadElementString("exp"));
@@ -125,12 +125,23 @@ public class GameManager : MonoSingleton<GameManager>
         return isPaused;
     }
 
-    public void RebirthPlayer(PlayerController.RankType rank)
+    public void CreatePlayer(PlayerController.RankType rank)
+    {
+        List<PlayerController> prefabs = new List<PlayerController>();
+        foreach (var item in playerPrefabs)
+        {
+            if (item.Rank == rank)
+                prefabs.Add(item);
+        }
+        CreatePlayer(prefabs[Random.Range(0, prefabs.Count)].Id);
+    }
+
+    public void CreatePlayer(string id)
     {
         PlayerController prefab = null;
         foreach (var item in playerPrefabs)
         {
-            if (item.Rank == rank)
+            if (item.Id == id)
             {
                 prefab = item;
                 break;
@@ -141,17 +152,27 @@ public class GameManager : MonoSingleton<GameManager>
         {
             newPlayer.transform.position = player.transform.position;
             newPlayer.transform.rotation = player.transform.rotation;
+            PlayerLibraryManager.instance.Unlock(newPlayer.Id);
             player.Destroy();
         }
         player = newPlayer;
     }
 
-    public void Finish()
+    public void Finish(bool isRebirth = false)
     {
         if (isFinished) return;
         isFinished = true;
 
         Pause();
+
+        if (player.Hp <= 0)
+        {
+            EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Hurt);
+        }
+        else if (isRebirth)
+        {
+            EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Rebirth);
+        }
 
         endingObject = GameObject.Instantiate(endingPrefab) as GameObject;
         FadeManager.instance.Fade(Color.clear, new Color(0, 0, 0, .7f), 1, () =>
@@ -168,7 +189,7 @@ public class GameManager : MonoSingleton<GameManager>
     public void Retry()
     {
         GameObject.Destroy(endingObject);
-        RebirthPlayer(PlayerController.RankType.Baby);
+        CreatePlayer(PlayerController.RankType.Baby);
         FadeManager.FadeIn();
         isFinished = false;
         Resume();

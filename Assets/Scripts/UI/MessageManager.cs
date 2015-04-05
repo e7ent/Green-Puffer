@@ -37,6 +37,7 @@ public class MessageManager : MonoSingleton<MessageManager>, UnityEngine.EventSy
         isVisible = true;
 
         gameObject.SetActive(true);
+        GetComponent<Canvas>().enabled = true;
         messgaeBox.transform.localScale = Vector3.zero;
         textControl.text = "";
 
@@ -56,6 +57,7 @@ public class MessageManager : MonoSingleton<MessageManager>, UnityEngine.EventSy
             messgaeBox.transform.DOScale(Vector3.zero, .3f).SetEase(Ease.InBack).OnComplete(() =>
                 {
                     gameObject.SetActive(false);
+                    GetComponent<Canvas>().enabled = false;
 
                     if (onConfirm != null)
                         onConfirm();
@@ -64,6 +66,7 @@ public class MessageManager : MonoSingleton<MessageManager>, UnityEngine.EventSy
         else
         {
             gameObject.SetActive(false);
+            GetComponent<Canvas>().enabled = false;
 
             if (onConfirm != null)
                 onConfirm();
