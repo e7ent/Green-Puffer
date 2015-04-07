@@ -7,19 +7,30 @@ using System.IO;
 using System.Text;
 using DG.Tweening;
 using Soomla.Profile;
+using E7;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    public int currency = 0;
+	[SerializeField]
+	private int currency;
+    public int Currency
+	{
+		get { return currency; }
+		set
+		{
+			currency = value;
+			PlayerPrefs.SetInt("currency", currency);
+		}
+	}
     public int generation = 1;
 
     public GameObject createEffect;
     public PlayerController[] playerPrefabs;
     public GameObject[] backgroundPrefabs;
     public GameObject endingPrefab;
+	public GameObject rebirthPrefab;
 
     private PlayerController player;
-    private GameObject endingObject;
 
     private bool isFinished = false;
     private bool isPaused = false;
@@ -89,7 +100,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void Save()
     {
-        PlayerPrefs.SetInt("currency", currency);
         XmlWriterSettings settings = new XmlWriterSettings();
         settings.Indent = true;
         settings.IndentChars = "\t";
@@ -181,21 +191,22 @@ public class GameManager : MonoSingleton<GameManager>
             EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Rebirth);
         }
 
-        endingObject = GameObject.Instantiate(endingPrefab) as GameObject;
+        var obj = GameObject.Instantiate(isRebirth?rebirthPrefab:endingPrefab) as GameObject;
         FadeManager.instance.Fade(Color.clear, new Color(0, 0, 0, .7f), 1, () =>
         {
             MessageManager.instance.Open();
-            MessageManager.instance.PushMessage(LocalizationString.GetStrings("death"));
+            MessageManager.instance.PushMessage(Localization.GetStringArray(isRebirth?"rebirth":"death"));
             MessageManager.instance.onConfirm += () =>
-            {
+			{
+				GameObject.Destroy(obj);
                 GameManager.instance.Retry();
             };
         });
     }
 
     public void Retry()
-    {
-        GameObject.Destroy(endingObject);
+	{
+		Currency += ((int)player.Rank * 100) + (int)player.Exp;
         CreatePlayer(PlayerController.RankType.Baby);
         FadeManager.FadeIn();
         isFinished = false;

@@ -17,7 +17,7 @@ public class Item : MonoBehaviour
 		if (feedFx)
 			Instantiate(feedFx, transform.position, Quaternion.identity);
 
-		GameManager.instance.currency += currency;
+		GameManager.instance.Currency += currency;
 		player.Eat(exp, satiety);
 		SendMessage("OnUse", SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using E7;
 
 public class PlayerController : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
 	public string Name
 	{
-        get { return LocalizationString.GetString(id); }
+		get { return Localization.GetString(id) + " " + Localization.GetString("puffer"); }
     }
 
     public float Hp
@@ -160,13 +161,13 @@ public class PlayerController : MonoBehaviour
 		this.Satiety -= Time.deltaTime * Size * 0.1f;
 
 		if (this.Hp <= (this.MaxHp * 0.1f))
-			animator.Change(PlayerAnimator.Type.Blow);
+			animator.ChangeBodyAnimation(PlayerAnimator.Type.Blow);
 		else if (Mathf.Abs(satiety) <= 0.5f)
-			animator.Change(PlayerAnimator.Type.Normal);
+			animator.ChangeBodyAnimation(PlayerAnimator.Type.Normal);
 		else if (satiety < 0)
-			animator.Change(PlayerAnimator.Type.Thin);
+			animator.ChangeBodyAnimation(PlayerAnimator.Type.Thin);
 		else
-			animator.Change(PlayerAnimator.Type.Fat);
+			animator.ChangeBodyAnimation(PlayerAnimator.Type.Fat);
 	}
 
 	private void UpdateMovement()

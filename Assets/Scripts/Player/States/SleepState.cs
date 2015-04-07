@@ -1,23 +1,25 @@
 ﻿using UnityEngine;
 using E7;
 
-class AttackState : IState
+class SleepState : IState
 {
+
 	SpeechBubble bubble;
-	private float elapsed = 0;
 
 	public void Begin(PlayerStateMachine owner)
 	{
-		bubble = SpeechBubbleManager.instance.CreateBubble(0, Localization.GetString("attack"));
+		bubble = SpeechBubbleManager.instance.CreateBubble(0, Localization.GetString("sleep"));
 		bubble.Attach(owner.transform);
 		bubble.SetEffect(SpeechBubble.Effect.None);
+		owner.animator.Change(PlayerAnimator.Type.Sleep);
 	}
 
 	public void Update(PlayerStateMachine owner)
 	{
-		if ((elapsed += Time.deltaTime) > 3)
+		if (owner.rigidbody.velocity.sqrMagnitude >= 0.1f)
 		{
 			owner.Change(new NormalState());
+			return;
 		}
 	}
 

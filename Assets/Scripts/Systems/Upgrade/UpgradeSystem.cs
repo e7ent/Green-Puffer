@@ -111,7 +111,7 @@ public class UpgradeSystem : MonoSingleton<UpgradeSystem>
 
 	public bool CanUpgrade(string name)
 	{
-		var currentCurrency = GameManager.instance.currency;
+		var currentCurrency = GameManager.instance.Currency;
         var currentLevel = GetUserData(name).currentLevel;
 		var requiredCurrency = GetData(name).GetRequiredCurrency(currentLevel);
 		return currentCurrency - requiredCurrency >= 0;
@@ -122,7 +122,7 @@ public class UpgradeSystem : MonoSingleton<UpgradeSystem>
         var data = GetData(name);
         var userData = GetUserData(name);
 
-        GameManager.instance.currency -= data.GetRequiredCurrency(userData.currentLevel);
+        GameManager.instance.Currency -= data.GetRequiredCurrency(userData.currentLevel);
         GetUserData(name).currentLevel++;
     }
 }

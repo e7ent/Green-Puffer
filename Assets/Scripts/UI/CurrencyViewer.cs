@@ -8,6 +8,6 @@ public class CurrencyViewer : MonoBehaviour
  
 	void Update()
 	{
-		text.text = string.Format("{0:#,##0}", GameManager.instance.currency);
+		text.text = string.Format("{0:#,##0}", GameManager.instance.Currency);
 	}
 }

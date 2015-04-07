@@ -1,57 +1,36 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfUpgradeData
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<UpgradeData>
-		<Name>hp</Name>
-		<Title>HP강화</Title>
-		<Description>HP를 강화해준다.</Description>
-		<IconName>upgrade_add</IconName>
-		<RequiredCurrency>
-			<Currency>100</Currency>
-			<Currency>2000</Currency>
-			<Currency>3000</Currency>
-			<Currency>40000</Currency>
-			<Currency>50000</Currency>
-		</RequiredCurrency>
-	</UpgradeData>
-	<UpgradeData>
-		<Name>strength</Name>
-		<Title>공격력 강화</Title>
-		<Description>공격력을 강화해준다.</Description>
-		<IconName>upgrade_add</IconName>
-		<RequiredCurrency>
-			<Currency>100</Currency>
-			<Currency>200</Currency>
-			<Currency>300</Currency>
-			<Currency>400</Currency>
-			<Currency>500</Currency>
-		</RequiredCurrency>
-	</UpgradeData>
-	<UpgradeData>
-		<Name>moveforce</Name>
-		<Title>속도 강화</Title>
-		<Description>속도가 증가된다.</Description>
-		<IconName>upgrade_up</IconName>
-		<RequiredCurrency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-		</RequiredCurrency>
-	</UpgradeData>
-	<UpgradeData>
-		<Name>size</Name>
-		<Title>사이즈 증가</Title>
-		<Description>복어의 크기가 커진다.</Description>
-		<IconName>upgrade_up</IconName>
-		<RequiredCurrency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-		</RequiredCurrency>
-	</UpgradeData>
-</ArrayOfUpgradeData>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  
+  <string name="puffer">복어</string>
+  <string name="adult">어른</string>
+  <string name="baby">아기</string>
+  <string name="baron">백작</string>
+  <string name="benny">밀집모자</string>
+  <string name="boxer">복서</string>
+  <string name="angel">천사</string>
+  <string name="gold">황금</string>
+  <string name="kid">어린이</string>
+  <string name="king">왕</string>
+  <string name="knight">기사</string>
+  <string name="lady">숙녀</string>
+  <string name="old">늙은</string>
+
+  <string name="attack">공격</string>
+  <string name="death">죽었을때</string>
+  <string name="eat">먹기</string>
+  <string name="hurt">다침</string>
+  <string name="sleep">잠자기</string>
+
+  <string-array name="death">
+    <item>AAAA</item>
+    <item>BBBB</item>
+    <item>CCCC</item>
+  </string-array>
+
+  <string-array name="rebirth">
+    <item>RAAAA</item>
+    <item>RBBBB</item>
+    <item>RCCCC</item>
+  </string-array>
+  
+</resources>

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using E7;
 
 public class DeathState : IState
 {
@@ -9,7 +10,7 @@ public class DeathState : IState
 	{
         owner.animator.Change(PlayerAnimator.Type.Fear);
         
-		bubble = SpeechBubbleManager.instance.CreateBubble(0, LocalizationString.GetString("death"));
+		bubble = SpeechBubbleManager.instance.CreateBubble(0, Localization.GetString("death"));
 		bubble.Attach(owner.transform);
 		bubble.SetEffect(SpeechBubble.Effect.None);
 	}

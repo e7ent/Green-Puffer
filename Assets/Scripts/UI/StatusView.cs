@@ -8,9 +8,10 @@ public class StatusView : MonoBehaviour
 	public Image expBar;
 	public Image rankImage;
 	public Text generationText;
+	public Button rebirthButton;
 	public Image injuryImage;
 
-	private PlayerController puffer;
+	private PlayerController player;
 
 	void Start()
 	{
@@ -18,14 +19,17 @@ public class StatusView : MonoBehaviour
 
 	void Update()
 	{
-		if (puffer == null)
+		if (player == null)
 		{
-			puffer = FindObjectOfType<PlayerController>();
-			if (puffer == null)
+			player = FindObjectOfType<PlayerController>();
+			if (player == null)
 				return;
 		}
 
-		expBar.fillAmount = puffer.Exp / puffer.MaxExp;
-		hpBar.fillAmount = puffer.Hp / puffer.MaxHp;
+		expBar.fillAmount = player.Exp / player.MaxExp;
+		hpBar.fillAmount = player.Hp / player.MaxHp;
+
+		if (player.Rank >= PlayerController.RankType.Adult ^ rebirthButton.gameObject.activeSelf)
+			rebirthButton.gameObject.SetActive(player.Rank >= PlayerController.RankType.Adult);
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using E7;
 
 
 class EatState : IState
@@ -8,7 +9,7 @@ class EatState : IState
 
 	public void Begin(PlayerStateMachine owner)
 	{
-		bubble = SpeechBubbleManager.instance.CreateBubble(0, LocalizationString.GetString("eat"));
+		bubble = SpeechBubbleManager.instance.CreateBubble(0, Localization.GetString("eat"));
 		bubble.Attach(owner.transform);
 		bubble.SetEffect(SpeechBubble.Effect.None);
 		owner.animator.Change(PlayerAnimator.Type.Eat);
