@@ -7,7 +7,7 @@ public class PlayerStateMachine : MonoBehaviour
 	[HideInInspector]
 	public PlayerAnimator animator;
 	[HideInInspector]
-	public Rigidbody2D rigidbody;
+	public new Rigidbody2D rigidbody;
 
 	private IState currentState;
 

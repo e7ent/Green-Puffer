@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
 	private float maxSize = 1;
 	[SerializeField]
     private float satiety = 0;
+	[SerializeField]
+	private bool isSick = false;
     [SerializeField]
     private GameObject[] nextGeneration;
 
@@ -101,6 +103,12 @@ public class PlayerController : MonoBehaviour
 		set {
 			satiety = Mathf.Clamp(value, -1.0f, 1.0f);
 		}
+	}
+
+	public bool IsSick
+	{
+		get { return isSick; }
+		set { isSick = value; }
 	}
 
 	public float Strength

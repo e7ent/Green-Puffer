@@ -4,9 +4,9 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<UpgradeData>
 		<Name>hp</Name>
-		<Title>HP강화</Title>
-		<Description>HP를 강화해준다.</Description>
-		<IconName>upgrade_add</IconName>
+		<Title>upgrade_hp_title</Title>
+		<Description>upgrade_hp_description</Description>
+		<IconName>ic_add</IconName>
 		<RequiredCurrency>
 			<Currency>100</Currency>
 			<Currency>2000</Currency>
@@ -17,9 +17,9 @@
 	</UpgradeData>
 	<UpgradeData>
 		<Name>strength</Name>
-		<Title>공격력 강화</Title>
-		<Description>공격력을 강화해준다.</Description>
-		<IconName>upgrade_add</IconName>
+		<Title>upgrade_strength_title</Title>
+		<Description>upgrade_strength_description</Description>
+		<IconName>ic_add</IconName>
 		<RequiredCurrency>
 			<Currency>100</Currency>
 			<Currency>200</Currency>
@@ -30,9 +30,9 @@
 	</UpgradeData>
 	<UpgradeData>
 		<Name>moveforce</Name>
-		<Title>속도 강화</Title>
-		<Description>속도가 증가된다.</Description>
-		<IconName>upgrade_up</IconName>
+		<Title>upgrade_moveforce_title</Title>
+		<Description>upgrade_moveforce_description</Description>
+		<IconName>ic_up</IconName>
 		<RequiredCurrency>
 			<Currency>100</Currency>
 			<Currency>100</Currency>
@@ -41,17 +41,57 @@
 			<Currency>100</Currency>
 		</RequiredCurrency>
 	</UpgradeData>
-	<UpgradeData>
-		<Name>size</Name>
-		<Title>사이즈 증가</Title>
-		<Description>복어의 크기가 커진다.</Description>
-		<IconName>upgrade_up</IconName>
-		<RequiredCurrency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-			<Currency>100</Currency>
-		</RequiredCurrency>
-	</UpgradeData>
+  <UpgradeData>
+    <Name>size</Name>
+    <Title>upgrade_size_title</Title>
+    <Description>upgrade_size_description</Description>
+    <IconName>ic_up</IconName>
+    <RequiredCurrency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+    </RequiredCurrency>
+  </UpgradeData>
+
+  <UpgradeData>
+    <Name>food_0</Name>
+    <Title>upgrade_food_0_title</Title>
+    <Description>upgrade_food_0_description</Description>
+    <IconName>ic_food_0</IconName>
+    <RequiredCurrency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+    </RequiredCurrency>
+  </UpgradeData>
+  <UpgradeData>
+    <Name>food_1</Name>
+    <Title>upgrade_food_1_title</Title>
+    <Description>upgrade_food_1_description</Description>
+    <IconName>ic_food_1</IconName>
+    <RequiredCurrency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+    </RequiredCurrency>
+  </UpgradeData>
+  <UpgradeData>
+    <Name>food_2</Name>
+    <Title>upgrade_food_2_title</Title>
+    <Description>upgrade_food_2_description</Description>
+    <IconName>ic_food_2</IconName>
+    <RequiredCurrency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+      <Currency>100</Currency>
+    </RequiredCurrency>
+  </UpgradeData>
 </ArrayOfUpgradeData>

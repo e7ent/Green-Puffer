@@ -2,7 +2,7 @@
 
 public class NormalState : IState
 {
-	private float elapsed = 0;
+	private float sleepElapsed = 0;
 
 	public void Begin(PlayerStateMachine owner)
 	{
@@ -15,7 +15,7 @@ public class NormalState : IState
 
 		if (owner.rigidbody.velocity.sqrMagnitude <= 0.1f)
 		{
-			if ((elapsed += Time.deltaTime) >= 1)
+			if ((sleepElapsed += Time.deltaTime) >= 1)
 			{
 				owner.Change(new SleepState());
 				return;
@@ -23,7 +23,7 @@ public class NormalState : IState
 		}
 		else
 		{
-			elapsed = 0;
+			sleepElapsed = 0;
 		}
 
 		if (hp <= (owner.controller.MaxHp * 0.1f))

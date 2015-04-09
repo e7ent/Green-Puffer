@@ -20,7 +20,50 @@
   <string name="eat">먹기</string>
   <string name="hurt">다침</string>
   <string name="sleep">잠자기</string>
+  <string name="hungry">배고픔</string>
 
+  <!-- 업그레이드 항목 -->
+  
+  <string name="upgrade_hp_title">HP 강화</string>
+  <string name="upgrade_hp_description">HP 강화 업그레이드 설명</string>
+  
+  <string name="upgrade_strength_title">공격력 강화</string>
+  <string name="upgrade_strength_description">공격력 강화 업그레이드 설명</string>
+  
+  <string name="upgrade_moveforce_title">속도 강화</string>
+  <string name="upgrade_moveforce_description">속도 강화 업그레이드 설명</string>
+  
+  <string name="upgrade_size_title">사이즈 강화</string>
+  <string name="upgrade_size_description">사이즈 강화 업그레이드 설명</string>
+
+  <string name="upgrade_food_0_title">과립형 사료 증가</string>
+  <string name="upgrade_food_0_description">과립형 사료 드롭률 증가</string>
+  
+  <string name="upgrade_food_1_title">프레이크 사료 증가</string>
+  <string name="upgrade_food_1_description">프레이크 사료 증가</string>
+  
+  <string name="upgrade_food_2_title">녹차 스틱</string>
+  <string name="upgrade_food_2_description">녹차 스틱</string>
+  
+  <!-- 아이템 항목 -->
+  <string name="item_hp_title">체력 회복</string>
+  <string name="item_hp_description">체력 회복 아이템 설명</string>
+  <string name="item_hp_effect">HP + 100%</string>
+
+  <string name="item_exp_title">즉시 성장</string>
+  <string name="item_exp_description">즉시 성장 아이템 설명</string>
+  <string name="item_exp_effect">EXP + 100%</string>
+
+  <string name="item_treatment_title">알약 성장</string>
+  <string name="item_treatment_description">병 치료</string>
+  <string name="item_treatment_effect"></string>
+         
+  <!-- 시스템 메세지 -->
+  <string name="not_enough_currency">돈이 부족합니다.</string>
+  <string name="upgrade_success">업그레이드 성공</string>
+  <string name="item_success">아이템 구매 성공</string>
+  <string name="ask_rebirth">결혼?</string>
+  
   <string-array name="death">
     <item>AAAA</item>
     <item>BBBB</item>

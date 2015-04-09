@@ -26,7 +26,7 @@ public class PlayerAnimator : MonoBehaviour
 		Blow = 15,
 		Move = 16,
 		Die = 17,
-		Hayyp = 18,
+		Happy = 18,
 		Fun = 19,
 	}
 

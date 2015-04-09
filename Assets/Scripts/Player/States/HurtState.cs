@@ -11,12 +11,12 @@ public class HurtState : IState
 		bubble = SpeechBubbleManager.instance.CreateBubble(0, Localization.GetString("hurt"));
 		bubble.Attach(owner.transform);
 		bubble.SetEffect(SpeechBubble.Effect.None);
-		owner.animator.Change(PlayerAnimator.Type.Eat);
+		owner.animator.Change(PlayerAnimator.Type.Fear);
 	}
 
 	public void Update(PlayerStateMachine owner)
 	{
-		if ((elapsed += Time.deltaTime) > 3)
+		if ((elapsed += Time.deltaTime) > 2)
 		{
 			owner.Change(new NormalState());
 		}

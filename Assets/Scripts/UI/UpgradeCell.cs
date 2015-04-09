@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using E7;
 
 public class UpgradeCell : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class UpgradeCell : MonoBehaviour
         var data = UpgradeSystem.instance.GetData(name);
         var userData = UpgradeSystem.instance.GetUserData(name);
 
-        title.text = data.title;
-        description.text = data.description;
+        title.text = Localization.GetString(data.title);
+		description.text = Localization.GetString(data.description);
         icon.sprite = data.GetIcon();
         slot.Value = userData.currentLevel;
 
@@ -40,9 +41,12 @@ public class UpgradeCell : MonoBehaviour
 	{
 		var res = UpgradeSystem.instance.CanUpgrade(this.upgradeName);
 		if (res == false)
-			AlertManager.instance.ShowAlert("돈이 부족합니다.");
-		else
-			AlertManager.instance.ShowAlert("업그레이드가 완료 되었습니다.");
+		{
+			AlertManager.instance.ShowAlert(Localization.GetString("not_enough_currency"));
+			return;
+		}
+		
+		AlertManager.instance.ShowAlert(Localization.GetString("upgrade_success"));
 
 		UpgradeSystem.instance.Upgrade(upgradeName);
         Load(this.upgradeName);

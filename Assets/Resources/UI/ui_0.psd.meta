@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: dadfe5851c5e3d443b714f9eb3e95dfb
+timeCreated: 1428556630
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: empty
+    21300002: ic_exp_up
+    21300004: ic_luck
+    21300006: ic_food_0
+    21300008: upgrade_add
+    21300010: upgrade_up
+    21300012: ic_currency_0
+    21300014: upgrade_exp_up
+    21300016: upgrade_luck_up
+    21300018: ic_puffer_5
+    21300020: upgrade_food_0
+    21300022: ui_upgrade_and_items_11
+    21300024: ui_upgrade_and_items_12
+    21300026: upgrade_food_2
+    21300028: upgrade_food_1
+    21300030: quest_0
+    21300032: quest_1
+    21300034: ic_treatment
+    21300036: ic_food_2
+    21300038: ic_food_1
+    21300040: ic_puffer_7
+    21300042: ic_puffer_6
+    21300044: ic_exp
+    21300046: ic_hp
+    21300048: ic_up
+    21300050: ic_add
+    21300052: ic_puffer
+    21300054: ic_scroll
+    21300056: ic_currency_1
+    21300058: ic_currency_2
+    21300060: ic_currency_3
+    21300062: ic_puffer_0
+    21300064: ic_puffer_1
+    21300066: ic_puffer_2
+    21300068: ic_puffer_3
+    21300070: ic_puffer_4
+    21300072: ic_puffer_9
+    21300074: ic_puffer_8
+    21300076: ic_ending_0
+    21300078: ic_ending_1
+    21300080: ic_ending_2
+    21300082: ic_ending_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ic_treatment
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1924
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_exp_up
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_luck
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_food_0
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_food_2
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_food_1
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_currency_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1549
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_exp
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1924
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_hp
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1924
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_up
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_add
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1799
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1674
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_scroll
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1674
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_currency_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1549
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_currency_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1549
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_currency_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1549
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_1
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 700
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_2
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 700
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_3
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 700
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_4
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 700
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_9
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 472
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_8
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 472
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_7
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 472
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 472
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_puffer_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 472
+        width: 403
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_ending_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_ending_1
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 0
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_ending_2
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 0
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ic_ending_3
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 0
+        width: 411
+        height: 235
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

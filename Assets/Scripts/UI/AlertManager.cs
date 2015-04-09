@@ -7,7 +7,9 @@ public class AlertManager : MonoSingleton<AlertManager>
 	public Window window;
 	public Text message;
 
-	System.Action onFinish = null;
+	public Button yesButton, noButton;
+
+	System.Action<bool> onFinish = null;
 
     void OnEnable()
     {
@@ -16,21 +18,33 @@ public class AlertManager : MonoSingleton<AlertManager>
     }
 
 
-	public void ShowAlert(string message, System.Action onFinish = null)
+	public void ShowAlert(string message, bool activeNo = false, System.Action<bool> onFinish = null)
 	{
 		this.onFinish = onFinish;
 		this.message.text = message;
 		window.Show();
 		gameObject.SetActive(true);
+
+		noButton.gameObject.SetActive(activeNo);
 	}
 
-	public void Ok()
+	public void Yes()
 	{
 		window.Close(() =>
 		{
 			gameObject.SetActive(false);
 			if (onFinish != null)
-				onFinish();
+				onFinish(true);
+		});
+	}
+
+	public void No()
+	{
+		window.Close(() =>
+		{
+			gameObject.SetActive(false);
+			if (onFinish != null)
+				onFinish(false);
 		});
 	}
 }

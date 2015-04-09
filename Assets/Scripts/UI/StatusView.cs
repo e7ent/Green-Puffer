@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using E7;
 
 public class StatusView : MonoBehaviour
 {
@@ -31,5 +32,20 @@ public class StatusView : MonoBehaviour
 
 		if (player.Rank >= PlayerController.RankType.Adult ^ rebirthButton.gameObject.activeSelf)
 			rebirthButton.gameObject.SetActive(player.Rank >= PlayerController.RankType.Adult);
+	}
+
+	public void Rebirth()
+	{
+		AlertManager.instance.ShowAlert(
+			Localization.GetString("ask_rebirth"),
+			true,
+			(bool ret) => {
+				if (ret == false)
+				{
+					return;
+				}
+
+				GameManager.instance.Finish(true);
+		});
 	}
 }

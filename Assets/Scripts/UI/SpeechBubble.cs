@@ -101,7 +101,7 @@ public class SpeechBubble : UIBehaviour
 
 	public void Destory()
 	{
-		transform.DOKill(false);
+//		transform.DOKill(false);
 		GameObject.Destroy(gameObject);
 	}
 
