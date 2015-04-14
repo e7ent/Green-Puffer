@@ -32,6 +32,7 @@ public class Creature : MonoBehaviour
 	private new Rigidbody2D rigidbody;
 
 	private PlayerController target = null;
+	private PlayerController attacker = null;
 
 	private float moveElapsed;
 	private Vector2 moveForce;
@@ -153,7 +154,7 @@ public class Creature : MonoBehaviour
 	{
 		if (destroyFx)
 			Instantiate(destroyFx, transform.position, Quaternion.identity);
-		GetComponent<ItemDropTrigger>().Drop();
+		GetComponent<ItemDropTrigger>().Drop(attacker);
 		SendMessage("OnUse", SendMessageOptions.DontRequireReceiver);
 	}
 
@@ -186,6 +187,7 @@ public class Creature : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
+		attacker = other.gameObject.GetComponent<PlayerController>();
 		if (other.gameObject.CompareTag(tag))
 		{
 			var dir = (other.transform.position - transform.position).normalized;

@@ -45,7 +45,7 @@ public class StatusView : MonoBehaviour
 					return;
 				}
 
-				GameManager.instance.Finish(true);
+				GameManager.instance.Finish(GameManager.FinishType.Rebirth);
 		});
 	}
 }

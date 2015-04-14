@@ -57,13 +57,19 @@
   <string name="item_treatment_title">알약 성장</string>
   <string name="item_treatment_description">병 치료</string>
   <string name="item_treatment_effect"></string>
+
+  <string name="item_ad_title">광고보기</string>
+  <string name="item_ad_description">광고보기</string>
+  <string name="item_ad_effect">1000 Coin</string>
          
   <!-- 시스템 메세지 -->
+  <string name="game_exit">게임 종료.</string>
+  <string name="share_message">소셜 게시 메시지.</string>
   <string name="not_enough_currency">돈이 부족합니다.</string>
   <string name="upgrade_success">업그레이드 성공</string>
   <string name="item_success">아이템 구매 성공</string>
   <string name="ask_rebirth">결혼?</string>
-  
+
   <string-array name="death">
     <item>AAAA</item>
     <item>BBBB</item>
@@ -71,6 +77,12 @@
   </string-array>
 
   <string-array name="rebirth">
+    <item>RAAAA</item>
+    <item>RBBBB</item>
+    <item>RCCCC</item>
+  </string-array>
+
+  <string-array name="rankup">
     <item>RAAAA</item>
     <item>RBBBB</item>
     <item>RCCCC</item>

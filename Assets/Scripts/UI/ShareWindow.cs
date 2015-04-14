@@ -2,21 +2,14 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using Soomla.Profile;
 
 public class ShareWindow : MonoBehaviour
 {
 	public InputField messageInputField;
 	public RawImage rawImageControl;
 
-	private Window window;
 	private RenderTexture renderTexture;
 	private Texture2D texture;
-
-	void Awake()
-	{
-		window = GetComponent<Window>();
-	}
 
 	void OnEnable()
 	{
@@ -55,37 +48,17 @@ public class ShareWindow : MonoBehaviour
 
 	public void Share(string providerName)
 	{
-		string sharePayload = "uploadImage";
-		Provider shareProvider = null;
+		var message = E7.Localization.GetString("share_message") + messageInputField.text;
 
 		switch (providerName)
 		{
 			default:
 			case "Facebook":
-				shareProvider = Provider.FACEBOOK;
+				UM_ShareUtility.FacebookShare(message, texture);
 				break;
 			case "Twitter":
-				shareProvider = Provider.TWITTER;
+				UM_ShareUtility.TwitterShare(message, texture);
 				break;
 		}
-
-		ProfileEvents.OnSocialActionStarted = (Provider provider, SocialActionType action, string payload) =>
-		{
-			if (payload != sharePayload)
-				return;
-
-			//loadingControl.SetActive(true);
-		};
-
-		ProfileEvents.OnSocialActionFinished = (Provider provider, SocialActionType action, string payload) =>
-		{
-			if (payload != sharePayload)
-				return;
-
-			//loadingControl.SetActive(false);
-			window.Close();
-		};
-
-		SoomlaProfile.UploadImage(shareProvider, messageInputField.text, "image.png", texture, sharePayload);
 	}
 }

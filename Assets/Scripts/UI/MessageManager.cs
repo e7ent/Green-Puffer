@@ -44,6 +44,8 @@ public class MessageManager : MonoSingleton<MessageManager>, UnityEngine.EventSy
         if (withEffect)
             messgaeBox.transform.DOScale(Vector3.one, .3f).SetEase(Ease.OutBack);
 
+		DisplayNextMessage();
+
         return this;
     }
 

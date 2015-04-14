@@ -10,7 +10,7 @@ public class QuestSystem : MonoSingleton<QuestSystem>
 {
 	private static string assetPath = Application.dataPath + "/Resources/quest.xml";
 
-	private Dictionary<string, QuestData> quests;
+	private Dictionary<string, QuestData> quests = new Dictionary<string,QuestData>();
 
 	public void Load()
 	{

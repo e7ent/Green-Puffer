@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 608fa5c011a21d243ad5db7ee1290c12
+timeCreated: 1428650883
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: food_shrimp_body_3
@@ -20,6 +22,8 @@ TextureImporter:
     21300030: food_hermitcrap_body_6
     21300032: food_basic
     21300034: food_greentealump
+    21300036: guppy_egg
+    21300038: caviar
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,6 +42,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 128
@@ -48,6 +55,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -241,5 +249,27 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guppy_egg
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caviar
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: Creature
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

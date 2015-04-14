@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: a8132c52e5a76dd4c8bac7b8e7d7cb73
+timeCreated: 1428650889
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: sheet_survival_object_0
@@ -26,6 +28,9 @@ TextureImporter:
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 512
@@ -36,6 +41,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
+  rGBM: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
@@ -56,8 +62,8 @@ TextureImporter:
         y: 0
         width: 158
         height: 305
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 2
+      pivot: {x: .5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_survival_object_1
       rect:
@@ -76,8 +82,8 @@ TextureImporter:
         y: 89
         width: 77
         height: 180
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .400000006, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: sheet_survival_object_3
       rect:
@@ -86,28 +92,10 @@ TextureImporter:
         y: 88
         width: 77
         height: 180
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: guppy_egg
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: caviar
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 72
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .400000006, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

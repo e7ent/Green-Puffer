@@ -6,11 +6,17 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Text;
 using DG.Tweening;
-using Soomla.Profile;
 using E7;
 
 public class GameManager : MonoSingleton<GameManager>
 {
+	public enum FinishType
+	{
+		Dead,
+		Rebirth,
+		RankUp,
+	}
+
 	[SerializeField]
 	private int currency;
     public int Currency
@@ -27,10 +33,7 @@ public class GameManager : MonoSingleton<GameManager>
     public GameObject createEffect;
     public PlayerController[] playerPrefabs;
     public GameObject[] backgroundPrefabs;
-    public GameObject endingPrefab;
-	public GameObject rebirthPrefab;
-
-    private PlayerController player;
+	public GameObject[] finishPrefabs;
 
     private bool isFinished = false;
     private bool isPaused = false;
@@ -40,82 +43,29 @@ public class GameManager : MonoSingleton<GameManager>
         base.Awake();
         Application.targetFrameRate = 60;
         DOTween.Init();
+		UM_AdManager.instance.Init();
 
-        Load();
-    }
+		currency = PlayerPrefs.GetInt("currency", 10000);
 
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
-        Save();
-    }
+		var id = PlayerPrefs.GetString("player_id", string.Empty);
+		if (string.IsNullOrEmpty(id))
+		{
+			CreatePlayer(PlayerController.RankType.Baby);
+		}
+		else
+		{
+			CreatePlayer(id);
+		}
 
-    private void OnApplicationQuit()
-    {
-        Save();
+		var player = PlayerController.instance;
+		player.Hp = PlayerPrefs.GetFloat("player_hp", player.MaxHp);
+		player.Exp = PlayerPrefs.GetFloat("player_exp", 0);
+		player.Satiety = PlayerPrefs.GetFloat("player_satiety", 0);
     }
 
     private void Start()
     {
         FadeManager.FadeIn();
-    }
-
-    public void Load()
-    {
-        // Load Currency
-        currency = PlayerPrefs.GetInt("currency", 10000);
-
-        string savedPlayerData = PlayerPrefs.GetString("player", string.Empty);
-
-        if (string.IsNullOrEmpty(savedPlayerData))
-        {
-            CreatePlayer(PlayerController.RankType.Baby);
-            return;
-        }
-
-        using (XmlReader reader = XmlTextReader.Create(new StringReader(savedPlayerData)))
-        {
-                reader.ReadStartElement("player");
-
-                var id = reader.ReadElementString("id");
-                PlayerController findPrefab = null;
-                foreach (var prefab in playerPrefabs)
-                {
-                    if (prefab.Id == id)
-                    {
-                        findPrefab = prefab;
-                        break;
-                    }
-                }
-
-                CreatePlayer(findPrefab.Id);
-
-                player.Hp = float.Parse(reader.ReadElementString("hp"));
-                player.Exp = float.Parse(reader.ReadElementString("exp"));
-                player.Satiety = float.Parse(reader.ReadElementString("satiety"));
-
-                reader.ReadEndElement();
-        }
-    }
-
-    public void Save()
-    {
-        XmlWriterSettings settings = new XmlWriterSettings();
-        settings.Indent = true;
-        settings.IndentChars = "\t";
-        settings.NewLineOnAttributes = true;
-
-        StringBuilder sb = new StringBuilder();
-        using (XmlWriter writer = XmlTextWriter.Create(sb, settings))
-        {
-            writer.WriteStartElement("player");
-            writer.WriteElementString("id", player.Id);
-            writer.WriteElementString("hp", player.Hp.ToString());
-            writer.WriteElementString("exp", player.Exp.ToString());
-            writer.WriteElementString("satiety", player.Satiety.ToString());
-            writer.WriteEndElement();
-        }
-        PlayerPrefs.SetString("player", sb.ToString());
     }
 
     public void Pause()
@@ -163,53 +113,96 @@ public class GameManager : MonoSingleton<GameManager>
                 break;
             }
         }
+
+		if (PlayerController.instance != null)
+		{
+			PlayerController.instance.Destroy();
+			PlayerLibraryManager.instance.Unlock(prefab.Id);
+		}
+
         var newPlayer = GameObject.Instantiate(prefab) as PlayerController;
-        if (player != null)
-        {
-            newPlayer.transform.position = player.transform.position;
-            newPlayer.transform.rotation = player.transform.rotation;
-            PlayerLibraryManager.instance.Unlock(newPlayer.Id);
-            player.Destroy();
-        }
-        player = newPlayer;
         GameObject.Instantiate(createEffect, newPlayer.transform.position, Quaternion.identity);
+
+		PlayerPrefs.SetString("player_id", id);
     }
 
-    public void Finish(bool isRebirth = false)
+    public void Finish(FinishType type = FinishType.Dead)
     {
         if (isFinished) return;
         isFinished = true;
 
         Pause();
 
-        if (player.Hp <= 0)
-        {
-            EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Hurt);
-        }
-        else if (isRebirth)
-        {
-            EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Rebirth);
-        }
+		PlayerController player = PlayerController.instance;
+		GameObject finish = GameObject.Instantiate(finishPrefabs[(int)type]);
+		string[] messages = null;
 
-        var obj = GameObject.Instantiate(isRebirth?rebirthPrefab:endingPrefab) as GameObject;
-        FadeManager.instance.Fade(Color.clear, new Color(0, 0, 0, .7f), 1, () =>
-        {
-            MessageManager.instance.Open();
-            MessageManager.instance.PushMessage(Localization.GetStringArray(isRebirth?"rebirth":"death"));
-            MessageManager.instance.onConfirm += () =>
-			{
-				GameObject.Destroy(obj);
-                GameManager.instance.Retry();
-            };
+		switch (type)
+		{
+			case FinishType.Dead:
+				if (player.Hp <= 0)
+					EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Hurt);
+				messages = Localization.GetStringArray("death");
+				MessageManager.instance.onConfirm += OnDeadFinish;
+				break;
+
+
+			case FinishType.Rebirth:
+				EndingLibraryManager.instance.Unlock(EndingLibraryManager.Type.Rebirth);
+				messages = Localization.GetStringArray("rebirth");
+				MessageManager.instance.onConfirm += OnRebirthFinish;
+				break;
+
+
+			case FinishType.RankUp:
+				messages = Localization.GetStringArray("rankup");
+				MessageManager.instance.onConfirm += OnRankUpFinish;
+				break;
+
+
+			default:
+				break;
+		}
+
+		MessageManager.instance.PushMessage(messages);
+		MessageManager.instance.onConfirm += () =>
+		{
+			if (finish)
+				GameObject.Destroy(finish);
+		};
+
+		FadeManager.instance.Fade(Color.clear, new Color(0, 0, 0, .7f), 1, () =>
+		{
+			MessageManager.instance.Open();
         });
+
+		UM_AdManager.instance.StartInterstitialAd();
     }
 
-    public void Retry()
+	private void OnDeadFinish()
 	{
+		PlayerController player = PlayerController.instance;
+
 		Currency += ((int)player.Rank * 100) + (int)player.Exp;
-        CreatePlayer(PlayerController.RankType.Baby);
-        FadeManager.FadeIn();
-        isFinished = false;
-        Resume();
-    }
+		isFinished = false;
+
+		CreatePlayer(PlayerController.RankType.Baby);
+
+		FadeManager.FadeIn();
+		Resume();
+	}
+
+	private void OnRebirthFinish()
+	{
+		OnDeadFinish();
+	}
+
+	private void OnRankUpFinish()
+	{
+		CreatePlayer(PlayerController.instance.Rank + 1);
+		PlayerController.instance.transform.position = Vector3.zero;
+		FadeManager.FadeIn();
+		isFinished = false;
+		Resume();
+	}
 }

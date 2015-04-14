@@ -5,7 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using E7;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoSingleton<PlayerController>
 {
     public enum RankType
     {
@@ -40,9 +40,9 @@ public class PlayerController : MonoBehaviour
 	[SerializeField]
     private float satiety = 0;
 	[SerializeField]
+	private float luck = 0;
+	[SerializeField]
 	private bool isSick = false;
-    [SerializeField]
-    private GameObject[] nextGeneration;
 
     public bool IsAlive
     {
@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
         set
         {
             hp = Mathf.Clamp(value, 0, MaxHp);
+			PlayerPrefs.SetFloat("player_hp", hp);
         }
     }
 
@@ -86,9 +87,10 @@ public class PlayerController : MonoBehaviour
         {
             exp = Mathf.Clamp(value, 0, MaxExp);
             if (exp >= MaxExp && Rank < RankType.Old)
-            {
-                GameManager.instance.CreatePlayer(rank + 1);
-            }
+			{
+				GameManager.instance.Finish(GameManager.FinishType.RankUp);
+			}
+			PlayerPrefs.SetFloat("player_exp", exp);
         }
     }
 
@@ -102,7 +104,13 @@ public class PlayerController : MonoBehaviour
 		get { return satiety; }
 		set {
 			satiety = Mathf.Clamp(value, -1.0f, 1.0f);
+			PlayerPrefs.SetFloat("player_satiety", satiety);
 		}
+	}
+
+	public float Luck
+	{
+		get { return luck + UpgradeSystem.instance.GetLevel("luck"); }
 	}
 
 	public bool IsSick
@@ -140,13 +148,19 @@ public class PlayerController : MonoBehaviour
 	private PlayerStateMachine stateMachine;
 	private new Rigidbody2D rigidbody;
 
-	void Awake()
+	protected override void Awake()
 	{
+		if (instance != null)
+		{
+			GameObject.Destroy(this);
+			return;
+		}
+
 		animator = GetComponent<PlayerAnimator>();
 		stateMachine = GetComponent<PlayerStateMachine>();
 		rigidbody = GetComponent<Rigidbody2D>();
 
-		Hp = MaxHp;
+		base.Awake();
 	}
 
 	private void Update()
@@ -267,6 +281,29 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+	public void Hurt(float strength)
+	{
+		if (!IsAlive) return;
+
+		Hp -= strength;
+
+		stateMachine.Change(new HurtState());
+
+		transform.DOKill(true);
+		foreach (var renderer in GetComponentsInChildren<Renderer>())
+		{
+			var mat = renderer.material;
+			if (mat.HasProperty("_Color") == false) continue;
+
+			var seq = DOTween.Sequence();
+			for (int i = 0; i < 3; i++)
+			{
+				seq.Append(mat.DOColor(new Color(1.0f, 0.8f, 0.8f), 0.1f));
+				seq.Append(mat.DOColor(Color.white, 0.1f));
+			}
+		}
+	}
+
 	public void Kill()
 	{
 		if (onDestroy != null)
@@ -288,6 +325,7 @@ public class PlayerController : MonoBehaviour
 			onDestroy(this);
 
 		GameObject.Destroy(gameObject);
+		instance = null;
 	}
 
 }
